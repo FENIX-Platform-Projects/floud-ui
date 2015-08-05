@@ -12,38 +12,44 @@
     },
     {
       "attrs": {
-        "id": "protected"
+        "id": "analysis"
       },
-      "target": "#protected",
+      "target": "#analysis",
       "label": {
-        "EN": "Protected"
+        "EN": "Analysis"
       }
     },
     {
       "attrs": {
-        "id": "about"
+        "id": "download"
       },
-      "target": "#about",
+      "target": "#download",
       "label": {
-        "EN": "About"
+        "EN": "Download"
+      }
+    },
+    {
+      "attrs": {
+        "id": "repo"
+      },
+      "target": "#repo",
+      "label": {
+        "EN": "Document Repository"
       }
     }
   ],
   "rightItems": [
     {
       "attrs": {
-        "id": "login"
+        "id": "fra-home"
       },
-      "label": {
-        "EN": "LOGIN"
-      }
-    },
-    {
-      "attrs": {
-        "id": "logout"
+      "a_attrs": {
+        "rel": "external",
+        "target" : "_blank"
       },
+      "target": "http://fenixapps2.fao.org/fra2015",
       "label": {
-        "EN": "LOGOUT"
+        "EN": "Fra Home"
       }
     }
   ],
