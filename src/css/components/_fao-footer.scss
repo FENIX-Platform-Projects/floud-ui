@@ -1,0 +1,27 @@
+/* FAO Like Footer */
+
+footer.fao-footer{
+  background-color: $custom-color6;
+
+  color: white;
+
+
+  li{
+    margin-bottom: 10px;
+  }
+
+  h4{
+    color: white;
+    font-size: 14px;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:focus,
+  a:active{
+    color: white;
+  }
+
+
+}
