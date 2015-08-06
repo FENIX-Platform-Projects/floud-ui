@@ -26,7 +26,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+  .invi{display:none !important}
+
 /* Active Icons */
+
 .icojam_button_new_1:before {
   content: "\eb2a"; }
 
@@ -821,7 +824,7 @@ div[data-module="region"] .fx-catalog-modular-form-content {
   height: 263px; }
 
 /* Fenix - Navigation Component */
-.navbar {
+.navbarModified {
   border: 0;
   border-width: 0; }
 
@@ -832,10 +835,10 @@ div[data-module="region"] .fx-catalog-modular-form-content {
   background-color: transparent;
   color: #666666; }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbarModified-default .navbarModified-nav > li > a:hover, .navbarModified-default .navbarModified-nav > li > a:focus {
   color: #5ba539; }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbarModified-default .navbarModified-nav > .active > a, .navbarModified-default .navbarModified-nav > .active > a:hover, .navbarModified-default .navbarModified-nav > .active > a:focus {
   border-bottom: 1px solid #5ba539; }
 
 /* Fenix - Object Box Component */
@@ -1152,34 +1155,34 @@ input[type="checkbox"]:checked + label {
     margin-right: 7px; }
 
 /* Fenix - Top Menu Component */
-.navbar ul {
+.navbarModified ul {
   list-style: outside none none;
   padding-left: 0; }
 
-.navbar .container {
+.navbarModified .container {
   position: relative; }
 
 .nav-pills li a {
   color: #666666; }
 
-.navbar-brand {
+.navbarModified-brand {
   background-image: url("img/fenix-ico.svg");
   background-position: 0 3px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: block; }
 
-.navbar .lang_picker {
+.navbarModified .lang_picker {
   text-transform: uppercase; }
 
-.navbar .lang_picker li {
+.navbarModified .lang_picker li {
   cursor: pointer; }
 
-.navbar .lang_picker li a, .navbar .lang_picker li a:hover {
+.navbarModified .lang_picker li a, .navbarModified .lang_picker li a:hover {
   text-align: center;
   text-decoration: none; }
 
-.navbar .lang_picker li:last-child {
+.navbarModified .lang_picker li:last-child {
   border-right: medium none; }
 
 /* Fenix - Sidebar Component */
@@ -2150,16 +2153,16 @@ input[type="checkbox"]:checked + label {
     transition: all 0.3s ease 0s;
     text-decoration: none; }
 
-.navbar .lang_picker {
+.navbarModified .lang_picker {
   overflow: hidden;
   height: 100%;
   width: 100%; }
-  .navbar .lang_picker li {
+  .navbarModified .lang_picker li {
     border-right: none;
     height: 100%;
     width: 100%;
     border: 2px solid white; }
-    .navbar .lang_picker li a {
+    .navbarModified .lang_picker li a {
       text-align: center;
       color: white;
       position: relative;
@@ -2392,7 +2395,7 @@ input[type="checkbox"]:checked + label {
   display: inline-block !important; }
 
 /* Afo Subemenu */
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+.navbarModified-default .navbarModified-nav > .open > a, .navbarModified-default .navbarModified-nav > .open > a:focus, .navbarModified-default .navbarModified-nav > .open > a:hover {
   background-color: #f9f6ee;
   border-right-color: transparent; }
 
@@ -2460,13 +2463,13 @@ input[type="checkbox"]:checked + label {
   margin-top: 0; }
 
 /* Afo Top Menu */
-.navbar {
+.navbarModified {
   min-height: 50px; }
 
-.navbar-default .navbar-nav > li > a {
+.navbarModified-default .navbarModified-nav > li > a {
   color: white;
   overflow: hidden; }
-  .navbar-default .navbar-nav > li > a:before {
+  .navbarModified-default .navbarModified-nav > li > a:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -2475,7 +2478,7 @@ input[type="checkbox"]:checked + label {
     left: 0;
     bottom: -5px;
     pointer-events: none; }
-  .navbar-default .navbar-nav > li > a:hover:before {
+  .navbarModified-default .navbarModified-nav > li > a:hover:before {
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -ms-transition: all 0.3s ease 0s;
@@ -2483,7 +2486,7 @@ input[type="checkbox"]:checked + label {
     transition: all 0.3s ease 0s;
     bottom: 0; }
 
-.navbar-default {
+.navbarModified-default {
   background-color: #a0c03a;
   background-image: -moz-linear-gradient(top, #a0c03a, #5ba539);
   background-image: -ms-linear-gradient(top, #a0c03a, #5ba539);
@@ -2496,16 +2499,16 @@ input[type="checkbox"]:checked + label {
   background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-repeat: no-repeat; }
-  .navbar-default li#home {
+  .navbarModified-default li#home {
     display: none; }
-  .navbar-default .navbar-nav > li {
+  .navbarModified-default .navbarModified-nav > li {
     border-right: 1px solid #457f25; }
-    .navbar-default .navbar-nav > li > a {
+    .navbarModified-default .navbarModified-nav > li > a {
       font: normal normal 300 12px/normal "Roboto";
       text-transform: uppercase;
       height: 50px; }
 
-.navbar-brand {
+.navbarModified-brand {
   background-image: url("img/afo-ico.svg");
   height: 50px;
   width: 50px;
@@ -2514,42 +2517,42 @@ input[type="checkbox"]:checked + label {
   background-color: white;
   background-position: center center; }
 
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+.navbarModified-default .navbarModified-brand:hover, .navbarModified-default .navbarModified-brand:focus {
   background-color: white; }
 
 /* Over menu */
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbarModified-default .navbarModified-nav > li > a:hover, .navbarModified-default .navbarModified-nav > li > a:focus {
   color: white; }
 
 /* Active - hover and normal state of menu btn */
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbarModified-default .navbarModified-nav > .active > a, .navbarModified-default .navbarModified-nav > .active > a:hover, .navbarModified-default .navbarModified-nav > .active > a:focus {
   border-bottom: 0;
   background-color: white;
   color: #5ba539; }
 
-.navbar-header {
+.navbarModified-header {
   background-color: whitesmoke; }
 
-.navbar-default .navbar-toggle {
+.navbarModified-default .navbarModified-toggle {
   border-color: transparent; }
 
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+.navbarModified-default .navbarModified-toggle:focus, .navbarModified-default .navbarModified-toggle:hover {
   background-color: transparent; }
 
-.navbar-collapse {
+.navbarModified-collapse {
   border-top: 0; }
-  .navbar-collapse .navbar-nav {
+  .navbarModified-collapse .navbarModified-nav {
     margin-top: 0; }
-    .navbar-collapse .navbar-nav .dropdown.open {
+    .navbarModified-collapse .navbarModified-nav .dropdown.open {
       background-color: #f9f6ee; }
 
 .container {
   background-color: white; }
 
-.navbar .container {
+.navbarModified .container {
   background-color: transparent; }
 
-.fx-menu .navbar-right > li {
+.fx-menu .navbarModified-right > li {
   border-right: 0;
   height: 50px;
   width: 50px;
@@ -2613,13 +2616,13 @@ input[type="checkbox"]:checked + label {
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto; }
 
-/*//////////////////////////////////////////// Navbar Media queries */
+/*//////////////////////////////////////////// navbarModified Media queries */
 @media (min-width: 768px) and (max-width: 990px) {
-  .navbar-nav.fx-ul > li > a {
+  .navbarModified-nav.fx-ul > li > a {
     font-size: 80%;
     padding: 15px 7px; } }
 @media (max-width: 767px) {
-  .navbar-default .navbar-nav > li > a:before {
+  .navbarModified-default .navbarModified-nav > li > a:before {
     display: none; }
 
   #login {
@@ -3185,7 +3188,7 @@ input[type="checkbox"]:checked + label {
 .afo-comp-timerange .afo-title-gray {
   margin-top: 0; }
 
-/*//////////////////////////////////////////// Navbar Media queries */
+/*//////////////////////////////////////////// navbarModified Media queries */
 @media (max-width: 767px) {
   .afo-prices-international-chart {
     padding-left: 0px; }
