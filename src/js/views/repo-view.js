@@ -141,8 +141,8 @@ define([
 					
 
 					$("#txtSearch").on("input" ,function(){
-		$(".afo-category-list-li").removeClass("active");
-		$(".afo-category-list-li").addClass("noactive");
+		$(".category-list-li").removeClass("active");
+		$(".category-list-li").addClass("noactive");
 		getData(Config.queries.pubs_reformat+" where upper(description) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(title) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(author_name) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(source) like '%"+this.value.toUpperCase().split(" ").join("%")+"%'");
 		
 		Config.queries.pubs_reformat2=Config.queries.pubs_reformat+" where upper(description) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(title) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(author_name) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' or upper(source) like '%"+this.value.toUpperCase().split(" ").join("%")+"%' "
@@ -154,9 +154,10 @@ define([
 		});*/
 		
 		
-		$(".afo-category-list-li").click(function(){
-		$(".afo-category-list-li").removeClass("active");
-		$(".afo-category-list-li").addClass("noactive");
+		$(".category-list-li").click(function(){
+			console.log('ole');
+		$(".category-list-li").removeClass("active");
+		$(".category-list-li").addClass("noactive");
 		//console.log(this.innerHTML)
 		document.getElementById("txtSearch").value="";
 		var tempCategory = $(this).attr('cat');
@@ -172,7 +173,7 @@ define([
 		Config.queries.pubs_reformat2=Config.queries.pubs_reformat+" where category = '"+tempCategory+"' ";
 		}
 		//console.log(Config.queries.pubs_reformat+" where upper(category) like '%"+this.innerHTML.toUpperCase()+"%' ")
-		this.className="afo-category-list-li active";
+		this.className="category-list-li active";
 		});
 		
 		$("#mostRecentOreder").click(function(){
