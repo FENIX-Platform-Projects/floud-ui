@@ -33,7 +33,7 @@ define(function () {
             SOCIAL_LINK_TWITTER : "https://twitter.com",
             SOCIAL_LINK_YOUTUBE : "https://youtube.com",
 
-            DOWNLOAD_FILE_SYSTEM_ROOT : 'http://google.com/'
+            DOWNLOAD_FILE_SYSTEM_ROOT : 'http://fenixrepo.fao.org/cdn/data/flude/download/'
 
         };
     });
