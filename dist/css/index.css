@@ -7006,6 +7006,9 @@ body {
 a {
   color: #ec6e00; }
 
+.invi {
+  display: none; }
+
 .truncate {
   min-width: 250px;
   white-space: nowrap;
@@ -7020,7 +7023,6 @@ a {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  height: 25px;
   min-width: 100px;
   padding: 3px 12px;
   font-size: 12px;
@@ -7028,10 +7030,12 @@ a {
   background-color: transparent;
   border: 1px solid #999999;
   color: #999999; }
-  .btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active {
+  .btn:hover, .btn:focus, .btn:active {
     background-color: #f2f2f2;
     border: 1px solid #999999;
     color: #999999; }
+  .btn:visited {
+    background-color: transparent; }
 
 .container {
   background-color: white; }
@@ -7355,66 +7359,13 @@ ul[role="group"] {
 
 /* Third parties */
 /* Pages */
-/* Homepage */
-[data-page='home'] .breadcrumb {
-  opacity: 0; }
-
-.flude {
-  position: relative;
-  top: -1px;
-  left: 23px; }
-
-.flude-logo-holder {
-  margin: 45px 0; }
-
-.flude-logo {
-  width: 257px;
-  height: 63px; }
-
-.flude-small-title {
-  color: #666666 !important;
-  font-size: 10px;
-  margin-top: 30px !important; }
-
-.flude-contact {
-  font-size: 10px !important;
-  padding-left: 10px;
-  border-left: 1px solid #b7d562; }
-
-.flude-title-square {
-  color: #666666 !important;
-  background-color: #b7d562;
-  display: inline-block;
-  padding: 3px 7px; }
-
-.db-updates-list {
-  list-style: none;
-  padding-left: 0;
-  padding-right: 15px; }
-  .db-updates-list li {
-    position: relative;
-    padding: 15px 0 15px 70px;
-    border-bottom: 1px solid #cccccc; }
-    .db-updates-list li:last-child {
-      border-bottom-color: transparent; }
-    .db-updates-list li h3 {
-      margin: 0;
-      color: #666666; }
-    .db-updates-list li .db-update-ico {
-      position: absolute;
-      left: 0;
-      width: 60px;
-      text-align: center;
-      font-size: 45px; }
-    .db-updates-list li .db-update-country {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #999999; }
-    .db-updates-list li .db-update-date {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #b7d562; }
-    .db-updates-list li .db-update-link {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #666666; }
+/* Download */
+.download-item {
+  min-height: 60px;
+  padding: 10px; }
+  .download-item .download-icon {
+    font-size: 35px;
+    margin-left: 15px; }
 
 /* Doc Repo */
 .doc-repo-holder {
@@ -7533,3 +7484,67 @@ ul[role="group"] {
 .doc-repo-sorter .dropdown-menu-right {
   border: 1px solid #cccccc;
   margin: 0; }
+
+.repo-search .btn {
+  height: 25px; }
+
+/* Homepage */
+[data-page='home'] .breadcrumb {
+  opacity: 0; }
+
+.flude {
+  position: relative;
+  top: -1px;
+  width: 100%; }
+
+.flude-logo-holder {
+  margin: 45px 0; }
+
+.flude-logo {
+  width: 257px;
+  height: 63px; }
+
+.flude-small-title {
+  color: #666666 !important;
+  font-size: 10px;
+  margin-top: 30px !important; }
+
+.flude-contact {
+  font-size: 10px !important;
+  padding-left: 10px;
+  border-left: 1px solid #b7d562; }
+
+.flude-title-square {
+  color: #666666 !important;
+  background-color: #b7d562;
+  display: inline-block;
+  padding: 3px 7px; }
+
+.db-updates-list {
+  list-style: none;
+  padding-left: 0;
+  padding-right: 15px; }
+  .db-updates-list li {
+    position: relative;
+    padding: 15px 0 15px 70px;
+    border-bottom: 1px solid #cccccc; }
+    .db-updates-list li:last-child {
+      border-bottom-color: transparent; }
+    .db-updates-list li h3 {
+      margin: 0;
+      color: #666666; }
+    .db-updates-list li .db-update-ico {
+      position: absolute;
+      left: 0;
+      width: 60px;
+      text-align: center;
+      font-size: 45px; }
+    .db-updates-list li .db-update-country {
+      font: normal normal 300 11px/normal "Roboto";
+      color: #999999; }
+    .db-updates-list li .db-update-date {
+      font: normal normal 300 11px/normal "Roboto";
+      color: #b7d562; }
+    .db-updates-list li .db-update-link {
+      font: normal normal 300 11px/normal "Roboto";
+      color: #666666; }
