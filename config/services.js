@@ -1,6 +1,6 @@
 define({
-  "dbName": "africafertilizer",
- "dbName_old": "flude",
+  "dbName_old": "africafertilizer",
+ "dbName": "flude",
   "wdsUrl": "http://faostat3.fao.org/wds/rest/table/json",
  
 

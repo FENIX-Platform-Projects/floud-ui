@@ -30,13 +30,12 @@ define([
 			var sqltmpl, sql;
 
 			if(queryVars) {
-				console.log('un');
+				
 				sqltmpl = _.template(queryTmpl);
 				sql = sqltmpl(queryVars);
 			}
 			else{
 
-				console.log('deux',queryTmpl);
 			sql = queryTmpl;
 			}
 			var	data = {
@@ -144,19 +143,9 @@ define([
         template: template,
 
         getTemplateData: function () {
-			
-			
-		
-	
-			
-			getData(Config.queries.events_reformat);
+				getData(Config.queries.events_reformat);
 			Config.queries.events_reformat2=Config.queries.events_reformat;
-
-			
-			
-			
-			
-            return i18nLabels;
+  return i18nLabels;
         },
 
         attach: function () {
@@ -188,7 +177,7 @@ $("#txtSearch").on("input" ,function(){
 	//console.log(this.innerHTML)
 	document.getElementById("txtSearch").value="";
 	var tempCategory = $(this).attr('cat');
-	console.log('tempCategory',tempCategory)
+	
 	if(tempCategory=="All")
 	{
 		getData(Config.queries.events_reformat);
