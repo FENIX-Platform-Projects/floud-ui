@@ -73,11 +73,20 @@ define([
 
 			var idPub = 0;
 
+			var categoy={	"1":"FRA results",
+							"2"	:"Guidelines & definitions",
+							"3"	:"FRA methods & manuals",
+							"4"	:"Planning documents",
+							"5"	:"FRA evaluations",
+							"6"	:"Technical document",
+							"7"	:"Maps"
+						};
+			
 			_.each(json, function(pub2) {
 
 				var pub = {
 					"PublicationId": idPub++,
-					"Category": pub2[0],
+					"Category":categoy[pub2[0]],
 					"PublicationName": pub2[1],
 					"PublicationDescription": pub2[2],
 					"PublicationSource": pub2[5],
@@ -150,7 +159,8 @@ define([
 		$(".afo-category-list-li").addClass("noactive");
 		//console.log(this.innerHTML)
 		document.getElementById("txtSearch").value="";
-		if(this.innerHTML=="All")
+		var tempCategory = $(this).attr('cat');
+		if(tempCategory=="All")
 		{
 			getData(Config.queries.pubs_reformat);
 		Config.queries.pubs_reformat2=Config.queries.pubs_reformat;
@@ -158,8 +168,8 @@ define([
 			
 		}
 		else{
-		getData(Config.queries.pubs_reformat+" where upper(category) like '%"+this.innerHTML.toUpperCase()+"%' ");
-		Config.queries.pubs_reformat2=Config.queries.pubs_reformat+" where upper(category) like '%"+this.innerHTML.toUpperCase()+"%' ";
+		getData(Config.queries.pubs_reformat+" where category = '"+tempCategory+"' ");
+		Config.queries.pubs_reformat2=Config.queries.pubs_reformat+" where category = '"+tempCategory+"' ";
 		}
 		//console.log(Config.queries.pubs_reformat+" where upper(category) like '%"+this.innerHTML.toUpperCase()+"%' ")
 		this.className="afo-category-list-li active";
