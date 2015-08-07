@@ -157,8 +157,8 @@ define([
 				
 $("#txtSearch").on("input" ,function(){
 	console.log('txtSearch');
-	$(".afo-category-list-li").removeClass("active");
-	$(".afo-category-list-li").addClass("noactive");
+	$(".category-list-li").removeClass("active");
+	$(".category-list-li").addClass("noactive");
 	getData(Config.queries.events_reformat+" where description ilike '%"+this.value.split(" ").join("%")+"%' or title ilike '%"+this.value.split(" ").join("%")+"%'");
 	
 	Config.queries.events_reformat2=Config.queries.events_reformat+" where description ilike '%"+this.value.split(" ").join("%")+"%' or title ilike '%"+this.value.split(" ").join("%")+"%' "
@@ -170,10 +170,10 @@ $("#txtSearch").on("input" ,function(){
 	});*/
 	
 	
-	$(".afo-category-list-li").click(function(){
-		console.log('.afo-category-list-li');
-	$(".afo-category-list-li").removeClass("active");
-	$(".afo-category-list-li").addClass("noactive");
+	$(".category-list-li").click(function(){
+		console.log('.category-list-li');
+	$(".category-list-li").removeClass("active");
+	$(".category-list-li").addClass("noactive");
 	//console.log(this.innerHTML)
 	document.getElementById("txtSearch").value="";
 	var tempCategory = $(this).attr('cat');
@@ -189,11 +189,11 @@ $("#txtSearch").on("input" ,function(){
 	Config.queries.events_reformat2=Config.queries.events_reformat+" where category = '"+tempCategory+"' ";
 	}
 	//console.log(Config.queries.events_reformat+" where upper(category) like '%"+this.innerHTML.toUpperCase()+"%' ")
-	this.className="afo-category-list-li active";
+	this.className="category-list-li active";
 	});
 	
 	$("#mostRecentOreder").click(function(){
-		console.log('.afo-category-list-li');
+		console.log('.category-list-li');
 		getData(Config.queries.events_reformat2 +"  order by date_start DESC");
 	
 	});

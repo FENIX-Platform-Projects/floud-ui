@@ -9,16 +9,18 @@
 
   outline: none;
 
-  background-color: $box-bg;
+  background-color: transparent;
+
+  color: $buttons;
 
   @include fx-noshadow;
 
-  border-color: transparent;
-  @include fx-border-radius(5);
+  border-color: $buttons;
+  @include fx-border-radius(0);
   font-weight: 500;
   padding: 3px 12px;
   font-size: 12px;
-  height: 28px;
+  height: 25px;
 
   &:focus{
     @include fx-noshadow;
@@ -30,10 +32,10 @@
 .input-group-btn{
 
   .btn{
-    border-left: 0;
+   // border-left: 0;
 
     &:hover{
-      border-color: transparent;
+      //border-color: transparent;
     }
 
 
