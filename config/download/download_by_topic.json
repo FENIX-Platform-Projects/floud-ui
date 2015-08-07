@@ -1,0 +1,13 @@
+[
+  {
+    "id": "id",
+    "type" : "zip",
+    "title": {
+      "EN": "Title En"
+    },
+    "description" : {
+      "EN": "description En"
+    },
+    "target" : "http://google.com"
+  }
+]

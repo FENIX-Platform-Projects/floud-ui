@@ -1,5 +1,5 @@
 /*global define*/
 define({
-    "title": "analysis",
+    "title": "Analysis",
     "text" : "Change me in 118n/root/analysis.js"
 });
