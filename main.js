@@ -3,8 +3,9 @@
 require([
     './submodules/fenix-ui-common/js/Compiler',
     './submodules/fenix-ui-common/js/paths',
-    './submodules/fenix-ui-menu/js/paths'
-], function (Compiler, Common, Menu) {
+    './submodules/fenix-ui-menu/js/paths',
+    './submodules/fenix-ui-dashboard/src/js/paths'
+], function (Compiler, Common, Menu, Dashboard) {
 
     'use strict';
 
@@ -16,7 +17,10 @@ require([
     var menuConfig = Menu;
     menuConfig.baseUrl = submodules_path + '/fenix-ui-menu/js';
 
-    Compiler.resolve([commonConfig, Menu],
+    var dashboardConfig = Dashboard;
+    dashboardConfig.baseUrl = submodules_path + '/fenix-ui-dashboard/src/js';
+
+    Compiler.resolve([commonConfig, menuConfig, dashboardConfig],
         {
             placeholders: {"FENIX_CDN": "//fenixrepo.fao.org/cdn"},
 
