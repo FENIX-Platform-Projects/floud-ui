@@ -1,10 +1,4 @@
-<!--<div class="row">-->
-    <!--<div class="col-sm-4">-->
-        <!--<h1> {{ home_welcome_title }}</h1>-->
-        <!--<p> {{ text }}</p>-->
-        <!--<p> {{ authentication_credentials }}</p>-->
-    <!--</div>-->
-<!--</div>-->
+
 
 <!-- Logo + Intro text-->
 <div class="row voh-intro-text">
@@ -42,7 +36,8 @@
 
         </div>
 
-        <h2 class="flude-title-square" > Database Update</h2>
+
+<!--        <h2 class="flude-title-square" > Database Update</h2>
         <div class="db-updates-list-holder">
             <ul id="db-updates-list" class="db-updates-list"><li>
                 <div class="db-update-ico"><span class="icojam_geography_globe"></span></div>
@@ -51,21 +46,37 @@
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac nisl ultricies, suscipit est ac, euismod neque. Duis a vulputate orci. </p>
                 <a class="db-update-link">GO TO DOWNLOAD <i class="fa fa-caret-right"></i></a>
             </li></ul>
-        </div>
+        </div>-->
 
-        <h2 class="flude-title-square" > Partners</h2>
-        <div >
-            <img class="img-responsive" src='src/images/partners.png'>
-            <p>
-                <b>FRA</b><br><br>
-                The FAO Global Forest Resources Assessment organizes, collects, analyzes and distributes a broad range of forest resource data in close collaboration with a network of National Correspondents.
-            </p>
+        <h2 class="flude-title-square" >Partners</h2>
+        <div data-role="partners">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active" data-partner='fra'><a href="#partner-fra"  aria-controls="home" role="tab" data-toggle="tab"></a></li>
+                <li role="presentation" data-partner='fe'><a href="#partner-fe"  aria-controls="profile" role="tab" data-toggle="tab"></a></li>
+                <li role="presentation" data-partner='unece'><a href="#partner-unece"  aria-controls="messages" role="tab" data-toggle="tab"></a></li>
+                <li role="presentation" data-partner='mp'><a href="#partner-mp"  aria-controls="settings" role="tab" data-toggle="tab"></a></li>
+                <li role="presentation" data-partner='ofac'><a href="#partner-ofac"  aria-controls="settings" role="tab" data-toggle="tab"></a></li>
+                <li role="presentation" data-partner='itto'><a href="#partner-itto"   aria-controls="settings" role="tab" data-toggle="tab"></a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="partner-fra">{{ home_partner_fra }}</div>
+                <div role="tabpanel" class="tab-pane fade" id="partner-fe">{{ home_partner_fe }}</div>
+                <div role="tabpanel" class="tab-pane fade" id="partner-unece">{{ home_partner_unece }}</div>
+                <div role="tabpanel" class="tab-pane fade" id="partner-mp">{{ home_partner_mp }}</div>
+                <div role="tabpanel" class="tab-pane fade" id="partner-ofac">{{ home_partner_ofac }}</div>
+                <div role="tabpanel" class="tab-pane fade" id="partner-itto">{{ home_partner_itto }}</div>
+            </div>
+
         </div>
 
 
     </div>
     <div class="col-lg-8">
 
-        <img class="img-responsive flude" src='src/images/home-bg.png'>
+        <img class="img-responsive flude" src='src/images/home-bg.jpg'>
     </div>
 </div>

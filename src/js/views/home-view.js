@@ -13,7 +13,9 @@ define([
 
     'use strict';
 
-    var s = { };
+    var s = {
+        PARTNERS : '[data-role="partners"]'
+    };
 
     var HomeView = View.extend({
 
@@ -43,7 +45,10 @@ define([
             this.configurePage();
         },
 
-        initVariables: function () { },
+        initVariables: function () {
+
+            this.$partners = this.$el.find(s.PARTNERS);
+        },
 
         initComponents: function () {
 
@@ -55,6 +60,12 @@ define([
         },
 
         configurePage: function () {
+
+
+            $(document).off('click.bs.tab.data-api', '[data-hover="tab"]');
+            $(document).on('mouseenter.bs.tab.data-api', '[data-toggle="tab"], [data-hover="tab"]', function () {
+                $(this).tab('show');
+            });
 
         },
 

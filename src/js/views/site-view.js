@@ -87,6 +87,8 @@ define([
 
             //Top Menu
             this.topMenu = new Menu(this.authManager.isLogged() ? menuConfAuth : menuConfPub);
+
+
         },
 
         onMenuRendered: function () {
