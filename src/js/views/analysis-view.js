@@ -51,7 +51,7 @@ define([
                 container: s.DASHBOARD_CONTAINER,
 
                 //layout : "fluid",
-                layout : "injected"
+                layout: "injected"
             });
 
         },
@@ -60,44 +60,96 @@ define([
 
             this.fludeDashboard.render({
                 //data cube's uid
-                uid : "FAOSTAT_fertilizer_test",
+                uid: "FAOSTAT_fertilizer_test",
 
                 //data base filter
-                filter : [],
+                filter: [],
 
                 //bridge configuration
-                bridge : {
+                bridge: {
 
-                    type : "d3p"
+                    type: "d3p"
 
                 },
 
                 /*
-                * in case bridge is WDS this is the cube metadata.
-                * if bridge is D3P this is ignored
-                * */
-                metadata : {
-
-                },
+                 * in case bridge is WDS this is the cube metadata.
+                 * if bridge is D3P this is ignored
+                 * */
+                metadata: {},
 
                 items: [
                     {
-                        id: 1,
-                        type : 'chart',
-                        class: "SIMONCINO E DANIELONE",
+                        id: 'timeseries-chart-example',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
                         //needed if layout = injected
-                        container : "#test-1"
+                        container: "#test-1",
+                        config: {
+                            container: "#test-1",
+                            adapter: {
+                                type: "standard",
+                                xDimensions: 'time',
+                                yDimensions: 'Unit',
+                                valueDimensions: 'value',
+                                seriesDimensions: []
+                            },
+                            template: {},
+                            creator: {
+                                chartObj: {
+                                    chart:{
+                                        type: "column"
+                                    },
+                                    tooltip: {
+                                        crosshairs: "mixed",
+                                        shared: true
+                                    }
+                                }
+                            }
+                        }
 
                     },
                     {
-                        id: 2,
-                        type : 'chart',
-                        container : "#test-2"
-                    }, {
-                        id: 3,
-                        type : 'chart',
-                        container : "#test-3"
+                        id: 'fx-table-example',
+                        type: 'table',
+                        class: "fx-table-chart",
+                        //needed if layout = injected
+                        container: "#test-3",
+                        config: {
+                            container: "#test-3"
+                        }
+
+                    },
+                    {
+                        id: 'map-chart-example',
+                        type: 'map',
+                        class: "fx-map-chart",
+                        //needed if layout = injected
+                        container: "#test-2",
+                        config: {
+                            container: "#test-2"
+                        }
+
+                    },
+                    {
+                        id: 'pie-chart-example',
+                        type: 'chart',
+                        class: "fx-pie-chart",
+                        //needed if layout = injected
+                        container: "#test-4",
+                        config: {
+                            container: "#test-4",
+                            adapter: {
+                                type: "pie",
+                                valueDimensions: 'value',
+                                seriesDimensions: []
+                            },
+                            template: {},
+                            creator: { }
+                        }
+
                     }
+
                 ]
             });
 
