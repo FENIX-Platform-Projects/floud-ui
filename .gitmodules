@@ -16,3 +16,6 @@
 [submodule "submodules/fenix-ui-map-creator"]
 	path = submodules/fenix-ui-map-creator
 	url = https://github.com/FENIX-Platform/fenix-ui-map-creator
+[submodule "submodules/fenix-ui-filter"]
+	path = submodules/fenix-ui-filter
+	url = https://github.com/FENIX-Platform/fenix-ui-filter

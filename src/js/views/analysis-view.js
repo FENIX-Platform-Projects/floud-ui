@@ -2,16 +2,20 @@
 define([
     'views/base/view',
     'fx-ds/start',
+    'fx-filter/start',
     'text!templates/analysis/analysis.hbs',
+    //'text!templates/analysis/topics.hbs',
     'i18n!nls/analysis',
+    //'i18n!nls/topics',
     'config/Events',
     'amplify'
-], function (View, Dashboard, template, i18nLabels, E) {
+], function (View, Dashboard, Filter, template, i18nLabels, E) {
 
     'use strict';
 
     var s = {
-        DASHBOARD_CONTAINER: '#dashboard-container'
+        DASHBOARD_CONTAINER: '#dashboard-container',
+        FILTER_CONTAINER: "#filter-container"
     };
 
     var AnalysisView = View.extend({
@@ -54,13 +58,32 @@ define([
                 layout: "injected"
             });
 
+            this.filter = new Filter();
+
+/*
+ this.filter.init({
+                container: s.FILTER_CONTAINER,
+                plugin_prefix: '',
+                layout: 'fluidGrid'
+                //  plugin_subdir: 'FENIX-plugin'
+            });
+*/
+
         },
 
         _renderComponents: function () {
 
+
+            this._renderDashboard();
+
+            //this._renderFilter();
+        },
+
+        _renderDashboard: function () {
+
             this.fludeDashboard.render({
                 //data cube's uid
-                uid: "FAOSTAT_fertilizer_test",
+                uid: "FLUDE_TOPIC_1",
 
                 //data base filter
                 filter: [],
@@ -97,7 +120,7 @@ define([
                             template: {},
                             creator: {
                                 chartObj: {
-                                    chart:{
+                                    chart: {
                                         type: "column"
                                     },
                                     tooltip: {
@@ -106,8 +129,36 @@ define([
                                     }
                                 }
                             }
-                        }
-
+                        },
+                        filter: [
+                            {
+                                "name":"simpleFilter",
+                                "parameters":{
+                                    "filter":{
+                                        "rows":{
+                                            "year":{
+                                                "time":[
+                                                    {
+                                                        "from":2015,
+                                                        "to":2015
+                                                    }
+                                                ]
+                                            },
+                                            "indicator":{
+                                                "codes":[
+                                                    {
+                                                        "uid":"FLUDE_INDICATORS",
+                                                        "codes":[
+                                                            "Forest"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         id: 'fx-table-example',
@@ -117,7 +168,36 @@ define([
                         container: "#test-3",
                         config: {
                             container: "#test-3"
-                        }
+                        },
+                        filter: [
+                            {
+                                "name":"simpleFilter",
+                                "parameters":{
+                                    "filter":{
+                                        "rows":{
+                                            "year":{
+                                                "time":[
+                                                    {
+                                                        "from":2015,
+                                                        "to":2015
+                                                    }
+                                                ]
+                                            },
+                                            "indicator":{
+                                                "codes":[
+                                                    {
+                                                        "uid":"FLUDE_INDICATORS",
+                                                        "codes":[
+                                                            "Forest"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
 
                     },
                     {
@@ -128,7 +208,36 @@ define([
                         container: "#test-2",
                         config: {
                             container: "#test-2"
-                        }
+                        },
+                        filter: [
+                            {
+                                "name":"simpleFilter",
+                                "parameters":{
+                                    "filter":{
+                                        "rows":{
+                                            "year":{
+                                                "time":[
+                                                    {
+                                                        "from":2015,
+                                                        "to":2015
+                                                    }
+                                                ]
+                                            },
+                                            "indicator":{
+                                                "codes":[
+                                                    {
+                                                        "uid":"FLUDE_INDICATORS",
+                                                        "codes":[
+                                                            "Forest"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
 
                     },
                     {
@@ -142,18 +251,107 @@ define([
                             adapter: {
                                 type: "pie",
                                 valueDimensions: 'value',
-                                seriesDimensions: []
+                                seriesDimensions: ['geo']
                             },
                             template: {},
-                            creator: { }
-                        }
+                            creator: {}
+                        },
+                        filter: [
+                            {
+                                "name":"simpleFilter",
+                                "parameters":{
+                                    "filter":{
+                                        "rows":{
+                                            "year":{
+                                                "time":[
+                                                    {
+                                                        "from":2015,
+                                                        "to":2015
+                                                    }
+                                                ]
+                                            },
+                                            "indicator":{
+                                                "codes":[
+                                                    {
+                                                        "uid":"FLUDE_INDICATORS",
+                                                        "codes":[
+                                                            "Forest"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
 
                     }
 
                 ]
             });
 
+        },
+
+        _renderFilter: function () {
+            //FENIX List Example : 1 component "sourceType": "timeList", 1 component "sourceType": "period"
+            var configuration = [
+                {
+                    "containerType": "fluidGridBaseContainer",
+                    "title": "List Test Timelist",
+                    "components": [
+                        {
+                            "componentType": "timeList-FENIX",
+                            "lang": "EN",
+                            "title": {
+                                "EN": "Time List For Fenix",
+                                "ES": "Time List For Fenix",
+                                "DE": "Time List For Fenix",
+                                "FR": "Time List For Fenix"
+                            },
+                            "name": "timeListForFenix",
+                            "component": {
+                                "source": {
+                                    "uid": "GAUL_ReferenceArea",
+                                    "version": "1.0"
+                                },
+                                "sourceType": "timeList",
+                                "defaultsource": [1986, 2015, 1997, 2000, 2002, 2003, 2005, 2007, 2010]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "containerType": "fluidGridBaseContainer",
+                    "title": "List Test Period",
+                    "components": [
+                        {
+                            "componentType": "timeList-FENIX",
+                            "lang": "EN",
+                            "title": {
+                                "EN": "Time List For Fenix",
+                                "ES": "Time List For Fenix",
+                                "DE": "Time List For Fenix",
+                                "FR": "Time List For Fenix"
+                            },
+                            "name": "periodForFenix",
+                            "component": {
+                                "sourceType": "period",
+                                "defaultsource": [{"from": 1983, "to": 1994}, {"from": 1996, "to": 1998}, {
+                                    "from": 2002,
+                                    "to": 2005
+                                }, {"from": 2007, "to": 2011}]
+                            }
+                        }
+                    ]
+                }
+            ];
+            var adapterMap = {};
+
+            this.filter.add(configuration, adapterMap);
+
         }
+
     });
 
     return AnalysisView;
