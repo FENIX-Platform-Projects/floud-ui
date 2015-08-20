@@ -4,24 +4,32 @@ define([
     'fx-ds/start',
     'fx-filter/start',
     'text!templates/analysis/analysis.hbs',
-    'text!templates/analysis/topics.hbs',
+    'text!templates/analysis/topics-flude.hbs',
+    'text!templates/analysis/topics-faostat.hbs',
     'i18n!nls/analysis',
-    'i18n!nls/topics',
+    'i18n!nls/topics-flude',
+    'i18n!nls/topics-faostat',
     'config/Events',
-    'text!config/analysis/lateral-menu.json',
-    'config/analysis/topics',
+    'text!config/analysis/lateral-menu-flude.json',
+    'text!config/analysis/lateral-menu-faostat.json',
+    'config/analysis/topics-flude',
+    'config/analysis/topics-faostat',
     'handlebars',
     'amplify',
     'jstree'
-], function (View, Dashboard, Filter, template, topicsTemplate, i18nLabels, topicLabels, E, LateralMenuConfig, TopicConfig, Handlebars) {
+], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, LateralMenuFludeConfig, LateralMenuFaostatConfig, TopicFludeConfig,TopicFaostatConfig, Handlebars) {
 
     'use strict';
 
     var s = {
-        DASHBOARD_CONTAINER: '#dashboard-container',
-        FILTER_CONTAINER: "#filter-container",
-        LATERAL_MENU: "#lateral-menu",
-        TOPIC_CONTENT: "#topic-content"
+        DASHBOARD_FLUDE_CONTAINER: '#dashboard-flude-container',
+        DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container',
+        FILTER_FLUDE_CONTAINER: "#filter-flude-container",
+        FILTER_FAOSTAT_CONTAINER: "#filter-faostat-container",
+        LATERAL_MENU_FLUDE: "#lateral-menu-flude",
+        LATERAL_MENU_FAOSTAT: "#lateral-menu-faostat",
+        TOPIC_CONTENT_FLUDE: "#topic-content-flude",
+        TOPIC_CONTENT_FAOSTAT: "#topic-content-faostat"
     };
 
     var AnalysisView = View.extend({
@@ -57,9 +65,11 @@ define([
 
         _initVariables: function () {
 
-            this.$lateralMenu = this.$el.find(s.LATERAL_MENU);
+            this.$lateralMenuFlude = this.$el.find(s.LATERAL_MENU_FLUDE);
+            this.$lateralMenuFaostat = this.$el.find(s.LATERAL_MENU_FAOSTAT);
 
-            this.$topicContent = this.$el.find(s.TOPIC_CONTENT);
+            this.$topicContentFlude = this.$el.find(s.TOPIC_CONTENT_FLUDE);
+            this.$topicContentFaostat = this.$el.find(s.TOPIC_CONTENT_FAOSTAT);
 
         },
 
@@ -67,29 +77,53 @@ define([
 
             var self = this;
 
-            this.$lateralMenu.on('changed.jstree', function (e, data) {
+            this.$lateralMenuFlude.on('changed.jstree', function (e, data) {
 
-                self._onTopicChange(data.selected[0]);
+                self._onFludeTopicChange(data.selected[0]);
+            });
+
+            this.$lateralMenuFaostat.on('changed.jstree', function (e, data) {
+
+                self._onFaostatTopicChange(data.selected[0]);
             });
 
         },
 
-        _onTopicChange: function (topic) {
+        _onFludeTopicChange: function (topic) {
 
-            this._showTopic(topic);
+            this._showFludeTopic(topic);
 
         },
 
-        _showTopic: function (topic) {
+        _onFaostatTopicChange: function (topic) {
+
+            this._showFaostatTopic(topic);
+
+        },
+
+        _showFludeTopic: function (topic) {
 
             //Inject HTML
-            var source = $(topicsTemplate).find("[data-topic='" + topic + "']"),
+            var source = $(topicsFludeTemplate).find("[data-topic='" + topic + "']"),
                 template = Handlebars.compile(source.prop('outerHTML')),
-                html = template(topicLabels[topic]);
+                html = template(topicFludeLabels[topic]);
 
-            this.$topicContent.html(html);
+            this.$topicContentFlude.html(html);
 
-            this._renderComponents(topic);
+            this._renderFludeComponents(topic);
+
+        },
+
+        _showFaostatTopic: function (topic) {
+
+            //Inject HTML
+            var source = $(topicsFaostatTemplate).find("[data-topic='" + topic + "']"),
+                template = Handlebars.compile(source.prop('outerHTML')),
+                html = template(topicFaostatLabels[topic]);
+
+            this.$topicContentFaostat.html(html);
+
+            this._renderFaostatComponents(topic);
 
         },
 
@@ -98,17 +132,24 @@ define([
             var self = this;
 
             // Lateral menu
-            this.$lateralMenu.jstree(JSON.parse(LateralMenuConfig))
+            this.$lateralMenuFlude.jstree(JSON.parse(LateralMenuFludeConfig))
                 //select first node
                 .on("ready.jstree", function () {
-                    self.$lateralMenu.jstree(true).select_node('ul > li:first');
-                })
+                    self.$lateralMenuFlude.jstree(true).select_node('ul > li:first');
+                });
+
+            // Lateral menu
+            this.$lateralMenuFaostat.jstree(JSON.parse(LateralMenuFaostatConfig))
+                //select first node
+                .on("ready.jstree", function () {
+                    self.$lateralMenuFaostat.jstree(true).select_node('ul > li:first');
+                });
 
         },
 
-        _renderComponents: function (topic) {
+        _renderFludeComponents: function (topic) {
 
-            var config = TopicConfig[topic];
+            var config = TopicFludeConfig[topic];
 
             if (!config || !config.dashboard || !config.filter) {
                 alert("Impossible to find configuration for topic: " + topic);
@@ -118,12 +159,30 @@ define([
             var dashboardConfig = config.dashboard,
                 filterConfig = config.filter;
 
-            this._renderDashboard(dashboardConfig);
+            this._renderFludeDashboard(dashboardConfig);
 
             //this._renderFilter(filterConfig);
         },
 
-        _renderDashboard: function (config) {
+        _renderFaostatComponents: function (topic) {
+
+            var config = TopicFaostatConfig[topic];
+
+            if (!config || !config.dashboard || !config.filter) {
+                alert("Impossible to find configuration for topic: " + topic);
+                return;
+            }
+
+            var dashboardConfig = config.dashboard,
+                filterConfig = config.filter;
+
+            this._renderFaostatDashboard(dashboardConfig);
+
+            //this._renderFilter(filterConfig);
+        },
+
+
+        _renderFludeDashboard: function (config) {
 
             if (this.fludeDashboard && this.fludeDashboard.destroy) {
                 this.fludeDashboard.destroy();
@@ -132,12 +191,29 @@ define([
             this.fludeDashboard = new Dashboard({
 
                 //Ignored if layout = injected
-                container: s.DASHBOARD_CONTAINER,
-
+                container: s.DASHBOARD_FLUDE_CONTAINER,
                 layout: "injected"
             });
 
             this.fludeDashboard.render(config);
+
+        },
+
+        _renderFaostatDashboard: function (config) {
+
+            if (this.faostatDashboard && this.faostatDashboard.destroy) {
+                this.faostatDashboard.destroy();
+            }
+
+            this.faostatDashboard = new Dashboard({
+
+                //Ignored if layout = injected
+                container: s.DASHBOARD_FAOSTAT_CONTAINER,
+
+                layout: "injected"
+            });
+
+            this.faostatDashboard.render(config);
 
         },
 
