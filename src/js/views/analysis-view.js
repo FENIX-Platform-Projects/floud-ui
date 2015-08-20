@@ -4,18 +4,24 @@ define([
     'fx-ds/start',
     'fx-filter/start',
     'text!templates/analysis/analysis.hbs',
-    //'text!templates/analysis/topics.hbs',
+    'text!templates/analysis/topics.hbs',
     'i18n!nls/analysis',
-    //'i18n!nls/topics',
+    'i18n!nls/topics',
     'config/Events',
-    'amplify'
-], function (View, Dashboard, Filter, template, i18nLabels, E) {
+    'text!config/analysis/lateral-menu.json',
+    'config/analysis/topics',
+    'handlebars',
+    'amplify',
+    'jstree'
+], function (View, Dashboard, Filter, template, topicsTemplate, i18nLabels, topicLabels, E, LateralMenuConfig, TopicConfig, Handlebars) {
 
     'use strict';
 
     var s = {
         DASHBOARD_CONTAINER: '#dashboard-container',
-        FILTER_CONTAINER: "#filter-container"
+        FILTER_CONTAINER: "#filter-container",
+        LATERAL_MENU: "#lateral-menu",
+        TOPIC_CONTENT: "#topic-content"
     };
 
     var AnalysisView = View.extend({
@@ -41,259 +47,116 @@ define([
             //update State
             amplify.publish(E.STATE_CHANGE, {menu: 'analysis'});
 
+            this._initVariables();
+
             this._initComponents();
 
-            this._renderComponents();
+            this._bindEventListeners();
+
+        },
+
+        _initVariables: function () {
+
+            this.$lateralMenu = this.$el.find(s.LATERAL_MENU);
+
+            this.$topicContent = this.$el.find(s.TOPIC_CONTENT);
+
+        },
+
+        _bindEventListeners: function () {
+
+            var self = this;
+
+            this.$lateralMenu.on('changed.jstree', function (e, data) {
+
+                self._onTopicChange(data.selected[0]);
+            });
+
+        },
+
+        _onTopicChange: function (topic) {
+
+            this._showTopic(topic);
+
+        },
+
+        _showTopic: function (topic) {
+
+            //Inject HTML
+            var source = $(topicsTemplate).find("[data-topic='" + topic + "']"),
+                template = Handlebars.compile(source.prop('outerHTML')),
+                html = template(topicLabels[topic]);
+
+            this.$topicContent.html(html);
+
+            this._renderComponents(topic);
 
         },
 
         _initComponents: function () {
+
+            var self = this;
+
+            // Lateral menu
+            this.$lateralMenu.jstree(JSON.parse(LateralMenuConfig))
+                //select first node
+                .on("ready.jstree", function () {
+                    self.$lateralMenu.jstree(true).select_node('ul > li:first');
+                })
+
+        },
+
+        _renderComponents: function (topic) {
+
+            var config = TopicConfig[topic];
+
+            if (!config || !config.dashboard || !config.filter) {
+                alert("Impossible to find configuration for topic: " + topic);
+                return;
+            }
+
+            var dashboardConfig = config.dashboard,
+                filterConfig = config.filter;
+
+            this._renderDashboard(dashboardConfig);
+
+            //this._renderFilter(filterConfig);
+        },
+
+        _renderDashboard: function (config) {
+
+            if (this.fludeDashboard && this.fludeDashboard.destroy) {
+                this.fludeDashboard.destroy();
+            }
 
             this.fludeDashboard = new Dashboard({
 
                 //Ignored if layout = injected
                 container: s.DASHBOARD_CONTAINER,
 
-                //layout : "fluid",
                 layout: "injected"
             });
 
-            this.filter = new Filter();
-
-/*
- this.filter.init({
-                container: s.FILTER_CONTAINER,
-                plugin_prefix: '',
-                layout: 'fluidGrid'
-                //  plugin_subdir: 'FENIX-plugin'
-            });
-*/
+            this.fludeDashboard.render(config);
 
         },
 
-        _renderComponents: function () {
+        _renderFilter: function (config) {
 
 
-            this._renderDashboard();
 
-            //this._renderFilter();
-        },
 
-        _renderDashboard: function () {
 
-            this.fludeDashboard.render({
-                //data cube's uid
-                uid: "FLUDE_TOPIC_1",
 
-                //data base filter
-                filter: [],
+            /*   this.filter = new Filter();
+             this.filter.init({
+             container: s.FILTER_CONTAINER,
+             plugin_prefix: '',
+             layout: 'fluidGrid'
+             //  plugin_subdir: 'FENIX-plugin'
+             });
+             */
 
-                //bridge configuration
-                bridge: {
-
-                    type: "d3p"
-
-                },
-
-                /*
-                 * in case bridge is WDS this is the cube metadata.
-                 * if bridge is D3P this is ignored
-                 * */
-                metadata: {},
-
-                items: [
-                    {
-                        id: 'timeseries-chart-example',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#test-1",
-                        config: {
-                            container: "#test-1",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'time',
-                                yDimensions: 'Unit',
-                                valueDimensions: 'value',
-                                seriesDimensions: []
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        filter: [
-                            {
-                                "name":"simpleFilter",
-                                "parameters":{
-                                    "filter":{
-                                        "rows":{
-                                            "year":{
-                                                "time":[
-                                                    {
-                                                        "from":2015,
-                                                        "to":2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator":{
-                                                "codes":[
-                                                    {
-                                                        "uid":"FLUDE_INDICATORS",
-                                                        "codes":[
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'fx-table-example',
-                        type: 'table',
-                        class: "fx-table-chart",
-                        //needed if layout = injected
-                        container: "#test-3",
-                        config: {
-                            container: "#test-3"
-                        },
-                        filter: [
-                            {
-                                "name":"simpleFilter",
-                                "parameters":{
-                                    "filter":{
-                                        "rows":{
-                                            "year":{
-                                                "time":[
-                                                    {
-                                                        "from":2015,
-                                                        "to":2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator":{
-                                                "codes":[
-                                                    {
-                                                        "uid":"FLUDE_INDICATORS",
-                                                        "codes":[
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-
-                    },
-                    {
-                        id: 'map-chart-example',
-                        type: 'map',
-                        class: "fx-map-chart",
-                        //needed if layout = injected
-                        container: "#test-2",
-                        config: {
-                            container: "#test-2"
-                        },
-                        filter: [
-                            {
-                                "name":"simpleFilter",
-                                "parameters":{
-                                    "filter":{
-                                        "rows":{
-                                            "year":{
-                                                "time":[
-                                                    {
-                                                        "from":2015,
-                                                        "to":2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator":{
-                                                "codes":[
-                                                    {
-                                                        "uid":"FLUDE_INDICATORS",
-                                                        "codes":[
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-
-                    },
-                    {
-                        id: 'pie-chart-example',
-                        type: 'chart',
-                        class: "fx-pie-chart",
-                        //needed if layout = injected
-                        container: "#test-4",
-                        config: {
-                            container: "#test-4",
-                            adapter: {
-                                type: "pie",
-                                valueDimensions: 'value',
-                                seriesDimensions: ['geo']
-                            },
-                            template: {},
-                            creator: {}
-                        },
-                        filter: [
-                            {
-                                "name":"simpleFilter",
-                                "parameters":{
-                                    "filter":{
-                                        "rows":{
-                                            "year":{
-                                                "time":[
-                                                    {
-                                                        "from":2015,
-                                                        "to":2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator":{
-                                                "codes":[
-                                                    {
-                                                        "uid":"FLUDE_INDICATORS",
-                                                        "codes":[
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-
-                    }
-
-                ]
-            });
-
-        },
-
-        _renderFilter: function () {
             //FENIX List Example : 1 component "sourceType": "timeList", 1 component "sourceType": "period"
             var configuration = [
                 {
