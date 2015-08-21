@@ -165,7 +165,7 @@ define(function () {
                                                         ]
                                                     }
                                                 ]
-                                            },
+                                            }
                                         }
                                     }
                                 }
