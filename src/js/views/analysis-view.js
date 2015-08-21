@@ -30,7 +30,8 @@ define([
         LATERAL_MENU_FLUDE: "#lateral-menu-flude",
         LATERAL_MENU_FAOSTAT: "#lateral-menu-faostat",
         TOPIC_CONTENT_FLUDE: "#topic-content-flude",
-        TOPIC_CONTENT_FAOSTAT: "#topic-content-faostat"
+        TOPIC_CONTENT_FAOSTAT: "#topic-content-faostat",
+
     };
 
     var AnalysisView = View.extend({
@@ -71,6 +72,7 @@ define([
 
             this.$topicContentFlude = this.$el.find(s.TOPIC_CONTENT_FLUDE);
             this.$topicContentFaostat = this.$el.find(s.TOPIC_CONTENT_FAOSTAT);
+            this.$topicContentFaostat = this.$el.find(s.TOPIC_CONTENT_FAOSTAT);
 
         },
 
@@ -86,6 +88,20 @@ define([
             this.$lateralMenuFaostat.on('changed.jstree', function (e, data) {
 
                 self._onFaostatTopicChange(data.selected[0]);
+            });
+
+
+            this.$filterFludeFilterBtn = this.$el.find("#filter-flude-btn");
+            console.log(this.$filterFludeFilterBtn.length);
+            this.$filterFludeFilterBtn.on('click', function (e, data) {
+                var filter = {};
+                var values = self.filter.getValues();
+                _.each(values, function(f, key) {
+                    if (values[key].length > 0)
+                        filter[key] = f;
+                });
+                // TODO: it's an array
+                self.fludeDashboard.filter([values]);
             });
 
         },
