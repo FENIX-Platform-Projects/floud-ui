@@ -4,7 +4,69 @@ define(function () {
     return {
 
         "FLUDE_TOPIC_1": {
-            filter: [],
+            filter:  [
+                {
+                    "type" : "static",
+                    "containerType":"fluidGridBaseContainer",
+                    "title":"Year",
+                    "components":[
+                        {
+                            "componentType":"dropDownList",
+                            "lang":"EN",
+                            "title":{"EN":"Year"},
+                            "name":"year",
+                            config:{
+                                "defaultsource":[
+                                    {"value":"2015","label":"2015","selected":false},
+                                    {"value":"2010","label":"2010","selected":false},
+                                    {"value":"2005","label":"2005","selected":false},
+                                    {"value":"2000","label":"2000","selected":false},
+                                    {"value":"1990","label":"1990","selected":false}
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type" : "codelist",
+                    "uid" : "ISO3",
+                    "containerType":"fluidGridBaseContainer",
+                    "title":"Year",
+                    "components":[
+                        {
+                            "componentType":"dropDownList",
+                            "lang":"EN",
+                            "title":{"EN":"Codelist"},
+                            "name":"codelist",
+                            config:{
+                                "defaultsource":[
+
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type" : "distinct",
+                    "uid" : "FLUDE_TOPIC_1",
+                    "column" : "indicator",
+                    "containerType":"fluidGridBaseContainer",
+                    "title":"Year",
+                    "components":[
+                        {
+                            "componentType":"dropDownList",
+                            "lang":"EN",
+                            "title":{"EN":"Distinct"},
+                            "name":"distinct",
+                            config:{
+                                "defaultsource":[
+
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_1",

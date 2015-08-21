@@ -14,17 +14,18 @@ define([
     'text!config/analysis/lateral-menu-faostat.json',
     'config/analysis/topics-flude',
     'config/analysis/topics-faostat',
+    'fx-filter/Fx-filter-configuration-creator',
     'handlebars',
     'amplify',
     'jstree'
-], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, LateralMenuFludeConfig, LateralMenuFaostatConfig, TopicFludeConfig,TopicFaostatConfig, Handlebars) {
+], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, LateralMenuFludeConfig, LateralMenuFaostatConfig, TopicFludeConfig,TopicFaostatConfig, FilterConfCreator, Handlebars) {
 
     'use strict';
 
     var s = {
         DASHBOARD_FLUDE_CONTAINER: '#dashboard-flude-container',
         DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container',
-        FILTER_FLUDE_CONTAINER: "#filter-flude-container",
+        FILTER_FLUDE_CONTAINER: "filter-flude-container",
         FILTER_FAOSTAT_CONTAINER: "#filter-faostat-container",
         LATERAL_MENU_FLUDE: "#lateral-menu-flude",
         LATERAL_MENU_FAOSTAT: "#lateral-menu-faostat",
@@ -161,7 +162,7 @@ define([
 
             this._renderFludeDashboard(dashboardConfig);
 
-            //this._renderFilter(filterConfig);
+            this._renderFludeFilter(filterConfig);
         },
 
         _renderFaostatComponents: function (topic) {
@@ -180,7 +181,6 @@ define([
 
             //this._renderFilter(filterConfig);
         },
-
 
         _renderFludeDashboard: function (config) {
 
@@ -217,77 +217,27 @@ define([
 
         },
 
-        _renderFilter: function (config) {
+        _renderFludeFilter: function (config) {
 
+            var self = this;
 
+            this.filterConfCreator = new FilterConfCreator();
 
+            this.filterConfCreator.getConfiguration(config)
+                .then(function (c) {
 
+                    self.filter = new Filter();
 
+                    self.filter.init({
+                        container: s.FILTER_FLUDE_CONTAINER,
+                        layout: 'fluidGrid'
+                    });
 
-            /*   this.filter = new Filter();
-             this.filter.init({
-             container: s.FILTER_CONTAINER,
-             plugin_prefix: '',
-             layout: 'fluidGrid'
-             //  plugin_subdir: 'FENIX-plugin'
-             });
-             */
+                    var adapterMap = {};
 
-            //FENIX List Example : 1 component "sourceType": "timeList", 1 component "sourceType": "period"
-            var configuration = [
-                {
-                    "containerType": "fluidGridBaseContainer",
-                    "title": "List Test Timelist",
-                    "components": [
-                        {
-                            "componentType": "timeList-FENIX",
-                            "lang": "EN",
-                            "title": {
-                                "EN": "Time List For Fenix",
-                                "ES": "Time List For Fenix",
-                                "DE": "Time List For Fenix",
-                                "FR": "Time List For Fenix"
-                            },
-                            "name": "timeListForFenix",
-                            "component": {
-                                "source": {
-                                    "uid": "GAUL_ReferenceArea",
-                                    "version": "1.0"
-                                },
-                                "sourceType": "timeList",
-                                "defaultsource": [1986, 2015, 1997, 2000, 2002, 2003, 2005, 2007, 2010]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "containerType": "fluidGridBaseContainer",
-                    "title": "List Test Period",
-                    "components": [
-                        {
-                            "componentType": "timeList-FENIX",
-                            "lang": "EN",
-                            "title": {
-                                "EN": "Time List For Fenix",
-                                "ES": "Time List For Fenix",
-                                "DE": "Time List For Fenix",
-                                "FR": "Time List For Fenix"
-                            },
-                            "name": "periodForFenix",
-                            "component": {
-                                "sourceType": "period",
-                                "defaultsource": [{"from": 1983, "to": 1994}, {"from": 1996, "to": 1998}, {
-                                    "from": 2002,
-                                    "to": 2005
-                                }, {"from": 2007, "to": 2011}]
-                            }
-                        }
-                    ]
-                }
-            ];
-            var adapterMap = {};
+                    self.filter.add(c, adapterMap);
 
-            this.filter.add(configuration, adapterMap);
+            });
 
         }
 
