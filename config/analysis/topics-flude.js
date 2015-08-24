@@ -65,6 +65,7 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
+                                    //{"value": null, "label": "All", "selected": true, "removeFilter": true},
                                 ]
                             }
                         }
