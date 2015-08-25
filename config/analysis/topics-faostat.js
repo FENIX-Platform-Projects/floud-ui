@@ -5,87 +5,8 @@ define(function () {
 
         "FLUDE_TOPIC_1": {
             filter: [],
-            dashboard: {
-                //data cube's uid
-                uid: "FLUDE_TOPIC_1",
+            dashboard: {}
 
-                //data base filter
-                filter: [],
-
-                //bridge configuration
-                bridge: {
-
-                    type: "d3p"
-
-                },
-
-                /*
-                 * in case bridge is WDS this is the cube metadata.
-                 * if bridge is D3P this is ignored
-                 * */
-                metadata: {},
-
-                items: [
-                    {
-                        id: 'timeseries-chart-example',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#test-1",
-                        config: {
-                            container: "#test-1",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'time',
-                                yDimensions: 'element',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['country']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    }
-                                }
-                            }
-                        },
-                        filter: [
-                            {
-                                "name": "simpleFilter",
-                                "parameters": {
-                                    "filter": {
-                                        "rows": {
-                                            "year": {
-                                                "time": [
-                                                    {
-                                                        "from": 2015,
-                                                        "to": 2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator": {
-                                                "codes": [
-                                                    {
-                                                        "uid": "FLUDE_INDICATORS",
-                                                        "codes": [
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    },
-                                    "order": {
-                                        "country": "ASC"
-                                    }
-                                }
-                            }
-
-                        ]
-                    }
-                ]
-            }
         },
 
         "FLUDE_TOPIC_2": {
