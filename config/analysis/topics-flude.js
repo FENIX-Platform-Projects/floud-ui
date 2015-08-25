@@ -102,7 +102,7 @@ define(function () {
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             "title": {"EN": "Codelist"},
-                            "name": "subregions",
+                            "name": "subregion",
                             config: {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
@@ -132,22 +132,22 @@ define(function () {
                  * */
                 metadata: {},
 
-                items: [{
-                    id: 'topic_map',
-                    type: 'map',
-                    class: "fx-map-chart",
-                    //needed if layout = injected
-                    container: "#topic_map",
-                    config: {
-                        container: "#topic_map"
-                    },
-                    // for now it takes the id, TODO: add uid as well
-                    allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregions'],
-                    filter: [
-                            {
-                                "name": "simpleFilter",
-                                "parameters": {
-                                    "filter": {
+                items: [
+                    {
+                        id: 'topic_map',
+                        type: 'map',
+                        class: "fx-map-chart",
+                        //needed if layout = injected
+                        container: "#map",
+                        config: {
+                            container: "#map"
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
+                        filter: [
+                                {
+                                    "name": "filter",
+                                    "parameters": {
                                         "rows": {
                                             "year": {
                                                 "time": [
@@ -170,68 +170,158 @@ define(function () {
                                         }
                                     }
                                 }
+                        ]
+                    },
+                    {
+                        id: 'timeserie',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
+                        //needed if layout = injected
+                        container: "#timeserie",
+                        config: {
+                            container: "#timeserie",
+                            adapter: {
+                                type: "standard",
+                                xDimensions: 'time',
+                                yDimensions: 'element',
+                                valueDimensions: 'value',
+                                seriesDimensions: ['country']
+                            },
+                            template: {
+                                "title": "Top 10..."
+                            },
+                            creator: {
+                                chartObj: {
+                                    chart: {
+                                        type: "column"
+                                    }
+                                }
+                            }
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 2015,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name" : "order",
+                                "parameters" : {
+                                    "value" : "DESC"
+                                }
+                            },
+                            {
+                                "name" : "page",
+                                "parameters" : {
+                                    "perPage" : 10,
+                                    "page" : 1
+                                }
                             }
                         ]
-
                     },
-                    //{
-                    //    id: 'timeseries-chart-example',
-                    //    type: 'chart',
-                    //    class: "fx-timeseries-ecample",
-                    //    //needed if layout = injected
-                    //    container: "#test-1",
-                    //    config: {
-                    //        container: "#test-1",
-                    //        adapter: {
-                    //            type: "standard",
-                    //            xDimensions: 'time',
-                    //            yDimensions: 'element',
-                    //            valueDimensions: 'value',
-                    //            seriesDimensions: ['country']
-                    //        },
-                    //        template: {},
-                    //        creator: {
-                    //            chartObj: {
-                    //                chart: {
-                    //                    type: "column"
-                    //                }
-                    //            }
-                    //        }
-                    //    },
-                    //    filter: [
-                    //        {
-                    //            "name": "simpleFilter",
-                    //            "parameters": {
-                    //                "filter": {
-                    //                    "rows": {
-                    //                        "year": {
-                    //                            "time": [
-                    //                                {
-                    //                                    "from": 2015,
-                    //                                    "to": 2015
-                    //                                }
-                    //                            ]
-                    //                        },
-                    //                        "indicator": {
-                    //                            "codes": [
-                    //                                {
-                    //                                    "uid": "FLUDE_INDICATORS",
-                    //                                    "codes": [
-                    //                                        "Forest"
-                    //                                    ]
-                    //                                }
-                    //                            ]
-                    //                        }
-                    //                    }
-                    //                },
-                    //                "order": {
-                    //                    "country": "ASC"
-                    //                }
-                    //            }
-                    //        }
-                    //
-                    //    ]
-                    //}
+                    {
+                        id: 'regions',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
+                        //needed if layout = injected
+                        container: "#regions",
+                        config: {
+                            container: "#regions",
+                            adapter: {
+                                type: "standard",
+                                xDimensions: 'year',
+                                yDimensions: 'indicator',
+                                valueDimensions: 'value',
+                                seriesDimensions: ['region']
+                            },
+                            template: {
+                                "title": "Regions"
+                            },
+                            creator: {
+                                chartObj: {
+                                    chart: {
+                                        type: "line"
+                                    },
+                                    tooltip: {
+                                        crosshairs: "mixed",
+                                        shared: true
+                                    }
+                                }
+                            }
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['indicator'],
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 1990,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name" : "group",
+                                "parameters" : {
+                                    "by" : [
+                                        "region", "year", "indicator"
+                                    ],
+                                    "aggregations" : [
+                                        {
+                                            "columns" : ["value"],
+                                            "rule" : "AVG"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name" : "order",
+                                "parameters" : {
+                                    "region" : "ASC",
+                                    "year" : "ASC"
+                                }
+                            }
+                        ]
+                    }
                 ]
             }
         },
