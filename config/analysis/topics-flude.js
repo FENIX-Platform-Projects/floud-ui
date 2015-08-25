@@ -334,7 +334,7 @@ define(function () {
                                 xDimensions: 'year',
                                 yDimensions: 'indicator',
                                 valueDimensions: 'value',
-                                seriesDimensions: ['region']
+                                seriesDimensions: ['subregion']
                             },
                             template: {
                             },
@@ -382,7 +382,7 @@ define(function () {
                                 "name" : "group",
                                 "parameters" : {
                                     "by" : [
-                                        "region", "year", "indicator"
+                                        "subregion", "year", "indicator"
                                     ],
                                     "aggregations" : [
                                         {
@@ -395,7 +395,167 @@ define(function () {
                             {
                                 "name" : "order",
                                 "parameters" : {
-                                    "region" : "ASC",
+                                    "subregion" : "ASC",
+                                    "year" : "ASC"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: 'item-5',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
+                        //needed if layout = injected
+                        container: "#item-5",
+                        config: {
+                            container: "#item-5",
+                            adapter: {
+                                type: "standard",
+                                xDimensions: 'year',
+                                yDimensions: 'indicator',
+                                valueDimensions: 'value',
+                                seriesDimensions: ['domain']
+                            },
+                            template: {
+                            },
+                            creator: {
+                                chartObj: {
+                                    chart: {
+                                        type: "column"
+                                    },
+                                    tooltip: {
+                                        crosshairs: "mixed",
+                                        shared: true
+                                    }
+                                }
+                            }
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['indicator'],
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 1990,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name" : "group",
+                                "parameters" : {
+                                    "by" : [
+                                        "domain", "year", "indicator"
+                                    ],
+                                    "aggregations" : [
+                                        {
+                                            "columns" : ["value"],
+                                            "rule" : "AVG"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name" : "order",
+                                "parameters" : {
+                                    "domain" : "ASC",
+                                    "year" : "ASC"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: 'item-6',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
+                        //needed if layout = injected
+                        container: "#item-6",
+                        config: {
+                            container: "#item-6",
+                            adapter: {
+                                type: "standard",
+                                xDimensions: 'year',
+                                yDimensions: 'indicator',
+                                valueDimensions: 'value',
+                                seriesDimensions: ['incomes']
+                            },
+                            template: {
+                            },
+                            creator: {
+                                chartObj: {
+                                    chart: {
+                                        type: "column"
+                                    },
+                                    tooltip: {
+                                        crosshairs: "mixed",
+                                        shared: true
+                                    }
+                                }
+                            }
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['indicator'],
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 1990,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "name" : "group",
+                                "parameters" : {
+                                    "by" : [
+                                        "incomes", "year", "indicator"
+                                    ],
+                                    "aggregations" : [
+                                        {
+                                            "columns" : ["value"],
+                                            "rule" : "AVG"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "name" : "order",
+                                "parameters" : {
+                                    "incomes" : "ASC",
                                     "year" : "ASC"
                                 }
                             }
