@@ -134,13 +134,13 @@ define(function () {
 
                 items: [
                     {
-                        id: 'topic_map',
+                        id: 'item-1',
                         type: 'map',
                         class: "fx-map-chart",
                         //needed if layout = injected
-                        container: "#map",
+                        container: "#item-1",
                         config: {
-                            container: "#map"
+                            container: "#item-1"
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -173,13 +173,13 @@ define(function () {
                         ]
                     },
                     {
-                        id: 'timeserie',
+                        id: 'item-2',
                         type: 'chart',
                         class: "fx-timeseries-ecample",
                         //needed if layout = injected
-                        container: "#timeserie",
+                        container: "#item-2",
                         config: {
-                            container: "#timeserie",
+                            container: "#item-2",
                             adapter: {
                                 type: "standard",
                                 xDimensions: 'time',
@@ -242,13 +242,13 @@ define(function () {
                         ]
                     },
                     {
-                        id: 'regions',
+                        id: 'item-3',
                         type: 'chart',
                         class: "fx-timeseries-ecample",
                         //needed if layout = injected
-                        container: "#regions",
+                        container: "#item-3",
                         config: {
-                            container: "#regions",
+                            container: "#item-3",
                             adapter: {
                                 type: "standard",
                                 xDimensions: 'year',
