@@ -154,10 +154,6 @@ define(function () {
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
-                        forbiddenValues: {
-                            year: {time:[{from: 2015, to: 2015}]},
-                            domain: {removeFilter: true}
-                        },
                         filter: [
                                 {
                                     "name": "filter",
