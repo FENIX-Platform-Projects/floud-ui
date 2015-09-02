@@ -5205,7 +5205,7 @@ button_new_2:before {
 /* Fenix Typography */
 body {
   color: #666666;
-  font: normal normal 300 12px/normal "Roboto"; }
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 a {
   color: #b7d562; }
@@ -5272,7 +5272,7 @@ input[type="button"]::-moz-focus-inner {
   background-color: #b7d562;
   color: white;
   border-color: transparent;
-  font: normal normal 300 12px/normal "Roboto"; }
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
   .btn:hover {
     background-color: transparent;
     color: #b7d562;
@@ -5289,7 +5289,7 @@ input[type="button"]::-moz-focus-inner {
   background-color: transparent;
   color: #666666;
   border-color: transparent;
-  font: normal normal 300 12px/normal "Roboto"; }
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
   .fx-button-reset:hover {
     background-color: transparent;
     color: #666666;
@@ -5633,7 +5633,7 @@ input[type=text]::-ms-clear {
 
 /* Fenix - Labels Component */
 label {
-  font: normal normal 300 12px/normal "Roboto"; }
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 /* Fenix - Legend Component */
 legend {
@@ -5820,7 +5820,7 @@ div[data-module="sector"] .fx-catalog-modular-form-content {
     background-color: transparent;
     color: #666666;
     border-color: transparent;
-    font: normal normal 300 12px/normal "Roboto";
+    font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
     text-align: left;
     position: relative; }
     .panel-group .panel-body .btn:hover {
@@ -6732,7 +6732,7 @@ input[type="checkbox"]:checked + label {
 
 /* Fenix - JQwidgets */
 .jqx-widget {
-  font: normal normal 300 12px/normal "Roboto"; }
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 .jqx-widget-content {
   color: #666666;
@@ -7604,123 +7604,6 @@ ul[role="group"] {
 
 /* Third parties */
 /* Pages */
-/* Homepage */
-[data-page='home'] .container-breadcrumb {
+/* Home */
+#side-faostat {
   display: none; }
-
-.flude {
-  position: relative;
-  width: 100%; }
-
-.flude-logo-holder {
-  margin: 45px 0; }
-
-.flude-logo {
-  width: 257px;
-  height: 63px; }
-
-.flude-small-title {
-  color: #666666 !important;
-  font-size: 10px;
-  margin-top: 30px !important; }
-
-.flude-contact {
-  font-size: 10px !important;
-  padding-left: 10px;
-  border-left: 1px solid #b7d562; }
-
-.flude-title-square {
-  color: #666666 !important;
-  background-color: #b7d562;
-  display: inline-block;
-  padding: 3px 7px; }
-
-.db-updates-list {
-  list-style: none;
-  padding-left: 0;
-  padding-right: 15px; }
-  .db-updates-list li {
-    position: relative;
-    padding: 15px 0 15px 70px;
-    border-bottom: 1px solid #cccccc; }
-    .db-updates-list li:last-child {
-      border-bottom-color: transparent; }
-    .db-updates-list li h3 {
-      margin: 0;
-      color: #666666; }
-    .db-updates-list li .db-update-ico {
-      position: absolute;
-      left: 0;
-      width: 60px;
-      text-align: center;
-      font-size: 45px; }
-    .db-updates-list li .db-update-country {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #999999; }
-    .db-updates-list li .db-update-date {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #b7d562; }
-    .db-updates-list li .db-update-link {
-      font: normal normal 300 11px/normal "Roboto";
-      color: #666666; }
-
-[data-role='partners'] .nav-tabs {
-  border-color: transparent; }
-
-.nav-tabs > li > a {
-  background-color: transparent;
-  border-color: transparent; }
-  .nav-tabs > li > a:link, .nav-tabs > li > a:visited, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li > a:active {
-    background-color: transparent;
-    border-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-.nav-tabs > li.active > a {
-  background-color: transparent;
-  border-color: transparent; }
-  .nav-tabs > li.active > a:link, .nav-tabs > li.active > a:visited, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:active {
-    background-color: transparent;
-    border-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-
-[data-partner] {
-  width: 16.6%; }
-  [data-partner] a {
-    height: 50px;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; }
-
-[data-partner='fra'] a {
-  background-image: url("../../src/images/partners/fra-off.png"); }
-[data-partner='fra'].active > a {
-  background-image: url("../../src/images/partners/fra.png"); }
-
-[data-partner='fe'] a {
-  background-image: url("../../src/images/partners/fe-off.png"); }
-[data-partner='fe'].active > a {
-  background-image: url("../../src/images/partners/fe.png"); }
-
-[data-partner='unece'] a {
-  background-image: url("../../src/images/partners/unece-off.png"); }
-[data-partner='unece'].active > a {
-  background-image: url("../../src/images/partners/unece.png"); }
-
-[data-partner='mp'] a {
-  background-image: url("../../src/images/partners/mp-off.png"); }
-[data-partner='mp'].active > a {
-  background-image: url("../../src/images/partners/mp.png"); }
-
-[data-partner='ofac'] a {
-  background-image: url("../../src/images/partners/ofac-off.png"); }
-[data-partner='ofac'].active > a {
-  background-image: url("../../src/images/partners/ofac.png"); }
-
-[data-partner='itto'] a {
-  background-image: url("../../src/images/partners/itto-off.png"); }
-[data-partner='itto'].active > a {
-  background-image: url("../../src/images/partners/itto.png"); }
