@@ -10,27 +10,40 @@ define([
     'i18n!nls/topics-flude',
     'i18n!nls/topics-faostat',
     'config/Events',
-    'text!config/analysis/lateral-menu-flude.json',
-    'text!config/analysis/lateral-menu-faostat.json',
+    'text!config/analysis/flude-topics.json',
+    'text!config/analysis/faostat-topics.json',
     'config/analysis/topics-flude',
     'config/analysis/topics-faostat',
     'fx-filter/Fx-filter-configuration-creator',
     'handlebars',
     'amplify',
+    'select2',
     'jstree'
-], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, LateralMenuFludeConfig, LateralMenuFaostatConfig, TopicFludeConfig,TopicFaostatConfig, FilterConfCreator, Handlebars) {
+], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, FludeTopics, FaostatTopics, TopicFludeConfig, TopicFaostatConfig, FilterConfCreator, Handlebars) {
 
     'use strict';
 
     var s = {
+        TOPIC_SELECTOR_FLUDE: "#flude-topic-selector",
+        TOPIC_SELECTOR_FAOSTAT: "#faostat-topic-selector",
+        TOPIC_CONTENT_FLUDE: "#flude-topic-content",
+        TOPIC_CONTENT_FAOSTAT: "#faostat-topic-content",
+        FILTER_OPENER_FAOSTAT: ".filter-opener-faostat",
+        FILTER_OPENER_FLUDE: ".filter-opener-flude",
+        FILTER_CONTAINER_FLUDE: "#filter-container-flude",
+        FILTER_CONTAINER_FAOSTAT: "#filter-container-faostat",
+        FILTER_FLUDE: "filter-flude",
+        FILTER_FAOSTAT: "filter-faostat",
+        FILTER_SUBMIT_FLUDE: "#filter-submit-btn-flude",
+        FILTER_SUBMIT_FAOSTAT: "#filter-submit-btn-faostat",
+
+        SIDE_FLUDE : "#side-flude",
+        SIDE_FAOSTAT : "#side-faostat",
+        TOGGLE_SIDE_FAOSTAT : "#toggle-side-faostat",
+
+
         DASHBOARD_FLUDE_CONTAINER: '#dashboard-flude-container',
-        DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container',
-        FILTER_FLUDE_CONTAINER: "filter-flude-container",
-        FILTER_FAOSTAT_CONTAINER: "#filter-faostat-container",
-        LATERAL_MENU_FLUDE: "#lateral-menu-flude",
-        LATERAL_MENU_FAOSTAT: "#lateral-menu-faostat",
-        TOPIC_CONTENT_FLUDE: "#topic-content-flude",
-        TOPIC_CONTENT_FAOSTAT: "#topic-content-faostat",
+        DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container'
 
     };
 
@@ -67,12 +80,23 @@ define([
 
         _initVariables: function () {
 
-            this.$lateralMenuFlude = this.$el.find(s.LATERAL_MENU_FLUDE);
-            this.$lateralMenuFaostat = this.$el.find(s.LATERAL_MENU_FAOSTAT);
-
+            this.$topicSelectorFlude = this.$el.find(s.TOPIC_SELECTOR_FLUDE);
+            this.$topicSelectorFaostat = this.$el.find(s.TOPIC_SELECTOR_FAOSTAT);
             this.$topicContentFlude = this.$el.find(s.TOPIC_CONTENT_FLUDE);
             this.$topicContentFaostat = this.$el.find(s.TOPIC_CONTENT_FAOSTAT);
-            this.$topicContentFaostat = this.$el.find(s.TOPIC_CONTENT_FAOSTAT);
+
+            this.$filterOpenerFlude = this.$el.find(s.FILTER_OPENER_FLUDE);
+            this.$filterOpenerFaostat = this.$el.find(s.FILTER_OPENER_FAOSTAT);
+            this.$filterContainerFlude = this.$el.find(s.FILTER_CONTAINER_FLUDE);
+            this.$filterContainerFaostat = this.$el.find(s.FILTER_CONTAINER_FAOSTAT);
+
+            this.$filterSubmitFaostat = this.$el.find(s.FILTER_SUBMIT_FAOSTAT);
+            this.$filterSubmitFlude = this.$el.find(s.FILTER_SUBMIT_FLUDE);
+
+            this.$sideFlude = this.$el.find(s.SIDE_FLUDE);
+            this.$sideFaostat = this.$el.find(s.SIDE_FAOSTAT);
+
+            this.$toggleFaostatSideBtn = this.$el.find(s.TOGGLE_SIDE_FAOSTAT);
 
         },
 
@@ -80,28 +104,59 @@ define([
 
             var self = this;
 
-            this.$lateralMenuFlude.on('changed.jstree', function (e, data) {
-
-                self._onFludeTopicChange(data.selected[0]);
+            this.$filterOpenerFlude.on('click', function () {
+                self.$filterContainerFlude.toggle();
             });
 
-            this.$lateralMenuFaostat.on('changed.jstree', function (e, data) {
-
-                self._onFaostatTopicChange(data.selected[0]);
+            this.$filterOpenerFaostat.on('click', function () {
+                self.$filterContainerFaostat.toggle();
             });
 
+            this.$topicSelectorFlude.on("change", function (e) {
+                self._onFludeTopicChange(e.val);
+            });
 
-            this.$filterFludeFilterBtn = this.$el.find("#filter-flude-btn");
-            console.log(this.$filterFludeFilterBtn.length);
-            this.$filterFludeFilterBtn.on('click', function (e, data) {
+            this.$topicSelectorFaostat.on("change", function (e) {
+                self._onFaostatTopicChange(e.val);
+            });
+
+            this.$filterSubmitFaostat.on('click', function (e, data) {
+
                 var filter = {};
-                var values = self.filter.getValues();
-                _.each(values, function(f, key) {
-                    if (values[key].length > 0)
-                        filter[key] = f;
-                });
-                // TODO: it's an array
-                self.fludeDashboard.filter([values]);
+                 var values = self.filterFaostat.getValues();
+                     _.each(values, function(f, key) {
+                     if (values[key].length > 0)
+                     filter[key] = f;
+                 });
+
+                 // TODO: it's an array
+                 self.fludeDashboard.filter([values]);
+            });
+
+            this.$filterSubmitFlude.on('click', function (e, data) {
+
+                var filter = {};
+                 var values = self.filterFlude.getValues();
+                 _.each(values, function(f, key) {
+                 if (values[key].length > 0)
+                 filter[key] = f;
+                 });
+
+
+                 // TODO: it's an array
+                 self.fludeDashboard.filter([values]);
+            });
+
+            this.$toggleFaostatSideBtn.on('click', function () {
+
+                self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
+
+                self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() :  self.$sideFaostat.show();
+
+                $(window).trigger('resize');
+
+                window.dispatchEvent(new Event('resize'));
+
             });
 
         },
@@ -146,21 +201,9 @@ define([
 
         _initComponents: function () {
 
-            var self = this;
+            this.$topicSelectorFlude.select2(JSON.parse(FludeTopics));
 
-            // Lateral menu
-            this.$lateralMenuFlude.jstree(JSON.parse(LateralMenuFludeConfig))
-                //select first node
-                .on("ready.jstree", function () {
-                    self.$lateralMenuFlude.jstree(true).select_node('ul > li:first');
-                });
-
-            // Lateral menu
-            this.$lateralMenuFaostat.jstree(JSON.parse(LateralMenuFaostatConfig))
-                //select first node
-                .on("ready.jstree", function () {
-                    self.$lateralMenuFaostat.jstree(true).select_node('ul > li:first');
-                });
+            this.$topicSelectorFaostat.select2(JSON.parse(FaostatTopics));
 
         },
 
@@ -195,7 +238,7 @@ define([
 
             this._renderFaostatDashboard(dashboardConfig);
 
-            //this._renderFilter(filterConfig);
+            this._renderFaostatFilter(filterConfig);
         },
 
         _renderFludeDashboard: function (config) {
@@ -242,18 +285,42 @@ define([
             this.filterConfCreator.getConfiguration(config)
                 .then(function (c) {
 
-                    self.filter = new Filter();
+                    self.filterFlude = new Filter();
 
-                    self.filter.init({
-                        container: s.FILTER_FLUDE_CONTAINER,
+                    self.filterFlude.init({
+                        container: s.FILTER_FLUDE,
                         layout: 'fluidGrid'
                     });
 
                     var adapterMap = {};
 
-                    self.filter.add(c, adapterMap);
+                    self.filterFlude.add(c, adapterMap);
 
-            });
+                });
+
+        },
+
+        _renderFaostatFilter: function (config) {
+
+            var self = this;
+
+            this.filterConfCreator = new FilterConfCreator();
+
+            this.filterConfCreator.getConfiguration(config)
+                .then(function (c) {
+
+                    self.filterFaostat = new Filter();
+
+                    self.filterFaostat.init({
+                        container: s.FILTER_FAOSTAT,
+                        layout: 'fluidGrid'
+                    });
+
+                    var adapterMap = {};
+
+                    self.filterFaostat.add(c, adapterMap);
+
+                });
 
         }
 

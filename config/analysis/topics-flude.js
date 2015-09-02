@@ -1,11 +1,14 @@
 /*global define*/
 
 define(function () {
+
+    'use strict';
+
     return {
 
         "FLUDE_TOPIC_1": {
             filter: [
-              {
+                {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_1",
                     "column": "indicator",
@@ -66,7 +69,8 @@ define(function () {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ]
+                                ],
+                                "enableMultiselection":true
                             }
                         }
                     ]
@@ -86,7 +90,8 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
-                                ]
+                                ],
+                                "enableMultiselection":true
                             }
                         }
                     ]
@@ -105,8 +110,9 @@ define(function () {
                             "name": "subregion",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    {"value": null, "label": "All", "selected": true}
+                                ],
+                                "enableMultiselection":true
                             }
                         }
                     ]
@@ -145,31 +151,31 @@ define(function () {
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
                         filter: [
-                                {
-                                    "name": "filter",
-                                    "parameters": {
-                                        "rows": {
-                                            "year": {
-                                                "time": [
-                                                    {
-                                                        "from": 2015,
-                                                        "to": 2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator": {
-                                                "codes": [
-                                                    {
-                                                        "uid": "FLUDE_INDICATORS",
-                                                        "codes": [
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 2015,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     }
                                 }
+                            }
                         ]
                     },
                     {
@@ -227,16 +233,16 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "value" : "DESC"
+                                "name": "order",
+                                "parameters": {
+                                    "value": "DESC"
                                 }
                             },
                             {
-                                "name" : "page",
-                                "parameters" : {
-                                    "perPage" : 25,
-                                    "page" : 1
+                                "name": "page",
+                                "parameters": {
+                                    "perPage": 25,
+                                    "page": 1
                                 }
                             }
                         ]
@@ -256,8 +262,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -299,24 +304,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -334,8 +339,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -377,23 +381,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC"
                                 }
                             }
                         ]
@@ -413,8 +417,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['subregion']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -456,24 +459,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "subregion", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "subregion" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "subregion": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -493,8 +496,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['domain']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -536,24 +538,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "domain", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "domain" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "domain": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -573,8 +575,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['incomes']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -616,24 +617,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "incomes", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "incomes" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "incomes": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -651,8 +652,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['subregion']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -694,23 +694,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "subregion", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "subregion" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "subregion": "ASC"
                                 }
                             }
                         ]
@@ -728,8 +728,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['domain']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -771,23 +770,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "domain", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "domain" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "domain": "ASC"
                                 }
                             }
                         ]
@@ -805,8 +804,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['incomes']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -848,23 +846,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "incomes", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "incomes" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "incomes": "ASC"
                                 }
                             }
                         ]
@@ -1097,16 +1095,16 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "value" : "DESC"
+                                "name": "order",
+                                "parameters": {
+                                    "value": "DESC"
                                 }
                             },
                             {
-                                "name" : "page",
-                                "parameters" : {
-                                    "perPage" : 25,
-                                    "page" : 1
+                                "name": "page",
+                                "parameters": {
+                                    "perPage": 25,
+                                    "page": 1
                                 }
                             }
                         ]
@@ -1126,8 +1124,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1169,24 +1166,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -1204,8 +1201,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1247,23 +1243,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC"
                                 }
                             }
                         ]
@@ -1283,8 +1279,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['subregion']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1326,24 +1321,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "subregion", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "subregion" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "subregion": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -1363,8 +1358,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['domain']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1406,24 +1400,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "domain", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "domain" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "domain": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -1443,8 +1437,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['incomes']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1486,24 +1479,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "incomes", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "incomes" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "incomes": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -1521,8 +1514,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['subregion']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1564,23 +1556,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "subregion", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "subregion" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "subregion": "ASC"
                                 }
                             }
                         ]
@@ -1598,8 +1590,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['domain']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1641,23 +1632,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "domain", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "domain" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "domain": "ASC"
                                 }
                             }
                         ]
@@ -1675,8 +1666,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['incomes']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -1718,23 +1708,23 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "incomes", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "incomes" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "incomes": "ASC"
                                 }
                             }
                         ]
@@ -2158,16 +2148,16 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "value" : "DESC"
+                                "name": "order",
+                                "parameters": {
+                                    "value": "DESC"
                                 }
                             },
                             {
-                                "name" : "page",
-                                "parameters" : {
-                                    "perPage" : 25,
-                                    "page" : 1
+                                "name": "page",
+                                "parameters": {
+                                    "perPage": 25,
+                                    "page": 1
                                 }
                             }
                         ]
@@ -2187,8 +2177,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -2230,24 +2219,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -2267,8 +2256,7 @@ define(function () {
                                 valueDimensions: 'value',
                                 seriesDimensions: ['region']
                             },
-                            template: {
-                            },
+                            template: {},
                             creator: {
                                 chartObj: {
                                     chart: {
@@ -2310,24 +2298,24 @@ define(function () {
                                 }
                             },
                             {
-                                "name" : "group",
-                                "parameters" : {
-                                    "by" : [
+                                "name": "group",
+                                "parameters": {
+                                    "by": [
                                         "region", "year", "indicator"
                                     ],
-                                    "aggregations" : [
+                                    "aggregations": [
                                         {
-                                            "columns" : ["value"],
-                                            "rule" : "AVG"
+                                            "columns": ["value"],
+                                            "rule": "AVG"
                                         }
                                     ]
                                 }
                             },
                             {
-                                "name" : "order",
-                                "parameters" : {
-                                    "region" : "ASC",
-                                    "year" : "ASC"
+                                "name": "order",
+                                "parameters": {
+                                    "region": "ASC",
+                                    "year": "ASC"
                                 }
                             }
                         ]
@@ -3407,4 +3395,5 @@ define(function () {
         }
 
     }
+
 });

@@ -1,0 +1,14 @@
+{
+  "multiple" : false,
+  "width" : "99%",
+  "data": [
+    {
+      "id": "FAOSTAT_1",
+      "text": "Example Faostat 1"
+    },
+    {
+      "id": "FAOSTAT_2",
+      "text": "Example Faostat 2"
+    }
+  ]
+}

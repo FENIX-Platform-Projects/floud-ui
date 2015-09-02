@@ -2,16 +2,6 @@
   "items": [
     {
       "attrs": {
-        "id": "home",
-        "class":"home-menu-item"
-      },
-      "target": "#home",
-      "label": {
-        "EN": ""
-      }
-    },
-    {
-      "attrs": {
         "id": "analysis"
       },
       "target": "#analysis",
@@ -26,15 +16,6 @@
       "target": "#download",
       "label": {
         "EN": "Download"
-      }
-    },
-    {
-      "attrs": {
-        "id": "repo"
-      },
-      "target": "#repo",
-      "label": {
-        "EN": "Document Repository"
       }
     }
   ],

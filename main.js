@@ -61,6 +61,7 @@ require([
                     i18n: "{FENIX_CDN}/js/requirejs/plugins/i18n/2.0.4/i18n",
                     text: '{FENIX_CDN}/js/requirejs/plugins/text/2.0.12/text',
                     rsvp: '{FENIX_CDN}/js/rsvp/3.0.17/rsvp',
+                    select2 : '{FENIX_CDN}/js/select2/3.5.4/select2.min',
 
                     amplify: '{FENIX_CDN}/js/amplify/1.1.2/amplify.min',
 
@@ -75,6 +76,9 @@ require([
                 // so we need to use the AMD wrapping of RequireJS
                 shim: {
                     bootstrap: {
+                        deps: ["jquery"]
+                    },
+                    select2: {
                         deps: ["jquery"]
                     },
                     underscore: {

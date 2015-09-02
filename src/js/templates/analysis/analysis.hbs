@@ -2,46 +2,78 @@
 
 <hr>
 
-<div class="row">
-    <div class="col-xs-3">
-        <h2>{{ lateral_menu_flude_title}}</h2>
-
-        <div id="lateral-menu-flude"></div>
-    </div>
-
-    <div class="col-xs-9">
-
-        <div id="filter-flude-container"> Filter container</div>
-
-        <button id="filter-flude-btn" type="button" class="btn btn-primary pull-right" aria-label="Left Align">
-            <span class="glyphicon glyphicon-leaf" aria-hidden="true"> Get Data</span>
-        </button>
-
-        <hr>
-
-        <div id="topic-content-flude">
-
-        </div>
-    </div>
-</div>
-
-<hr>
+<button id="toggle-side-faostat" class="btn btn-default" type="submit">Toggle FAOSTAT</button>
 
 <div class="row">
-    <div class="col-xs-3">
-        <h2>{{ lateral_menu_faostat_title}}</h2>
 
-        <div id="lateral-menu-faostat"></div>
-    </div>
+    <div id="side-flude" class="col-xs-6">
 
-    <div class="col-xs-9">
+        <h1>{{title_flude}}</h1>
 
-        <div id="filter-faostat-container"> Filter container</div>
-
-        <hr>
-
-        <div id="topic-content-faostat">
-
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="flude-topic-selector"></div>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="filter-opener-flude"> {{ filter }}</h2>
+
+                <div id="filter-container-flude">
+                    <div id="filter-flude">
+                    </div>
+                    <button id="filter-submit-btn-flude" class="btn btn-default"> {{filter_btn}}</button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="flude-topic-content">
+                    dashboard
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
+    <div id="side-faostat" class="col-xs-6">
+
+        <h1>{{title_faostat}}</h1>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="faostat-topic-selector"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="filter-opener-faostat"> {{ filter }}</h2>
+
+                <div id="filter-container-faostat">
+
+                    <div id="filter-faostat"></div>
+                    <button id="filter-submit-btn-faostat" class="btn btn-default">{{filter_btn}} </button>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="faostat-topic-content">
+                    dashboard
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
 </div>
