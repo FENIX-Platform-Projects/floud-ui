@@ -52,6 +52,7 @@ define([
 
         initComponents: function () {
 
+            /*
             var self = this,
                 menuConf = {
 
@@ -84,9 +85,10 @@ define([
                     self.topMenu.refresh(menuConfPub);
                 }, this)
             });
+            */
 
             //Top Menu
-            this.topMenu = new Menu(this.authManager.isLogged() ? menuConfAuth : menuConfPub);
+            //this.topMenu = new Menu(this.authManager.isLogged() ? menuConfAuth : menuConfPub);
 
 
         },

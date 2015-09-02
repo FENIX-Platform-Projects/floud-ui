@@ -1,6 +1,6 @@
 {
-  "core": {
     "multiple" : false,
+    "width" : "99%",
     "data": [
       {
         "id": "FLUDE_TOPIC_1",
@@ -39,6 +39,4 @@
         "text": "Annual Data"
       }
     ]
-  },
-  "plugins": ["checkbox", "wholerow"]
 }
