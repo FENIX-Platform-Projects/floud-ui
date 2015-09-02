@@ -15,7 +15,7 @@ define(function () {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_1",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["Forest"],
                     "components": [
@@ -34,7 +34,7 @@ define(function () {
                 },
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -57,7 +57,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -80,7 +80,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -101,7 +101,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
@@ -892,7 +892,7 @@ define(function () {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_2",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["ProdFor"],
                     "components": [
@@ -911,7 +911,7 @@ define(function () {
                 },
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -934,7 +934,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -956,7 +956,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -976,7 +976,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
@@ -1769,7 +1769,7 @@ define(function () {
                         "type": "distinct",
                         "uid": "FLUDE_TOPIC_3",
                         "column": "indicator",
-                        "containerType": "fluidGridBaseContainer",
+                        "containerType": "baseContainer",
                         "title": "Indicator",
                         "defaultCodes": ["InvSppAreaToT"],
                         "components": [
@@ -1788,7 +1788,7 @@ define(function () {
                     },
                     {
                         "type": "static",
-                        "containerType": "fluidGridBaseContainer",
+                        "containerType": "baseContainer",
                         "title": "Year",
                         "components": [
                             {
@@ -1810,7 +1810,7 @@ define(function () {
                     },
                     {
                         "type": "codelist",
-                        "containerType": "fluidGridBaseContainer",
+                        "containerType": "baseContainer",
                         "title": "Domains",
                         "components": [
                             {
@@ -1832,7 +1832,7 @@ define(function () {
                     },
                     {
                         "type": "codelist",
-                        "containerType": "fluidGridBaseContainer",
+                        "containerType": "baseContainer",
                         "title": "Incomes",
                         "components": [
                             {
@@ -1852,7 +1852,7 @@ define(function () {
                     },
                     {
                         "type": "codelist",
-                        "containerType": "fluidGridBaseContainer",
+                        "containerType": "baseContainer",
                         "title": "Subregions",
                         "components": [
                             {
@@ -1954,7 +1954,7 @@ define(function () {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_4",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["SFMpolicN"],
                     "components": [
@@ -1983,7 +1983,7 @@ define(function () {
 
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -2006,7 +2006,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -2027,7 +2027,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -2047,7 +2047,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
