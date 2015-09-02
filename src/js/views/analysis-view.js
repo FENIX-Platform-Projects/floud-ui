@@ -129,24 +129,28 @@ define([
 
                 var filter = {};
                 var values = self.filterFaostat.getValues();
-                _.each(values, function (f, key) {
-                    if (values[key].length > 0)
-                        filter[key] = f;
-                });
+
+                // TODO: funzione per distruggere dashboard e ricrearla con gli items giusti:
+                /*
+                 var filteredConfig = self._getFilteredConfig(values, self.$faostatDashboardConfig);
+                 self._renderFaostatDashboard(filteredConfig);
+                 self.faostatDashboard.filter([values]);
+                 */
 
                 // TODO: it's an array
-                self.fludeDashboard.filter([values]);
+                self.faostatDashboard.filter([values]);
             });
 
             this.$filterSubmitFlude.on('click', function (e, data) {
 
                 var filter = {};
                 var values = self.filterFlude.getValues();
-                _.each(values, function (f, key) {
-                    if (values[key].length > 0)
-                        filter[key] = f;
-                });
-
+                // TODO: funzione per distruggere dashboard e ricrearla con gli items giusti:
+                /*
+                 var filteredConfig = self._getFilteredConfig(values, self.$faostatDashboardConfig);
+                 self._renderFaostatDashboard(filteredConfig);
+                 self.fludeDashboard.filter([values]);
+                 */
 
                 // TODO: it's an array
                 self.fludeDashboard.filter([values]);
@@ -165,6 +169,31 @@ define([
             });
 
         },
+        _getFilteredConfig : function (valuesToFilter, originalConfig) {
+            var filteredConfig = {};
+            $.extend(filteredConfig,originalConfig);
+            var indexItemsToRemove = {};
+            if (valuesToFilter) {
+
+                for (var i = 0, length = filteredConfig.items.length; i < length; i++) {
+                    if (filteredConfig.items[i].forbiddenValues) {
+                        indexItemsToRemove[i] = false;
+                        for (var forbiddenKey in filteredConfig.items[i].forbiddenValues) {
+                            if (valuesToFilter[forbiddenKey] && (_.isEqual(valuesToFilter[forbiddenKey], filteredConfig.items[i].forbiddenValues[forbiddenKey]))) {
+                                indexItemsToRemove[i] = true;
+                            }
+                        }
+                    }
+                }
+            }
+            for(var key in indexItemsToRemove) {
+                if(indexItemsToRemove[key] === true) {
+                    filteredConfig.items.splice(key,1)
+                }
+            }
+            return filteredConfig;
+        },
+
 
         _onFludeTopicChange: function (topic) {
 
@@ -238,10 +267,10 @@ define([
                 return;
             }
 
-            var dashboardConfig = config.dashboard,
-                filterConfig = config.filter;
+            this.$fludeDashboardConfig = config.dashboard
+            var filterConfig = config.filter;
 
-            this._renderFludeDashboard(dashboardConfig);
+            this._renderFludeDashboard(config.dashboard);
 
             this._renderFludeFilter(filterConfig);
         },
@@ -255,10 +284,10 @@ define([
                 return;
             }
 
-            var dashboardConfig = config.dashboard,
-                filterConfig = config.filter;
+            this.$faostatDashboardConfig = config.dashboard
+            var filterConfig = config.filter;
 
-            this._renderFaostatDashboard(dashboardConfig);
+            this._renderFaostatDashboard(config.dashboard);
 
             this._renderFaostatFilter(filterConfig);
         },

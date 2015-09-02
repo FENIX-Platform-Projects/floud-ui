@@ -11,7 +11,7 @@ define(function () {
                 "target" : "o_zip_one.zip"
             },
             filter: [
-              {
+                {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_1",
                     "column": "indicator",
@@ -154,32 +154,36 @@ define(function () {
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
+                        forbiddenValues: {
+                            year: {time:[{from: 2015, to: 2015}]},
+                            domain: {removeFilter: true}
+                        },
                         filter: [
-                                {
-                                    "name": "filter",
-                                    "parameters": {
-                                        "rows": {
-                                            "year": {
-                                                "time": [
-                                                    {
-                                                        "from": 2015,
-                                                        "to": 2015
-                                                    }
-                                                ]
-                                            },
-                                            "indicator": {
-                                                "codes": [
-                                                    {
-                                                        "uid": "FLUDE_INDICATORS",
-                                                        "codes": [
-                                                            "Forest"
-                                                        ]
-                                                    }
-                                                ]
-                                            }
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 2015,
+                                                    "to": 2015
+                                                }
+                                            ]
+                                        },
+                                        "indicator": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_INDICATORS",
+                                                    "codes": [
+                                                        "Forest"
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     }
                                 }
+                            }
                         ]
                     },
                     {
@@ -2122,7 +2126,7 @@ define(function () {
                                             ]
                                         }
                                     },
-                                   "columns":['value']
+                                    "columns":['value']
                                 }
                             }
                         ]
