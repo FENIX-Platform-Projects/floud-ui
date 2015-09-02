@@ -10,6 +10,7 @@ define([
     'i18n!nls/topics-flude',
     'i18n!nls/topics-faostat',
     'config/Events',
+    'config/Config',
     'text!config/analysis/flude-topics.json',
     'text!config/analysis/faostat-topics.json',
     'config/analysis/topics-flude',
@@ -18,8 +19,9 @@ define([
     'handlebars',
     'amplify',
     'select2',
-    'jstree'
-], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, FludeTopics, FaostatTopics, TopicFludeConfig, TopicFaostatConfig, FilterConfCreator, Handlebars) {
+    'jstree',
+    'highcharts-export'
+], function (View, Dashboard, Filter, template, topicsFludeTemplate, topicsFaostatTemplate, i18nLabels, topicFludeLabels, topicFaostatLabels, E, C, FludeTopics, FaostatTopics, TopicFludeConfig, TopicFaostatConfig, FilterConfCreator, Handlebars) {
 
     'use strict';
 
@@ -37,10 +39,11 @@ define([
         FILTER_SUBMIT_FLUDE: "#filter-submit-btn-flude",
         FILTER_SUBMIT_FAOSTAT: "#filter-submit-btn-faostat",
 
-        SIDE_FLUDE : "#side-flude",
-        SIDE_FAOSTAT : "#side-faostat",
-        TOGGLE_SIDE_FAOSTAT : "#toggle-side-faostat",
+        SIDE_FLUDE: "#side-flude",
+        SIDE_FAOSTAT: "#side-faostat",
+        TOGGLE_SIDE_FAOSTAT: "#toggle-side-faostat",
 
+        DOWNLOAD_BTN_FLUDE: "#flude-download",
 
         DASHBOARD_FLUDE_CONTAINER: '#dashboard-flude-container',
         DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container'
@@ -98,6 +101,8 @@ define([
 
             this.$toggleFaostatSideBtn = this.$el.find(s.TOGGLE_SIDE_FAOSTAT);
 
+            this.$downloadBtnFlude = this.$el.find(s.DOWNLOAD_BTN_FLUDE);
+
         },
 
         _bindEventListeners: function () {
@@ -123,35 +128,35 @@ define([
             this.$filterSubmitFaostat.on('click', function (e, data) {
 
                 var filter = {};
-                 var values = self.filterFaostat.getValues();
-                     _.each(values, function(f, key) {
-                     if (values[key].length > 0)
-                     filter[key] = f;
-                 });
+                var values = self.filterFaostat.getValues();
+                _.each(values, function (f, key) {
+                    if (values[key].length > 0)
+                        filter[key] = f;
+                });
 
-                 // TODO: it's an array
-                 self.fludeDashboard.filter([values]);
+                // TODO: it's an array
+                self.fludeDashboard.filter([values]);
             });
 
             this.$filterSubmitFlude.on('click', function (e, data) {
 
                 var filter = {};
-                 var values = self.filterFlude.getValues();
-                 _.each(values, function(f, key) {
-                 if (values[key].length > 0)
-                 filter[key] = f;
-                 });
+                var values = self.filterFlude.getValues();
+                _.each(values, function (f, key) {
+                    if (values[key].length > 0)
+                        filter[key] = f;
+                });
 
 
-                 // TODO: it's an array
-                 self.fludeDashboard.filter([values]);
+                // TODO: it's an array
+                self.fludeDashboard.filter([values]);
             });
 
             this.$toggleFaostatSideBtn.on('click', function () {
 
                 self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
 
-                self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() :  self.$sideFaostat.show();
+                self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
 
                 $(window).trigger('resize');
 
@@ -163,7 +168,15 @@ define([
 
         _onFludeTopicChange: function (topic) {
 
+            this._configureFludeDownload(topic);
+
             this._showFludeTopic(topic);
+
+        },
+
+        _configureFludeDownload: function (topic) {
+
+            this.$downloadBtnFlude.attr("href", C.DOWNLOAD_FILE_SYSTEM_ROOT + TopicFludeConfig[topic].download.target)
 
         },
 
@@ -201,7 +214,16 @@ define([
 
         _initComponents: function () {
 
-            this.$topicSelectorFlude.select2(JSON.parse(FludeTopics));
+            //Flude
+
+            var conf = JSON.parse(FludeTopics);
+
+            this.$topicSelectorFlude.select2(conf);
+
+            this.$topicSelectorFlude.select2('data', conf.data[0]);
+            this._onFludeTopicChange(conf.data[0].id);
+
+            //Faostat
 
             this.$topicSelectorFaostat.select2(JSON.parse(FaostatTopics));
 

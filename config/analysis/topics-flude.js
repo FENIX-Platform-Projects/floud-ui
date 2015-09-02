@@ -1,9 +1,15 @@
 /*global define*/
 
 define(function () {
+
+    'use strict';
+
     return {
 
         "FLUDE_TOPIC_1": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [
               {
                     "type": "distinct",
@@ -66,7 +72,8 @@ define(function () {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ]
+                                ] ,
+                                "enableMultiselection" : true
                             }
                         }
                     ]
@@ -86,7 +93,8 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
-                                ]
+                                ] ,
+                                "enableMultiselection" : true
                             }
                         }
                     ]
@@ -106,12 +114,14 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
-                                ]
+                                ] ,
+                                "enableMultiselection" : true
                             }
                         }
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_1",
@@ -874,6 +884,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_2": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [
                 {
                     "type": "distinct",
@@ -1744,6 +1757,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_3": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter:
 
 
@@ -1927,6 +1943,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_4": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [
 
 
@@ -2114,8 +2133,10 @@ define(function () {
 
         },
 
-
         "FLUDE_TOPIC_5": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [],
             dashboard: {
                 //data cube's uid
@@ -2329,6 +2350,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_6": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [],
             dashboard: {
                 //data cube's uid
@@ -2544,6 +2568,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_7": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [],
             dashboard: {
                 //data cube's uid
@@ -2757,6 +2784,9 @@ define(function () {
         },
 
         "FLUDE_TOPIC_8": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [],
             dashboard: {
                 //data cube's uid
@@ -2972,6 +3002,9 @@ define(function () {
         },
 
         "ANNUAL_DATA": {
+            download: {
+                "target" : "o_zip_one.zip"
+            },
             filter: [],
             dashboard: {
                 //data cube's uid
