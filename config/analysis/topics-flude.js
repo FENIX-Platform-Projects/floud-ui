@@ -2632,7 +2632,7 @@ define(function () {
             },
 
             filter: [
-                 {
+                {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_4",
                     "column": "indicator",
@@ -2853,7 +2853,7 @@ define(function () {
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ] ,
+                                ],
                                 "enableMultiselection": true
                             }
                         }
@@ -2874,7 +2874,7 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
-                                ] ,
+                                ],
                                 "enableMultiselection": true
                             }
                         }
@@ -2895,7 +2895,7 @@ define(function () {
                             config: {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
-                                ] ,
+                                ],
                                 "enableMultiselection": true
                             }
                         }
@@ -2924,7 +2924,7 @@ define(function () {
                 metadata: {},
 
                 items: [
- /*                   {
+                    {
                         id: 'item-1',
                         type: 'map',
                         class: "fx-map-chart",
@@ -3033,7 +3033,7 @@ define(function () {
                                 }
                             }
                         ]
-                    },*/
+                    },
                     {
                         id: 'item-3',
                         type: 'chart',
@@ -3082,7 +3082,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "InvSppAreaToT"
+                                                        "BioCons"
                                                     ]
                                                 }
                                             ]
@@ -3113,7 +3113,7 @@ define(function () {
                             }
                         ]
                     },
-                    /*{
+                    {
                         id: 'item-4',
                         type: 'chart',
                         class: "fx-timeseries-ecample",
@@ -3159,7 +3159,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "InvSppAreaToT"
+                                                        "BioCons"
                                                     ]
                                                 }
                                             ]
@@ -3653,22 +3653,23 @@ define(function () {
                                 }
                             }
                         ]
-                    }*/
-
-
+                    }
                 ]
-
-
             }
         },
 
         "FLUDE_TOPIC_6": {
+
+            download: {
+                "target": "o_zip_one.zip"
+            },
+
             filter: [
                 {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_6",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["SoilWatProt"],
                     "components": [
@@ -3687,7 +3688,7 @@ define(function () {
                 },
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -3710,7 +3711,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -3723,16 +3724,17 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
+                                    //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ]
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -3744,15 +3746,16 @@ define(function () {
                             "name": "incomes",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
@@ -3764,13 +3767,15 @@ define(function () {
                             "name": "subregion",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_6",
@@ -3792,8 +3797,6 @@ define(function () {
                 metadata: {},
 
                 items: [
-
-
                     {
                         id: 'item-1',
                         type: 'map',
@@ -4212,6 +4215,7 @@ define(function () {
                             }
                         ]
                     },
+
                     {
                         id: 'item-7',
                         type: 'chart',
@@ -4367,12 +4371,13 @@ define(function () {
                             }
                         ]
                     },
+
                     {
                         id: 'item-9',
                         type: 'chart',
                         class: "fx-timeseries-ecample",
                         //needed if layout = injected
-                        container: "#item-",
+                        container: "#item-9",
                         config: {
                             container: "#item-9",
                             adapter: {
@@ -4380,7 +4385,7 @@ define(function () {
                                 xDimensions: 'year',
                                 yDimensions: 'indicator',
                                 valueDimensions: 'value',
-                                seriesDimensions: ['income']
+                                seriesDimensions: ['incomes']
                             },
                             template: {},
                             creator: {
@@ -4427,7 +4432,7 @@ define(function () {
                                 "name": "group",
                                 "parameters": {
                                     "by": [
-                                        "income", "year", "indicator"
+                                        "incomes", "year", "indicator"
                                     ],
                                     "aggregations": [
                                         {
@@ -4446,6 +4451,7 @@ define(function () {
                             }
                         ]
                     },
+
                     {
                         id: 'item-10',
                         type: 'chart',
@@ -4457,7 +4463,7 @@ define(function () {
                             adapter: {
                                 type: "pie",
                                 valueDimensions: 'value',
-                                seriesDimensions: ['income']
+                                seriesDimensions: ['incomes']
                             },
                             template: {},
                             creator: {
@@ -4504,7 +4510,7 @@ define(function () {
                                 "name": "group",
                                 "parameters": {
                                     "by": [
-                                        "income", "indicator"
+                                        "incomes", "indicator"
                                     ],
                                     "aggregations": [
                                         {
@@ -4529,12 +4535,17 @@ define(function () {
         },
 
         "FLUDE_TOPIC_7": {
+
+            download: {
+                "target": "o_zip_one.zip"
+            },
+
             filter: [
                 {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_7",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["ForEmpl"],
                     "components": [
@@ -4553,7 +4564,7 @@ define(function () {
                 },
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -4576,7 +4587,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -4589,16 +4600,17 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
+                                    //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ]
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -4610,15 +4622,16 @@ define(function () {
                             "name": "incomes",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
@@ -4630,8 +4643,9 @@ define(function () {
                             "name": "subregion",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
@@ -5394,6 +5408,11 @@ define(function () {
         },
 
         "FLUDE_TOPIC_8": {
+
+            download: {
+                "target": "o_zip_one.zip"
+            },
+
             filter: [
                 {
                     "type": "distinct",
@@ -5418,7 +5437,7 @@ define(function () {
                 },
                 {
                     "type": "static",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Year",
                     "components": [
                         {
@@ -5441,7 +5460,7 @@ define(function () {
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Domains",
                     "components": [
                         {
@@ -5454,16 +5473,17 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
+                                    //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
-                                ]
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Incomes",
                     "components": [
                         {
@@ -5475,15 +5495,16 @@ define(function () {
                             "name": "incomes",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
                 },
                 {
                     "type": "codelist",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Subregions",
                     "components": [
                         {
@@ -5495,8 +5516,9 @@ define(function () {
                             "name": "subregion",
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
-                                ]
+                                    //{"value": null, "label": "All", "selected": true},
+                                ],
+                                "enableMultiselection": true
                             }
                         }
                     ]
@@ -6258,9 +6280,11 @@ define(function () {
         },
 
         "ANNUAL_DATA": {
+
             download: {
                 "target": "o_zip_one.zip"
             },
+
             filter: [],
             dashboard: {
                 //data cube's uid
