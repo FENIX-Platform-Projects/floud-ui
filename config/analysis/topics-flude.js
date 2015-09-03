@@ -4445,7 +4445,7 @@ define(function () {
                             {
                                 "name": "order",
                                 "parameters": {
-                                    "income": "ASC",
+                                    "incomes": "ASC",
                                     "year": "ASC"
                                 }
                             }
@@ -4523,7 +4523,7 @@ define(function () {
                             {
                                 "name": "order",
                                 "parameters": {
-                                    "income": "ASC"
+                                    "incomes": "ASC"
                                 }
                             }
                         ]
@@ -4651,6 +4651,7 @@ define(function () {
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_7",
@@ -5418,7 +5419,7 @@ define(function () {
                     "type": "distinct",
                     "uid": "FLUDE_TOPIC_8",
                     "column": "indicator",
-                    "containerType": "fluidGridBaseContainer",
+                    "containerType": "baseContainer",
                     "title": "Indicator",
                     "defaultCodes": ["PubOwn"],
                     "components": [
@@ -5448,7 +5449,6 @@ define(function () {
                             "name": "year",
                             config: {
                                 "defaultsource": [
-
                                     {"value": "2010", "label": "2010", "selected": true},
                                     {"value": "2005", "label": "2005", "selected": false},
                                     {"value": "2000", "label": "2000", "selected": false},
@@ -5524,6 +5524,7 @@ define(function () {
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_8",
@@ -5545,6 +5546,7 @@ define(function () {
                 metadata: {},
 
                 items: [
+
                     {
                         id: 'item-1',
                         type: 'map',
@@ -5584,695 +5586,699 @@ define(function () {
                             }
                         ]
                     },
-                    {
-                        id: 'item-2',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-2",
-                        config: {
-                            container: "#item-2",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'time',
-                                yDimensions: 'element',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['country']
-                            },
-                            template: {
-                                //"title": "Top 25..."
-                            },
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 1990,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "value": "DESC"
-                                }
-                            },
-                            {
-                                "name": "page",
-                                "parameters": {
-                                    "perPage": 25,
-                                    "page": 1
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-3',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-3",
-                        config: {
-                            container: "#item-3",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'year',
-                                yDimensions: 'indicator',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['region']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 1990,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "region", "year", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "region": "ASC",
-                                    "year": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-4',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-4",
-                        config: {
-                            container: "#item-4",
-                            adapter: {
-                                type: "pie",
-                                valueDimensions: 'value',
-                                seriesDimensions: ['region']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator', 'year'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 2010,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "region", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "region": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-5',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-5",
-                        config: {
-                            container: "#item-5",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'year',
-                                yDimensions: 'indicator',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['subregion']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 1990,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "subregion", "year", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "subregion": "ASC",
-                                    "year": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-6',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-6",
-                        config: {
-                            container: "#item-6",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'year',
-                                yDimensions: 'indicator',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['domain']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 1990,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "domain", "year", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "domain": "ASC",
-                                    "year": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-7',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-7",
-                        config: {
-                            container: "#item-7",
-                            adapter: {
-                                type: "standard",
-                                xDimensions: 'year',
-                                yDimensions: 'indicator',
-                                valueDimensions: 'value',
-                                seriesDimensions: ['incomes']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 1990,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "incomes", "year", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "incomes": "ASC",
-                                    "year": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-8',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-8",
-                        config: {
-                            container: "#item-8",
-                            adapter: {
-                                type: "pie",
-                                valueDimensions: 'value',
-                                seriesDimensions: ['subregion']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator', 'year'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 2010,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "subregion", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "subregion": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-9',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-9",
-                        config: {
-                            container: "#item-9",
-                            adapter: {
-                                type: "pie",
-                                valueDimensions: 'value',
-                                seriesDimensions: ['domain']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator', 'year'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 2010,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "domain", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "domain": "ASC"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: 'item-10',
-                        type: 'chart',
-                        class: "fx-timeseries-ecample",
-                        //needed if layout = injected
-                        container: "#item-10",
-                        config: {
-                            container: "#item-10",
-                            adapter: {
-                                type: "pie",
-                                valueDimensions: 'value',
-                                seriesDimensions: ['incomes']
-                            },
-                            template: {},
-                            creator: {
-                                chartObj: {
-                                    chart: {
-                                        type: "column"
-                                    },
-                                    tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
-                                    }
-                                }
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['indicator', 'year'],
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 2010,
-                                                    "to": 2010
-                                                }
-                                            ]
-                                        },
-                                        "indicator": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_INDICATORS",
-                                                    "codes": [
-                                                        "PubOwn"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "name": "group",
-                                "parameters": {
-                                    "by": [
-                                        "incomes", "indicator"
-                                    ],
-                                    "aggregations": [
-                                        {
-                                            "columns": ["value"],
-                                            "rule": "AVG"
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "order",
-                                "parameters": {
-                                    "incomes": "ASC"
-                                }
-                            }
-                        ]
-                    }
+
+                    /*
+                    *         {
+                     id: 'item-2',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-2",
+                     config: {
+                     container: "#item-2",
+                     adapter: {
+                     type: "standard",
+                     xDimensions: 'time',
+                     yDimensions: 'element',
+                     valueDimensions: 'value',
+                     seriesDimensions: ['country']
+                     },
+                     template: {
+                     //"title": "Top 25..."
+                     },
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 1990,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "value": "DESC"
+                     }
+                     },
+                     {
+                     "name": "page",
+                     "parameters": {
+                     "perPage": 25,
+                     "page": 1
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-3',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-3",
+                     config: {
+                     container: "#item-3",
+                     adapter: {
+                     type: "standard",
+                     xDimensions: 'year',
+                     yDimensions: 'indicator',
+                     valueDimensions: 'value',
+                     seriesDimensions: ['region']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 1990,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "region", "year", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "region": "ASC",
+                     "year": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-4',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-4",
+                     config: {
+                     container: "#item-4",
+                     adapter: {
+                     type: "pie",
+                     valueDimensions: 'value',
+                     seriesDimensions: ['region']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator', 'year'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 2010,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "region", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "region": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-5',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-5",
+                     config: {
+                     container: "#item-5",
+                     adapter: {
+                     type: "standard",
+                     xDimensions: 'year',
+                     yDimensions: 'indicator',
+                     valueDimensions: 'value',
+                     seriesDimensions: ['subregion']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 1990,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "subregion", "year", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "subregion": "ASC",
+                     "year": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-6',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-6",
+                     config: {
+                     container: "#item-6",
+                     adapter: {
+                     type: "standard",
+                     xDimensions: 'year',
+                     yDimensions: 'indicator',
+                     valueDimensions: 'value',
+                     seriesDimensions: ['domain']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 1990,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "domain", "year", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "domain": "ASC",
+                     "year": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-7',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-7",
+                     config: {
+                     container: "#item-7",
+                     adapter: {
+                     type: "standard",
+                     xDimensions: 'year',
+                     yDimensions: 'indicator',
+                     valueDimensions: 'value',
+                     seriesDimensions: ['incomes']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 1990,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "incomes", "year", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "incomes": "ASC",
+                     "year": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-8',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-8",
+                     config: {
+                     container: "#item-8",
+                     adapter: {
+                     type: "pie",
+                     valueDimensions: 'value',
+                     seriesDimensions: ['subregion']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator', 'year'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 2010,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "subregion", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "subregion": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-9',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-9",
+                     config: {
+                     container: "#item-9",
+                     adapter: {
+                     type: "pie",
+                     valueDimensions: 'value',
+                     seriesDimensions: ['domain']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator', 'year'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 2010,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "domain", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "domain": "ASC"
+                     }
+                     }
+                     ]
+                     },
+                     {
+                     id: 'item-10',
+                     type: 'chart',
+                     class: "fx-timeseries-ecample",
+                     //needed if layout = injected
+                     container: "#item-10",
+                     config: {
+                     container: "#item-10",
+                     adapter: {
+                     type: "pie",
+                     valueDimensions: 'value',
+                     seriesDimensions: ['incomes']
+                     },
+                     template: {},
+                     creator: {
+                     chartObj: {
+                     chart: {
+                     type: "column"
+                     },
+                     tooltip: {
+                     crosshairs: "mixed",
+                     shared: true
+                     }
+                     }
+                     }
+                     },
+                     // for now it takes the id, TODO: add uid as well
+                     allowedFilter: ['indicator', 'year'],
+                     filter: [
+                     {
+                     "name": "filter",
+                     "parameters": {
+                     "rows": {
+                     "year": {
+                     "time": [
+                     {
+                     "from": 2010,
+                     "to": 2010
+                     }
+                     ]
+                     },
+                     "indicator": {
+                     "codes": [
+                     {
+                     "uid": "FLUDE_INDICATORS",
+                     "codes": [
+                     "PubOwn"
+                     ]
+                     }
+                     ]
+                     }
+                     }
+                     }
+                     },
+                     {
+                     "name": "group",
+                     "parameters": {
+                     "by": [
+                     "incomes", "indicator"
+                     ],
+                     "aggregations": [
+                     {
+                     "columns": ["value"],
+                     "rule": "AVG"
+                     }
+                     ]
+                     }
+                     },
+                     {
+                     "name": "order",
+                     "parameters": {
+                     "incomes": "ASC"
+                     }
+                     }
+                     ]
+                     }
+                    * */
+
 
                 ]
 
