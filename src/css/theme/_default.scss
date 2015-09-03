@@ -206,7 +206,8 @@ top: 6px;
 
   &:hover,
   &:focus,
-  &:active{
+  &:active,
+  &:visited{
 
     background-color: #3e90d4;
     //border-color: transparent;
@@ -214,9 +215,6 @@ top: 6px;
     color: white;
   }
 
-  &:visited{
-    background-color: transparent;
-  }
 
 }
 

@@ -7338,12 +7338,10 @@ input#toggle-side-faostat:checked + label:after {
   background-color: #4387bf;
   border: 1px solid #3883c0;
   color: white; }
-  .btn:hover, .btn:focus, .btn:active {
+  .btn:hover, .btn:focus, .btn:active, .btn:visited {
     background-color: #3e90d4;
     border: 1px solid #2f7dbe;
     color: white; }
-  .btn:visited {
-    background-color: transparent; }
 
 /* TEMPORARY */
 .btn.btn-default.json-editor-btn-collapse {
