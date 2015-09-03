@@ -46,7 +46,7 @@ h2.filter-opener-faostat{
   position: absolute;
   right: 15px;
   top: 3px;
-  width: 280px;
+  width: 420px;
   height: 46px;
   @include fx-border-radius(5px);
   background-color: white;
@@ -289,7 +289,7 @@ top: 6px;
   font-size: 0 !important;
 
   &:before{
-    content: 'Legenda';
+    content: 'Legend';
     font: $standard-text;
   }
 

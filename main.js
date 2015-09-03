@@ -67,6 +67,8 @@ require([
 
                     'fx-c-c/config/creators/highcharts_template' :'../../config/submodules/fx-chart/highcharts_template',
 
+                    'fx-ds/config/config' : "../../config/submodules/fx-dashboard/config",
+
                     nls: "../../i18n",
                     config: "../../config",
                     json: "../../json",

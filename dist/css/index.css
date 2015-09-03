@@ -7213,7 +7213,7 @@ h2.filter-opener-faostat {
   position: absolute;
   right: 15px;
   top: 3px;
-  width: 280px;
+  width: 420px;
   height: 46px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -7389,7 +7389,7 @@ input#toggle-side-faostat:checked + label:after {
 .fm-legend-layertitle {
   font-size: 0 !important; }
   .fm-legend-layertitle:before {
-    content: 'Legenda';
+    content: 'Legend';
     font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 /* Components */

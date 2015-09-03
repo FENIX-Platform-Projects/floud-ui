@@ -74,7 +74,23 @@ define(function () {
             enabled: false //Attiva o disattiva il link di HighCharts dalla chart
         },
         exporting: {
-            enabled: true
+            buttons: {
+                contextButton: {
+                    menuItems: [{
+                        textKey: 'downloadPNG',
+                        onclick: function () {
+                            this.exportChart();
+                        }
+                    }, {
+                        textKey: 'downloadJPEG',
+                        onclick: function () {
+                            this.exportChart({
+                                type: 'image/jpeg'
+                            });
+                        }
+                    }]
+                }
+            }
         },
         navigation: { //Modifica lo stile dei bottoni e spesso del solo bottone dell'esportazione (lo sfondo)
             buttonOptions: {

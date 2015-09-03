@@ -7,6 +7,7 @@ define(function () {
     return {
 
         "FLUDE_TOPIC_1": {
+
             download: {
                 "target": "o_zip_one.zip"
             },
@@ -357,11 +358,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -670,11 +686,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -746,11 +777,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -822,11 +868,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -880,7 +941,7 @@ define(function () {
                                 }
                             }
                         ]
-                    },
+                    }
                 ]
             }
         },
@@ -1233,11 +1294,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -1546,11 +1622,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -1622,11 +1713,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -1698,11 +1804,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -1756,7 +1877,7 @@ define(function () {
                                 }
                             }
                         ]
-                    },
+                    }
                 ]
             }
         },
@@ -2111,11 +2232,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -2424,11 +2560,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -2576,11 +2727,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -2685,7 +2851,7 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
+                                    {"value": null, "label": "All", "selected": true}
                                 ]
                             }
                         }
@@ -2873,7 +3039,7 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true},
+                                    {"value": null, "label": "All", "selected": true}
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
                                 ],
                                 "enableMultiselection": true
@@ -3157,11 +3323,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -3470,11 +3651,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -3546,11 +3742,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -3622,11 +3833,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -4033,11 +4259,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -4188,11 +4429,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -4344,11 +4600,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -4501,11 +4772,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -4914,11 +5200,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -5227,11 +5528,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -5303,11 +5619,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -5379,11 +5710,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -5794,11 +6140,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -6107,11 +6468,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -6183,11 +6559,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -6259,11 +6650,26 @@ define(function () {
                             creator: {
                                 chartObj: {
                                     chart: {
-                                        type: "column"
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
                                     }
                                 }
                             }
@@ -6334,7 +6740,7 @@ define(function () {
             filter: [],
             dashboard: {
                 //data cube's uid
-                uid: "ANNUAL_DATA",
+                uid: "FLUDE_TOPIC_9",
 
                 //data base filter
                 filter: [],
@@ -6505,7 +6911,32 @@ define(function () {
                                 seriesDimensions: ['geo']
                             },
                             template: {},
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false,
+                                        type: 'pie'
+                                    },
+                                    title: {
+                                        //text: 'Browser market shares January, 2015 to May, 2015'
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                            cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true
+                                            },
+                                            showInLegend: true
+                                        }
+                                    }
+                                }
+                            }
                         },
                         filter: [
                             {
