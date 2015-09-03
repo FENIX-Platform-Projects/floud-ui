@@ -7195,6 +7195,9 @@ h1.flude-analysis-title {
 h2.filter-opener-flude {
   margin: 0; }
 
+h2.filter-opener-faostat {
+  margin-top: 10px; }
+
 .flude-topic-selector {
   width: calc(100%- 250px) !important; }
 
@@ -7280,6 +7283,12 @@ input#toggle-side-faostat:checked + label:after {
   right: 0;
   cursor: pointer; }
 
+.filter-container {
+  min-height: 70px; }
+
+.filter-container-fs {
+  min-height: 65px; }
+
 .obj-box-header {
   padding: 5px 15px;
   height: 34px;
@@ -7288,13 +7297,18 @@ input#toggle-side-faostat:checked + label:after {
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05); }
+  .obj-box-header .btn-default {
+    position: absolute;
+    right: 25px;
+    top: 6px; }
   .obj-box-header h1 {
     color: #333;
     margin: 0; }
 
 .obj-box, .obj-box-radius10, .obj-box-title {
   margin-top: 0;
-  position: relative; }
+  position: relative;
+  min-height: 155px; }
   .obj-box #flude-download, .obj-box-radius10 #flude-download, .obj-box-title #flude-download {
     width: 230px;
     position: absolute;
@@ -7358,6 +7372,13 @@ input#toggle-side-faostat:checked + label:after {
     background-color: white;
     border-color: transparent;
     color: #666666; }
+
+.whole-btn {
+  background-color: #e19a0e;
+  border-color: #a4812f; }
+  .whole-btn:hover, .whole-btn:focus, .whole-btn:active {
+    background-color: #a4812f;
+    border-color: #a4812f; }
 
 /* Components */
 /* BreadCrumbs */

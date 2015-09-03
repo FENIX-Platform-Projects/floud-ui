@@ -21,6 +21,11 @@ h2.filter-opener-flude{
   margin: 0;
 }
 
+h2.filter-opener-faostat{
+  margin-top: 10px;
+}
+
+
 .flude-topic-selector{
   width: calc(100%- 250px) !important;
 }
@@ -125,8 +130,22 @@ input#toggle-side-faostat:checked + label:after {
   cursor: pointer;
 }
 
+.filter-container{
+  min-height: 70px;
+}
+
+.filter-container-fs{
+  min-height: 65px;
+}
 
 .obj-box-header{
+
+
+  .btn-default{
+    position: absolute;
+    right: 25px;
+top: 6px;
+  }
 
   h1{
     color: #333;
@@ -147,6 +166,8 @@ input#toggle-side-faostat:checked + label:after {
 .obj-box{
   margin-top: 0;
   position: relative;
+  min-height: 155px;
+
 
   #flude-download{
     width: 230px;
@@ -245,3 +266,16 @@ input#toggle-side-faostat:checked + label:after {
 }
 
 
+.whole-btn{
+  background-color: #e19a0e;
+  border-color: #a4812f;
+
+  &:hover,
+  &:focus,
+  &:active{
+
+    background-color: #a4812f;
+    border-color: #a4812f;
+  }
+
+}
