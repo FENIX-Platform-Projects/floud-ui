@@ -1,8 +1,8 @@
 /*global define*/
 define({
     "title": "Analysis Dashboard",
-    "title_flude": "Flude Data",
-    "title_faostat": "Faostat Data",
+    "title_flude": "FRA Data",
+    "title_faostat": "Other Agricultural Data",
     "filter" : "Filter Data",
     "text" : "Change me in 118n/root/analysis.js",
     "lateral_menu_flude_title" : "Topics",

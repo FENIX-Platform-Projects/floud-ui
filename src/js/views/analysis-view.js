@@ -298,6 +298,7 @@ define([
                 this.fludeDashboard.destroy();
             }
 
+
             this.fludeDashboard = new Dashboard({
 
                 //Ignored if layout = injected
