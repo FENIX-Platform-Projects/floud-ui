@@ -151,7 +151,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                    zoomControl: false,
+                                    attributionControl: true,
+                                    scrollWheelZoom: false
+                                }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -1026,7 +1031,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -1896,7 +1906,13 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
+
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -2718,6 +2734,7 @@ define(function () {
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_4",
@@ -2746,7 +2763,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -2931,7 +2953,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -3804,7 +3831,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1" ,
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -4680,7 +4712,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#item-1",
                         config: {
-                            container: "#item-1"
+                            container: "#item-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
@@ -5554,7 +5591,12 @@ define(function () {
                         //needed if layout = injected
                         container: "#topic-8-1",
                         config: {
-                            container: "#topic-8-1"
+                            container: "#topic-8-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['indicator', 'year', 'domain', 'incomes', 'subregion'],
