@@ -65,6 +65,8 @@ require([
 
                     amplify: '{FENIX_CDN}/js/amplify/1.1.2/amplify.min',
 
+                    'fx-c-c/config/creators/highcharts_template' :'../../config/submodules/fx-chart/highcharts_template',
+
                     nls: "../../i18n",
                     config: "../../config",
                     json: "../../json",

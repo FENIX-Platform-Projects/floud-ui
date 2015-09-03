@@ -5219,19 +5219,19 @@ a {
   color: #666666; }
 
 h1 {
-  font: normal normal 300 18px/normal "Roboto";
+  font: normal normal 300 18px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   color: #b7d562; }
 
 h2 {
-  font: normal normal 300 12px/normal "Roboto";
+  font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   color: #a9b780; }
 
 h3 {
-  font: normal normal 500 12px/normal "Roboto";
+  font: normal normal 500 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   color: #9fa394; }
 
 h4 {
-  font: normal normal 300 11px/normal "Roboto";
+  font: normal normal 300 11px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   color: #9c9c9c; }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
@@ -5376,7 +5376,7 @@ input[type="button"]::-moz-focus-inner {
   text-align: center;
   background-color: #f1f1f1; }
   .fx-catalog-header em {
-    font: normal normal 400 10px/normal "Roboto"; }
+    font: normal normal 400 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 .fx-catalog-header-btn {
   cursor: pointer; }
@@ -5460,7 +5460,7 @@ input[type="button"]::-moz-focus-inner {
 .fx-circle-number {
   color: white;
   display: inline-block;
-  font: normal normal 500 14px/normal "Roboto";
+  font: normal normal 500 14px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   height: 20px;
   width: 20px;
   line-height: 20px;
@@ -5777,7 +5777,7 @@ div[data-module="sector"] .fx-catalog-modular-form-content {
   padding-top: 5px; }
   .obj-box-title h4 {
     color: #b7d562;
-    font: normal normal 300 11px/normal "Roboto"; }
+    font: normal normal 300 11px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 /* Fenix - Panel Component */
 .panel-group {
@@ -5804,7 +5804,7 @@ div[data-module="sector"] .fx-catalog-modular-form-content {
     border-radius: 0;
     padding: 10px; }
     .panel-group .panel-heading .panel-title {
-      font: normal normal 300 16px/normal "Roboto"; }
+      font: normal normal 300 16px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
       .panel-group .panel-heading .panel-title a {
         color: #666666;
         text-transform: uppercase; }
@@ -6037,7 +6037,7 @@ input[type="checkbox"]:checked + label {
   color: #b7d562;
   padding-left: 15px;
   padding-top: 5px;
-  font: normal normal 400 10px/normal "Roboto";
+  font: normal normal 400 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   position: absolute;
   top: 0; }
 
@@ -6073,7 +6073,7 @@ input[type="checkbox"]:checked + label {
     width: 20%;
     padding-left: 15px; }
     .fx-resume-item-selected .fx-resume-module-title em {
-      font: normal normal 400 10px/normal "Roboto";
+      font: normal normal 400 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
       color: #b7d562;
       font-size: 12px;
       /* Not expected */
@@ -6667,7 +6667,7 @@ input[type="checkbox"]:checked + label {
 
 .fx-sessionstore-item-title {
   text-transform: uppercase;
-  font: normal normal 700 10px/normal "Roboto"; }
+  font: normal normal 700 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 .fx-sessionstore-item-info {
   min-height: 50px;
@@ -6676,7 +6676,7 @@ input[type="checkbox"]:checked + label {
 .fx-sessionstore-item-movemetodesk {
   float: left;
   text-transform: uppercase;
-  font: normal normal 700 10px/normal "Roboto";
+  font: normal normal 700 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   cursor: pointer;
   margin-top: 10px;
   position: relative; }
@@ -6684,7 +6684,7 @@ input[type="checkbox"]:checked + label {
 .fx-sessionstore-item-removeme {
   float: right;
   text-transform: uppercase;
-  font: normal normal 700 10px/normal "Roboto";
+  font: normal normal 700 10px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   cursor: pointer;
   margin-top: 10px;
   position: relative; }
@@ -6703,7 +6703,7 @@ input[type="checkbox"]:checked + label {
   background: none;
   color: white;
   display: inline-block;
-  font: normal normal 500 14px/normal "Roboto";
+  font: normal normal 500 14px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif;
   height: 20px;
   width: 20px;
   line-height: 20px;
@@ -7183,10 +7183,45 @@ input[type="checkbox"]:checked + label {
 /* Base */
 /* Base style File */
 body {
-  background-color: #f1f1f1; }
+  background: url(../../src/css/img/bg-tool.gif) repeat-x #dbe7ee; }
 
 a {
   color: #ec6e00; }
+
+h1.flude-analysis-title {
+  color: white; }
+
+.home-logo {
+  background-image: url(../../src/css/img/flude-logo.jpg);
+  height: 75px;
+  background-repeat: no-repeat;
+  position: relative;
+  left: -15px;
+  max-width: 50%; }
+
+.home-back-btn {
+  height: 75px;
+  width: 86px;
+  background-image: url(../../src/css/img/home-btn.jpg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer; }
+
+.obj-box-header {
+  padding: 5px 15px;
+  height: 34px;
+  border: 1px solid #C2C2C2;
+  background: #fafafa;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05); }
+  .obj-box-header h1 {
+    color: #333;
+    margin: 0; }
+
+.obj-box, .obj-box-radius10, .obj-box-title {
+  margin-top: 0; }
 
 .invi {
   display: none; }
@@ -7201,26 +7236,22 @@ a {
   text-transform: uppercase; }
 
 .btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  -ms-border-radius: 2;
+  border-radius: 2;
   min-width: 100px;
   padding: 3px 12px;
   font-size: 12px;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: 1px solid #999999;
-  color: #999999; }
+  background-color: #4387bf;
+  border: 1px solid #3883c0;
+  color: white; }
   .btn:hover, .btn:focus, .btn:active {
-    background-color: #f2f2f2;
-    border: 1px solid #999999;
-    color: #999999; }
+    background-color: #3e90d4;
+    border: 1px solid #2f7dbe;
+    color: white; }
   .btn:visited {
     background-color: transparent; }
-
-.container {
-  background-color: white; }
 
 /* TEMPORARY */
 .btn.btn-default.json-editor-btn-collapse {
@@ -7234,10 +7265,10 @@ a {
       color: #666666; }
 
 .btn-table-go, .btn-scores-go {
-  background-color: #999999;
+  background-color: #4387bf;
   color: white; }
   .btn-table-go:hover, .btn-table-go:active, .btn-table-go:visited, .btn-table-go:focus, .btn-scores-go:hover, .btn-scores-go:active, .btn-scores-go:visited, .btn-scores-go:focus {
-    background-color: #999999;
+    background-color: #4387bf;
     border-color: transparent;
     color: white; }
 
@@ -7272,189 +7303,15 @@ a {
   content: '|';
   color: #666666; }
 
-/* FAO Like Footer */
-footer.fao-footer {
-  background-color: #0d6cac;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: white; }
-  footer.fao-footer li {
-    margin-bottom: 10px; }
-  footer.fao-footer h4 {
-    color: white;
-    font-size: 14px; }
-  footer.fao-footer a:link,
-  footer.fao-footer a:visited,
-  footer.fao-footer a:hover,
-  footer.fao-footer a:focus,
-  footer.fao-footer a:active {
-    color: white; }
-  footer.fao-footer .device-image {
-    padding-right: 10px;
-    float: left; }
-  footer.fao-footer .fao-social-holder {
-    display: inline-block;
-    width: 19%;
-    padding: 3px 2px; }
-
-/*//////////////////////////////////////////// Navbar Media queries */
-/* Ipad */
-@media (min-width: 768px) and (max-width: 990px) {
-  footer.fao-footer .device-image {
-    margin-bottom: 10px; }
-  footer.fao-footer .fao-social-holder {
-    display: inline-block;
-    width: 20%;
-    padding: 3px 2px; } }
-/* Iphone */
-@media (max-width: 767px) {
-  footer.fao-footer {
-    text-align: center; }
-    footer.fao-footer .device-image {
-      margin-bottom: 10px;
-      float: none; }
-    footer.fao-footer .fao-social-holder {
-      display: inline-block;
-      width: 15%;
-      margin: 3px; }
-
-  /* End of the iPhone media query*/ }
 /* FAO Like Top Menu */
-/* Bootstrap reset */
-.navbar-brand {
-  display: none; }
-
-/* Item on the right fix */
-.fx-menu .navbar-nav.navbar-right {
-  margin: 0; }
-  .fx-menu .navbar-nav.navbar-right li a {
-    border-right: 0; }
-
-/* Header */
-.container.fao-header {
-  height: 90px;
-  position: relative;
-  background-color: #0d6cac; }
-  .container.fao-header .fao-logo {
-    width: 300px;
-    height: auto;
-    position: relative;
-    top: 5px; }
-  .container.fao-header ul li {
-    border-right: 1px solid white; }
-    .container.fao-header ul li:last-child {
-      border-right: none; }
-    .container.fao-header ul li a {
-      color: white; }
-      .container.fao-header ul li a:hover {
-        text-decoration: none; }
-
-/* Menu */
-.topmenu {
-  padding-top: 30px; }
-  .topmenu .navbar-collapse {
-    background-color: white;
-    background-image: -moz-linear-gradient(top, white, #efefef);
-    background-image: -ms-linear-gradient(top, white, #efefef);
-    background-image: -o-linear-gradient(top, white, #efefef);
-    background-image: -webkit-gradient(linear, center top, center bottom, from(white), to(#efefef));
-    background-image: -webkit-linear-gradient(top, white, #efefef);
-    background-image: linear-gradient(top, white, #efefef);
-    background-image: linear-gradient(to bottom, white, #efefef);
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    -webkit-background-clip: padding-box;
-    background-repeat: no-repeat;
-    border: 1px solid #d2d0d0; }
-
-.topmenu-buttons-holder {
-  padding-left: 0;
-  padding-right: 0; }
-
-.navbar-default {
-  background-color: transparent;
-  min-height: 40px;
-  margin-bottom: 0; }
-  .navbar-default .navbar-nav > li {
-    /* Home icon as fao website */ }
-    .navbar-default .navbar-nav > li > a {
-      height: 40px;
-      overflow: hidden;
-      padding-bottom: 10px;
-      padding-top: 10px;
-      border-right: 1px solid #d2d0d0; }
-      .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-        color: #ec6e00;
-        background-color: white; }
-    .navbar-default .navbar-nav > li.active a,
-    .navbar-default .navbar-nav > li.active a:link,
-    .navbar-default .navbar-nav > li.active a:visited,
-    .navbar-default .navbar-nav > li.active a:hover,
-    .navbar-default .navbar-nav > li.active a:focus,
-    .navbar-default .navbar-nav > li.active a:active {
-      border-bottom-color: transparent;
-      color: #ec6e00; }
-    .navbar-default .navbar-nav > li.home-menu-item {
-      width: 40px; }
-      .navbar-default .navbar-nav > li.home-menu-item.active a {
-        background-image: url(../../src/images/home-h.png); }
-      .navbar-default .navbar-nav > li.home-menu-item a {
-        background-image: url(../../src/images/home.png);
-        background-size: 20px 16px;
-        background-position: 50% 50%;
-        background-repeat: no-repeat; }
-        .navbar-default .navbar-nav > li.home-menu-item a:hover, .navbar-default .navbar-nav > li.home-menu-item a:focus {
-          background-image: url(../../src/images/home-h.png); }
-
-/* Open/Close button in mobile mode */
-.navbar-default .navbar-toggle {
-  border-color: transparent; }
-  .navbar-default .navbar-toggle:link, .navbar-default .navbar-toggle:visited, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
-    background-color: transparent; }
-
-.navbar-collapse {
-  border-top: 0; }
-  .navbar-collapse .navbar-nav {
-    margin-top: 0; }
+.internal-fao-header {
+  background-image: url(../../src/css/img/flude-header-bg.jpg);
+  height: 75px; }
 
 /*//////////////////////////////////////////// Navbar Media queries */
 /* Ipad */
 /* Iphone */
 @media (max-width: 767px) {
-  .container.fao-header {
-    height: 140px; }
-    .container.fao-header .fao-header-menu {
-      margin-top: 15px;
-      text-align: center;
-      line-height: 20px; }
-      .container.fao-header .fao-header-menu ul li a {
-        /* Expand the item space in the mobile version */
-        margin: 5px; }
-
-  .topmenu {
-    padding-top: 30px; }
-    .topmenu .navbar-collapse {
-      background: none;
-      background-color: white;
-      border-color: transparent; }
-
-  .navbar-default .navbar-nav > li {
-    /* Home icon as fao website */ }
-    .navbar-default .navbar-nav > li > a {
-      border-right-color: transparent; }
-    .navbar-default .navbar-nav > li.active a,
-    .navbar-default .navbar-nav > li.active a:link,
-    .navbar-default .navbar-nav > li.active a:visited,
-    .navbar-default .navbar-nav > li.active a:hover,
-    .navbar-default .navbar-nav > li.active a:focus,
-    .navbar-default .navbar-nav > li.active a:active {
-      border-bottom-color: transparent;
-      color: #ec6e00 !important; }
-    .navbar-default .navbar-nav > li.home-menu-item {
-      width: 100%; }
-      .navbar-default .navbar-nav > li.home-menu-item a {
-        background-position: 15px 50%; }
-
   /* End of the iPhone media query*/ }
 /*Form */
 .form-control {
@@ -7482,7 +7339,7 @@ footer.fao-footer {
     -moz-box-shadow: none;
     box-shadow: none;
     outline: none;
-    border-color: #999999; }
+    border-color: #4387bf; }
 
 .input-group-btn .btn {
   border-left: 0; }

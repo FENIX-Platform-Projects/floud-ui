@@ -1,15 +1,58 @@
 /* Base style File */
 
 body{
-
-  background-color: $fenix-light-bg;
-
+  background: url(../../src/css/img/bg-tool.gif) repeat-x #dbe7ee;
 }
 
 a{
   color: $custom-color8; // Fao Orange;
 }
 
+h1.flude-analysis-title{
+  color:white;
+}
+
+.home-logo{
+  background-image:url(../../src/css/img/flude-logo.jpg) ;
+  height: 75px;
+  background-repeat: no-repeat;
+  position: relative;
+  left: -15px;
+  max-width: 50%;
+}
+
+.home-back-btn{
+  height: 75px;
+  width: 86px;
+  background-image:url(../../src/css/img/home-btn.jpg) ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+
+.obj-box-header{
+
+  h1{
+    color: #333;
+    margin: 0;
+  }
+  padding: 5px 15px;
+  height: 34px;
+  border: 1px solid #C2C2C2;
+  background: #fafafa;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,.05);
+}
+
+
+
+
+.obj-box{
+  margin-top: 0;
+}
 
 .invi{display:none}
 
@@ -25,15 +68,15 @@ a{
 }
 
 .btn{
-  @include fx-border-radius(0);
+  @include fx-border-radius(2);
 
   min-width: 100px;
   padding: 3px 12px;
   font-size: 12px;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: 1px solid $buttons;
-  color: $buttons;
+  //text-transform: uppercase;
+  background-color: $buttons;
+  border: 1px solid #3883c0;
+  color: white;
 
 
 
@@ -41,10 +84,10 @@ a{
   &:focus,
   &:active{
 
-    background-color: $superlight-gray;
+    background-color: #3e90d4;
     //border-color: transparent;
-    border: 1px solid $buttons;
-    color: $buttons;
+    border: 1px solid #2f7dbe;
+    color: white;
   }
 
   &:visited{
@@ -53,9 +96,9 @@ a{
 
 }
 
-.container {
-  background-color: white;
-}
+//.container, .container-fluid {
+//  background-color: white;
+//}
 
 /* TEMPORARY */
 

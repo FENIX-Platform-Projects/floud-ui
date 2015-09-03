@@ -1,35 +1,43 @@
-<h1>{{title}}</h1>
+<h1 class="flude-analysis-title">{{title}}</h1>
 
-<a id="flude-download" class="btn btn-default" href="http://fenixrepo.fao.org/cdn/data/flude/download/o_zip_one.zip" role="button" target="_blank">{{ download_bulk_btn }}</a>
-
-<hr>
-
-<button id="toggle-side-faostat" class="btn btn-default" type="submit">Toggle FAOSTAT</button>
+<!--<button id="toggle-side-faostat" class="btn btn-default" type="submit">Compare with FAOSTAT</button>-->
 
 <div class="row">
 
     <div id="side-flude" class="col-xs-12">
 
-        <h1>{{title_flude}}</h1>
 
-        <a id="flude-download" class="btn btn-default" href="" role="button" target="_blank">{{ download_btn }}</a>
+
+
 
         <div class="row">
             <div class="col-xs-12">
-                <div id="flude-topic-selector"></div>
+                <div class="obj-box-header"><h1>{{title_flude}}</h1></div>
+                <div class="obj-box">
+
+                    <div id="flude-topic-selector"></div>
+                    <br><br>
+
+                    <a id="flude-download" class="btn btn-default" href="" role="button" target="_blank">{{ download_btn }}</a>
+
+                </div>
+
             </div>
+
         </div>
 
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="filter-opener-flude"> {{ filter }}</h2>
+                <div class="obj-box-header"><h1 class="filter-opener-flude"> {{ filter }}</h1></div>
 
+                <div class="obj-box">
                 <div id="filter-container-flude">
                     <div id="filter-flude">
                     </div>
                     <button id="filter-submit-btn-flude" class="btn btn-default"> {{filter_btn}}</button>
 
                 </div>
+                    </div>
             </div>
         </div>
 
@@ -82,3 +90,7 @@
     </div>
 
 </div>
+
+
+
+<a id="flude-download" class="btn btn-default" href="http://fenixrepo.fao.org/cdn/data/flude/download/o_zip_one.zip" role="button" target="_blank">{{ download_bulk_btn }}</a>
