@@ -44,23 +44,29 @@ h2.filter-opener-faostat{
 
 .compare-wrapper{
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 15px;
+  top: 3px;
+  width: 280px;
+  height: 46px;
+  @include fx-border-radius(5px);
+  background-color: white;
+  border: 1px solid #3883c0;
+
 }
 .compare-title{
-  color: white;
+  color: $buttons;
   margin: 0;
   display: inline-block;
   position: relative;
-  right: 80px;
-  top: 20px;
+  left: 15px;
+  top: 13px;
 }
 
 
 .toggle-wrapper{
   position: absolute;
   right: 10px;
-  top: 12px;
+  top: 7px;
 
 
 
@@ -274,6 +280,17 @@ top: 6px;
 
     background-color: #a4812f;
     border-color: #a4812f;
+  }
+
+}
+
+
+.fm-legend-layertitle{
+  font-size: 0 !important;
+
+  &:before{
+    content: 'Legenda';
+    font: $standard-text;
   }
 
 }

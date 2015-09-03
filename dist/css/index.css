@@ -7211,21 +7211,29 @@ h2.filter-opener-faostat {
 
 .compare-wrapper {
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 15px;
+  top: 3px;
+  width: 280px;
+  height: 46px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #3883c0; }
 
 .compare-title {
-  color: white;
+  color: #4387bf;
   margin: 0;
   display: inline-block;
   position: relative;
-  right: 80px;
-  top: 20px; }
+  left: 15px;
+  top: 13px; }
 
 .toggle-wrapper {
   position: absolute;
   right: 10px;
-  top: 12px; }
+  top: 7px; }
 
 input#toggle-side-faostat + label {
   display: block;
@@ -7377,6 +7385,12 @@ input#toggle-side-faostat:checked + label:after {
   .whole-btn:hover, .whole-btn:focus, .whole-btn:active {
     background-color: #a4812f;
     border-color: #a4812f; }
+
+.fm-legend-layertitle {
+  font-size: 0 !important; }
+  .fm-legend-layertitle:before {
+    content: 'Legenda';
+    font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 /* Components */
 /* BreadCrumbs */
