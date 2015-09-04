@@ -156,7 +156,8 @@ define(function () {
                             leaflet: {
                                     zoomControl: false,
                                     attributionControl: true,
-                                    scrollWheelZoom: false
+                                    scrollWheelZoom: false,
+                                    minZoom: 2
                                 }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -217,7 +218,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        valueSuffix: ' unit of measurement'
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -287,8 +288,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -536,8 +536,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -615,8 +614,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -1099,7 +1097,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -1154,6 +1153,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -1223,8 +1225,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -1393,8 +1394,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -1472,8 +1472,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -1551,8 +1550,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2034,7 +2032,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false ,
+                                minZoom: 2
                             }
 
                         },
@@ -2092,6 +2091,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2161,8 +2163,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2331,8 +2332,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2410,8 +2410,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2489,8 +2488,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2657,8 +2655,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -2936,7 +2933,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -3126,7 +3124,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false ,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -3181,8 +3180,8 @@ define(function () {
                             },
                             creator: {
                                 chartObj: {
-                                    chart: {
-                                        type: "column"
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -3252,8 +3251,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -3422,8 +3420,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -3501,8 +3498,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -3580,8 +3576,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -4064,7 +4059,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -4119,6 +4115,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -4188,8 +4187,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -4358,8 +4356,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -4529,8 +4526,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -4700,8 +4696,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5005,7 +5000,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -5060,6 +5056,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5129,8 +5128,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5299,8 +5297,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5378,8 +5375,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5457,8 +5453,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -5944,7 +5939,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false ,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -6000,6 +5996,8 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    }, tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -6069,8 +6067,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -6239,8 +6236,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -6318,8 +6314,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -6397,8 +6392,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -6893,7 +6887,8 @@ define(function () {
                             leaflet: {
                                 zoomControl: false,
                                 attributionControl: true,
-                                scrollWheelZoom: false
+                                scrollWheelZoom: false ,
+                                minZoom: 2
                             }
                         },
                         // for now it takes the id, TODO: add uid as well
@@ -6949,6 +6944,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -7019,8 +7017,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -7098,8 +7095,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }
@@ -7177,8 +7173,7 @@ define(function () {
                                         type: "column"
                                     },
                                     tooltip: {
-                                        crosshairs: "mixed",
-                                        shared: true
+                                        valueSuffix: ' 1000 HA'
                                     }
                                 }
                             }

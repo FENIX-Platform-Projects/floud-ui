@@ -117,6 +117,8 @@ define([
                 self.$filterContainerFaostat.toggle();
             });
 
+            this.$filterContainerFaostat.toggle();
+
             this.$topicSelectorFlude.on("change", function (e) {
                 self._onFludeTopicChange(e.val);
             });
@@ -168,7 +170,18 @@ define([
 
             });
 
+            //TODO remove me
+            self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
+
+            self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
+
+            $(window).trigger('resize');
+
+            window.dispatchEvent(new Event('resize'));
+            //TODO remove me
+
         },
+
         _getFilteredConfig : function (valuesToFilter, originalConfig) {
             var filteredConfig = {};
             $.extend(filteredConfig,originalConfig);
@@ -193,7 +206,6 @@ define([
             }
             return filteredConfig;
         },
-
 
         _onFludeTopicChange: function (topic) {
 
@@ -254,7 +266,11 @@ define([
 
             //Faostat
 
-            this.$topicSelectorFaostat.select2(JSON.parse(FaostatTopics));
+            var confFS =  JSON.parse(FaostatTopics);
+
+            this.$topicSelectorFaostat.select2(confFS);
+            this.$topicSelectorFaostat.select2('data', confFS.data[0]);
+            this._onFaostatTopicChange(confFS.data[0].id);
 
         },
 

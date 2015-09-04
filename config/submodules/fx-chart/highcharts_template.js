@@ -202,7 +202,7 @@ define(function () {
             x: -20 //center
         },
         subtitle: {
-            text: null,
+            text: 'FRA Data',
             x: -20
         },
         xAxis: {

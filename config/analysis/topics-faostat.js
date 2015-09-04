@@ -8,11 +8,9 @@ define(function () {
 
         "FAOSTAT_QC": {
 
-            download: {
-                "target": "o_zip_one.zip"
-            },
-
             filter: [
+
+                /*
                 {
                     "type": "static",
                     "containerType": "baseContainer",
@@ -26,11 +24,18 @@ define(function () {
                             "name": "year",
                             config: {
                                 "defaultsource": [
-                                    {"value": "2015", "label": "2015", "selected": true},
+                                    {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
+                                    {"value": "2009", "label": "2009", "selected": false},
+                                    {"value": "2008", "label": "2008", "selected": false},
+                                    {"value": "2007", "label": "2007", "selected": false},
+                                    {"value": "2006", "label": "2006", "selected": false},
                                     {"value": "2005", "label": "2005", "selected": false},
-                                    {"value": "2000", "label": "2000", "selected": false},
-                                    {"value": "1990", "label": "1990", "selected": false}
+                                    {"value": "2004", "label": "2004", "selected": false},
+                                    {"value": "2003", "label": "2003", "selected": false},
+                                    {"value": "2002", "label": "2002", "selected": false},
+                                    {"value": "2001", "label": "2001", "selected": false},
+                                    {"value": "2000", "label": "2000", "selected": false}
                                 ]
                             }
                         }
@@ -98,10 +103,11 @@ define(function () {
                             }
                         }
                     ]
-                },
+                }
 
-
+                */
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FAOSTAT_QC",
@@ -122,67 +128,8 @@ define(function () {
                  * */
                 metadata: {},
 
-
                 items:  [
 
-                    {
-                        id: 'faostat-QC-1',
-                        type: 'map',
-                        class: "fx-map-chart",
-                        //needed if layout = injected
-                        container: "#faostat-QC-1",
-                        config: {
-                            container: "#faostat-QC-1",
-                            leaflet: {
-                                zoomControl: false,
-                                attributionControl: true,
-                                scrollWheelZoom: false
-                            }
-                        },
-                        // for now it takes the id, TODO: add uid as well
-                        allowedFilter: ['element', 'item', 'year'],
-                        forbiddenValues: {
-                            year: {time: [{from: 2015, to: 2015}]},
-                            domain: {removeFilter: true}
-                        },
-                        filter: [
-                            {
-                                "name": "filter",
-                                "parameters": {
-                                    "rows": {
-                                        "year": {
-                                            "time": [
-                                                {
-                                                    "from": 2013,
-                                                    "to": 2013
-                                                }
-                                            ]
-                                        },
-                                        "element": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FAOSTAT_Elements",
-                                                    "codes": [
-                                                        "5312"
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        "item": {
-                                            "codes": [
-                                                {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
-                                                    "codes": [
-                                                        "1717"
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-                    }
 
                 ]
 
