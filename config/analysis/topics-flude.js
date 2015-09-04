@@ -9,7 +9,7 @@ define(function () {
         "FLUDE_TOPIC_1": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "1.FOREST AREA AND CHARACTERISTICS.zip"
             },
 
             filter: [
@@ -949,7 +949,7 @@ define(function () {
         "FLUDE_TOPIC_2": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "2.PRODUCTION.zip"
             },
 
             filter: [
@@ -1885,7 +1885,7 @@ define(function () {
         "FLUDE_TOPIC_3": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "3.DISTURBANCE AND FOREST DEGRADATION.zip"
             },
 
             filter: [
@@ -2810,7 +2810,7 @@ define(function () {
         "FLUDE_TOPIC_4": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "4.MEASURING PROGRESS TOWARDS SFM.zip"
             },
 
             filter: [
@@ -2976,7 +2976,7 @@ define(function () {
         "FLUDE_TOPIC_5": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "5.BIODIVERSITY AND CONSERVATION.zip"
             },
 
             filter: [
@@ -3914,7 +3914,7 @@ define(function () {
         "FLUDE_TOPIC_6": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "6.PROTECTIVE FUNCTIONS AND SELECTIVE ECOSYSTEM SERVICES.zip"
             },
 
             filter: [
@@ -4855,7 +4855,7 @@ define(function () {
         "FLUDE_TOPIC_7": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "7.ECONOMICS LIVELIHOOD.zip"
             },
 
             filter: [
@@ -5794,7 +5794,7 @@ define(function () {
         "FLUDE_TOPIC_8": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "8.OWNERSHIP.zip"
             },
 
             filter: [

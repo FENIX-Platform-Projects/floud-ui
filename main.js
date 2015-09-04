@@ -38,7 +38,10 @@ require([
 
     Compiler.resolve([commonConfig, menuConfig, dashboardConfig, chartConfig, tableConfig, mapConfig, filterConfig],
         {
-            placeholders: {"FENIX_CDN": "//fenixrepo.fao.org/cdn"},
+            placeholders: {
+                "FENIX_CDN": "//fenixrepo.fao.org/cdn"
+                //"FENIX_CDN": "http://lprapp16.fao.org/external/fenixapps1/repository"
+            },
 
             config: {
 
@@ -67,7 +70,12 @@ require([
 
                     'fx-c-c/config/creators/highcharts_template' :'../../config/submodules/fx-chart/highcharts_template',
 
-                    'fx-ds/config/config' : "../../config/submodules/fx-dashboard/config",
+                    'fx-ds/config/config' : "../../config/submodules/fx-dashboard/Config",
+
+                    'fenix-ui-map' : '../../submodules/fenix-ui-map/dist/fenix-ui-map.src',
+                    'fenix-ui-map-config' : '../../config/submodules/fx-map/Config' ,
+
+                    'fx-m-c/config/config' : '../../config/submodules/fx-chart-creator/Config' ,
 
                     nls: "../../i18n",
                     config: "../../config",

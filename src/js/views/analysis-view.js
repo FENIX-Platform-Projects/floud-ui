@@ -43,7 +43,7 @@ define([
         SIDE_FAOSTAT: "#side-faostat",
         TOGGLE_SIDE_FAOSTAT: "#toggle-side-faostat",
 
-        DOWNLOAD_BTN_FLUDE: "#flude-download",
+        DOWNLOAD_BTN_FLUDE: "#flude-download-btn",
 
         DASHBOARD_FLUDE_CONTAINER: '#dashboard-flude-container',
         DASHBOARD_FAOSTAT_CONTAINER: '#dashboard-faostat-container'
