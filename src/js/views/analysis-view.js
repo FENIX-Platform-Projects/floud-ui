@@ -129,14 +129,12 @@ define([
 
                 var filter = {};
                 var values = self.filterFaostat.getValues();
-                console.log(values)
-
                 // TODO: funzione per distruggere dashboard e ricrearla con gli items giusti:
-                /*
-                 var filteredConfig = self._getFilteredConfig(values, self.$faostatDashboardConfig);
+
+/*                 var filteredConfig = self._getFilteredConfig(values, self.$faostatDashboardConfig);
                  self._renderFaostatDashboard(filteredConfig);
                  self.faostatDashboard.filter([values]);
-                 */
+ */
 
                 // TODO: it's an array
                 self.faostatDashboard.filter([values]);
@@ -262,7 +260,7 @@ define([
             this.$topicSelectorFlude.select2(conf);
 
             this.$topicSelectorFlude.select2('data', conf.data[0]);
-            //this._onFludeTopicChange(conf.data[0].id);
+            this._onFludeTopicChange(conf.data[0].id);
 
             //Faostat
 
@@ -283,12 +281,13 @@ define([
                 return;
             }
 
-            this.$fludeDashboardConfig = config.dashboard
             var filterConfig = config.filter;
+
+            this._renderFludeFilter(filterConfig);
 
             this._renderFludeDashboard(config.dashboard);
 
-            this._renderFludeFilter(filterConfig);
+
         },
 
         _renderFaostatComponents: function (topic) {
@@ -300,12 +299,12 @@ define([
                 return;
             }
 
-            this.$faostatDashboardConfig = config.dashboard
             var filterConfig = config.filter;
+
+            this._renderFaostatFilter(filterConfig);
 
             this._renderFaostatDashboard(config.dashboard);
 
-            this._renderFaostatFilter(filterConfig);
         },
 
         _renderFludeDashboard: function (config) {
