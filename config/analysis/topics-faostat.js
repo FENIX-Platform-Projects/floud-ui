@@ -130,6 +130,134 @@ define(function () {
 
                 items:  [
 
+                    {
+                        id: 'faostat-QC-1',
+                        type: 'map',
+                        class: "fx-map-chart",
+                        //needed if layout = injected
+                        container: "#faostat-QC-1",
+                        config: {
+                            container: "#faostat-QC-1",
+                            leaflet: {
+                                zoomControl: false,
+                                attributionControl: true,
+                                scrollWheelZoom: false,
+                                minZoom: 2
+                            }
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['year', 'element', 'item'],
+                        forbiddenValues: {
+                            year: {time: [{from: 2013, to: 2013}]},
+                            domain: {removeFilter: true}
+                        },
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+                                        "year": {
+                                            "time": [
+                                                {
+                                                    "from": 2013,
+                                                    "to": 2013
+                                                }
+                                            ]
+                                        },
+                                        "element": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FAOSTAT_Elements",
+                                                    "codes": [
+                                                        "5312"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "item": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "codes": [
+                                                        "1717"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: 'faostat-QC-2',
+                        type: 'chart',
+                        class: "fx-timeseries-ecample",
+                        //needed if layout = injected
+                        container: "#faostat-QC-2",
+                        config: {
+                            container: "#faostat-QC-2",
+                            adapter: {
+                                type: "timeserie",
+                                xDimensions: 'time',
+                                yDimensions: 'element',
+                                valueDimensions: 'value',
+                                seriesDimensions: []
+                            },
+                            template: {
+                                //"title": "Top 25..."
+                            },
+                            creator: {}
+                        },
+                        // for now it takes the id, TODO: add uid as well
+                        allowedFilter: ['country', 'item', 'element'],
+                        filter: [
+                            {
+                                "name": "filter",
+                                "parameters": {
+                                    "rows": {
+
+                                        "country": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FAOSTAT_Countries",
+                                                    "codes": [
+                                                        "33"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "element": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FAOSTAT_Elements",
+                                                    "codes": [
+                                                        "5312"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "item": {
+                                            "codes": [
+                                                {
+                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "codes": [
+                                                        "1717"
+                                                    ]
+                                                }
+                                            ]
+
+                                        }
+                                }
+                                }
+                            }
+
+
+                        ]
+                    }
+
+
+
 
                 ]
 
