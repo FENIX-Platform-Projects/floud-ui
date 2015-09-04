@@ -159,50 +159,32 @@ define([
 
                 self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
 
-                self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
+                 if (!self.$sideFaostat.is(':visible')) {
+                     self.$sideFaostat.show();
+                     self._loadFaostatForTheFirstTime();
+                 } else {
+                     self.$sideFaostat.hide()
+                 }
 
                 $(window).trigger('resize');
 
                 window.dispatchEvent(new Event('resize'));
 
             });
-
-            //TODO remove me
-            self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
-
-            self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
-
-            $(window).trigger('resize');
-
-            window.dispatchEvent(new Event('resize'));
-
-            //TODO remove me
-
         },
 
-        _getFilteredConfig : function (valuesToFilter, originalConfig) {
-            var filteredConfig = {};
-            $.extend(filteredConfig,originalConfig);
-            var indexItemsToRemove = {};
-            if (valuesToFilter) {
+        _loadFaostatForTheFirstTime : function () {
 
-                for (var i = 0, length = filteredConfig.items.length; i < length; i++) {
-                    if (filteredConfig.items[i].forbiddenValues) {
-                        indexItemsToRemove[i] = false;
-                        for (var forbiddenKey in filteredConfig.items[i].forbiddenValues) {
-                            if (valuesToFilter[forbiddenKey] && (_.isEqual(valuesToFilter[forbiddenKey], filteredConfig.items[i].forbiddenValues[forbiddenKey]))) {
-                                indexItemsToRemove[i] = true;
-                            }
-                        }
-                    }
-                }
+            if (this._faostatIsAlreadyInitialized === true ){
+                return;
             }
-            for(var key in indexItemsToRemove) {
-                if(indexItemsToRemove[key] === true) {
-                    filteredConfig.items.splice(key,1)
-                }
-            }
-            return filteredConfig;
+
+            this._faostatIsAlreadyInitialized = true;
+
+            var confFS =  JSON.parse(FaostatTopics);
+
+            this._onFaostatTopicChange(confFS.data[0].id);
+
         },
 
         _onFludeTopicChange: function (topic) {
@@ -265,10 +247,9 @@ define([
             //Faostat
 
             var confFS =  JSON.parse(FaostatTopics);
-
             this.$topicSelectorFaostat.select2(confFS);
             this.$topicSelectorFaostat.select2('data', confFS.data[0]);
-            this._onFaostatTopicChange(confFS.data[0].id);
+
 
         },
 

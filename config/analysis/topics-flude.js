@@ -6734,7 +6734,7 @@ define(function () {
         "ANNUAL_DATA": {
 
             download: {
-                "target": "o_zip_one.zip"
+                "target": "9. ANNUAL DATA.zip"
             },
 
             filter: [

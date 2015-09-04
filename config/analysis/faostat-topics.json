@@ -10,10 +10,7 @@
       "id": "FAOSTAT_QA",
       "text": "Production - Live Animal"
     },
-    {
-      "id": "FAOSTAT_QL",
-      "text": "Production - Livestock Primary"
-    },
+
     {
       "id": "FAOSTAT_OA",
       "text": "Annual population"
@@ -30,5 +27,9 @@
       "id": "FAOSTAT_GL",
       "text": "Emissions - Land use"
     }
-  ]
+  ],
+  "backup" :  {
+    "id": "FAOSTAT_QL",
+    "text": "Production - Livestock Primary"
+  }
 }
