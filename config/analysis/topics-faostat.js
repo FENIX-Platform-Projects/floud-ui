@@ -9,8 +9,6 @@ define(function () {
         "FAOSTAT_QC": {
 
             filter: [
-
-                /*
                 {
                     "type": "static",
                     "containerType": "baseContainer",
@@ -20,7 +18,6 @@ define(function () {
                             "type": "time",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
-                            "title": {"EN": "Year"},
                             "name": "year",
                             config: {
                                 "defaultsource": [
@@ -35,77 +32,89 @@ define(function () {
                                     {"value": "2003", "label": "2003", "selected": false},
                                     {"value": "2002", "label": "2002", "selected": false},
                                     {"value": "2001", "label": "2001", "selected": false},
-                                    {"value": "2000", "label": "2000", "selected": false}
+                                    {"value": "2000", "label": "2000", "selected": false},
+                                    {"value": "1999", "label": "1999", "selected": false},
+                                    {"value": "1998", "label": "1998", "selected": false},
+                                    {"value": "1997", "label": "1997", "selected": false},
+                                    {"value": "1996", "label": "1996", "selected": false},
+                                    {"value": "1995", "label": "1995", "selected": false},
+                                    {"value": "1994", "label": "1994", "selected": false},
+                                    {"value": "1993", "label": "1993", "selected": false},
+                                    {"value": "1992", "label": "1992", "selected": false},
+                                    {"value": "1991", "label": "1991", "selected": false},
+                                    {"value": "1990", "label": "1990", "selected": false}
                                 ]
                             }
                         }
                     ]
                 },
                 {
-                    "type": "distinct",
-                    "uid": "FAOSTAT_QC",
-                    "column": "country",
+                    "type": "codelist-codes",
+                    "containerType": "baseContainer",
+                    "title": "Item",
+                    "defaultCodes": ["33"],
+                    "components": [
+                        {
+                            "type": "codelist-codes",
+                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "componentType": "dropDownList-FENIX",
+                            "lang": "EN",
+                            // name is the ID output in tehe filter getValues()
+                            "name": "item",
+                            "config": {
+                                "defaultsource": [ ],
+                                filter :  {
+                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                    "version": null,
+                                    "codes" : ["QC"]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "codelist-codes",
+                    "containerType": "baseContainer",
+                    "title": "Elements",
+                    "defaultCodes": ["33"],
+                    "components": [
+                        {
+                            "type": "codelist-codes",
+                            "uid": "FAOSTAT_Elements",
+                            "componentType": "dropDownList-FENIX",
+                            "lang": "EN",
+                            // name is the ID output in the filter getValues()
+                            "name": "element",
+                            "config": {
+                                "defaultsource": [ ],
+                                filter :  {
+                                    "uid": "FAOSTAT_Elements",
+                                    "version": null,
+                                    "codes" : ["QC"]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "codelist",
                     "containerType": "baseContainer",
                     "title": "Country",
                     "defaultCodes": ["33"],
                     "components": [
                         {
                             "type": "codelist",
+                            "uid": "FAOSTAT_Countries",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
-                            "title": {"EN": "Distinct"},
-                            // name is the ID output in tehe filter getValues()
+                            // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
-                                "defaultsource": []
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "distinct",
-                    "uid": "FAOSTAT_QC",
-                    "column": "element",
-                    "containerType": "baseContainer",
-                    "title": "Element",
-                    "defaultCodes": ["5312"],
-                    "components": [
-                        {
-                            "type": "codelist",
-                            "componentType": "dropDownList-FENIX",
-                            "lang": "EN",
-                            "title": {"EN": "Distinct"},
-                            // name is the ID output in tehe filter getValues()
-                            "name": "element",
-                            "config": {
-                                "defaultsource": []
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "distinct",
-                    "uid": "FAOSTAT_QC",
-                    "column": "item",
-                    "containerType": "baseContainer",
-                    "title": "Item",
-                    "defaultCodes": ["1717"],
-                    "components": [
-                        {
-                            "type": "codelist",
-                            "componentType": "dropDownList-FENIX",
-                            "lang": "EN",
-                            "title": {"EN": "Distinct"},
-                            // name is the ID output in tehe filter getValues()
-                            "name": "item",
-                            "config": {
-                                "defaultsource": []
+                                "defaultsource": [ ]
                             }
                         }
                     ]
                 }
-
-                */
             ],
 
             dashboard: {

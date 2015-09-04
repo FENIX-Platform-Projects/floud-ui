@@ -117,8 +117,6 @@ define([
                 self.$filterContainerFaostat.toggle();
             });
 
-            this.$filterContainerFaostat.toggle();
-
             this.$topicSelectorFlude.on("change", function (e) {
                 self._onFludeTopicChange(e.val);
             });
@@ -131,6 +129,7 @@ define([
 
                 var filter = {};
                 var values = self.filterFaostat.getValues();
+                console.log(values)
 
                 // TODO: funzione per distruggere dashboard e ricrearla con gli items giusti:
                 /*
@@ -171,14 +170,14 @@ define([
             });
 
             //TODO remove me
-            /*self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
+            self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
 
             self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
 
             $(window).trigger('resize');
 
             window.dispatchEvent(new Event('resize'));
-            */
+
             //TODO remove me
 
         },
@@ -263,7 +262,7 @@ define([
             this.$topicSelectorFlude.select2(conf);
 
             this.$topicSelectorFlude.select2('data', conf.data[0]);
-            this._onFludeTopicChange(conf.data[0].id);
+            //this._onFludeTopicChange(conf.data[0].id);
 
             //Faostat
 
