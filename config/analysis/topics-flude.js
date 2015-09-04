@@ -3040,7 +3040,7 @@ define(function () {
 
                             config: {
                                 "defaultsource": [
-                                    {"value": null, "label": "All", "selected": true}
+                                    //{"value": null, "label": "All", "selected": true}
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
                                 ],
                                 "enableMultiselection": true
@@ -3180,6 +3180,9 @@ define(function () {
                             },
                             creator: {
                                 chartObj: {
+                                    chart: {
+                                        type: "column"
+                                    },
                                     tooltip: {
                                         valueSuffix: ' 1000 HA'
                                     }
@@ -6781,8 +6784,17 @@ define(function () {
                                     {"value": "2003", "label": "2003", "selected": false},
                                     {"value": "2002", "label": "2002", "selected": false},
                                     {"value": "2001", "label": "2001", "selected": false},
-                                    {"value": "2000", "label": "2000", "selected": false}
-
+                                    {"value": "2000", "label": "2000", "selected": false},
+                                    {"value": "1999", "label": "1999", "selected": false},
+                                    {"value": "1998", "label": "1998", "selected": false},
+                                    {"value": "1997", "label": "1997", "selected": false},
+                                    {"value": "1996", "label": "1996", "selected": false},
+                                    {"value": "1995", "label": "1995", "selected": false},
+                                    {"value": "1994", "label": "1994", "selected": false},
+                                    {"value": "1993", "label": "1993", "selected": false},
+                                    {"value": "1992", "label": "1992", "selected": false},
+                                    {"value": "1991", "label": "1991", "selected": false},
+                                    {"value": "1990", "label": "1990", "selected": false}
                                 ]
                             }
                         }
@@ -6854,6 +6866,7 @@ define(function () {
                     ]
                 }
             ],
+
             dashboard: {
                 //data cube's uid
                 uid: "FLUDE_TOPIC_9",
@@ -6875,7 +6888,6 @@ define(function () {
                 metadata: {},
 
                 items:  [
-
                     {
                         id: 'item-1',
                         type: 'map',
@@ -6911,7 +6923,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -6961,7 +6973,7 @@ define(function () {
                                         "year": {
                                             "time": [
                                                 {
-                                                    "from": 2000,
+                                                    "from": 2011,
                                                     "to": 2011
                                                 }
                                             ]
@@ -6971,7 +6983,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7042,7 +7054,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7120,7 +7132,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7198,7 +7210,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7290,7 +7302,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7381,7 +7393,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]
@@ -7472,7 +7484,7 @@ define(function () {
                                                 {
                                                     "uid": "FLUDE_INDICATORS",
                                                     "codes": [
-                                                        "BurnLan"
+                                                        "WooRemov"
                                                     ]
                                                 }
                                             ]

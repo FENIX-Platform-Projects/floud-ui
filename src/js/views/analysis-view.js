@@ -171,13 +171,14 @@ define([
             });
 
             //TODO remove me
-            self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
+            /*self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
 
             self.$sideFaostat.is(':visible') ? self.$sideFaostat.hide() : self.$sideFaostat.show();
 
             $(window).trigger('resize');
 
             window.dispatchEvent(new Event('resize'));
+            */
             //TODO remove me
 
         },
