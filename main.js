@@ -39,8 +39,8 @@ require([
     Compiler.resolve([commonConfig, menuConfig, dashboardConfig, chartConfig, tableConfig, mapConfig, filterConfig],
         {
             placeholders: {
-                "FENIX_CDN": "//fenixrepo.fao.org/cdn"
-                //"FENIX_CDN": "http://lprapp16.fao.org/external/fenixapps1/repository"
+                //"FENIX_CDN": "//fenixrepo.fao.org/cdn"
+                "FENIX_CDN": "http://lprapp16.fao.org/external/fenixrepo/cdn"
             },
 
             config: {
@@ -76,6 +76,8 @@ require([
                     'fenix-ui-map-config' : '../../config/submodules/fx-map/Config' ,
 
                     'fx-m-c/config/config' : '../../config/submodules/fx-chart-creator/Config' ,
+
+                    'fx-filter/config/config' : '../../config/submodules/fx-filter/Config' ,
 
                     nls: "../../i18n",
                     config: "../../config",
