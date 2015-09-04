@@ -256,7 +256,7 @@ define(function () {
         },
         tooltip: {
             //valueSuffix: '',
-           // backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            // backgroundColor: 'rgba(255, 255, 255, 0.95)',
             borderWidth: 1,
             shadow: true,
             crosshairs: "mixed",

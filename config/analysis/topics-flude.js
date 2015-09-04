@@ -215,6 +215,9 @@ define(function () {
                                 chartObj: {
                                     chart: {
                                         type: "column"
+                                    },
+                                    tooltip: {
+                                        valueSuffix: ' unit of measurement'
                                     }
                                 }
                             }
