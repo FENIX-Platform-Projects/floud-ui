@@ -7192,10 +7192,7 @@ h1.flude-analysis-title {
   color: white;
   display: inline-block; }
 
-h2.filter-opener-flude {
-  margin: 0; }
-
-h2.filter-opener-faostat {
+h2.filter-opener-flude, h2.filter-opener-faostat {
   margin-top: 10px; }
 
 .flude-topic-selector {
