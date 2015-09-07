@@ -56,7 +56,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in tehe filter getValues()
@@ -319,7 +319,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()
@@ -582,7 +582,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()
@@ -845,7 +845,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()
@@ -1108,7 +1108,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()
@@ -1371,7 +1371,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()
@@ -1635,7 +1635,7 @@ define(function () {
                     "components": [
                         {
                             "type": "codelist-codes",
-                            "uid": "FLUDE_FAOSTAT_ITEM",
+                            "uid": "FAOSTAT_Items",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             // name is the ID output in the filter getValues()

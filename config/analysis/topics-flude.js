@@ -25,7 +25,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
-                            "uid" : "DAMOE EMOD AMOD OA",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -196,7 +196,7 @@ define(function () {
                             }
                         ]
                     },
-/*                    {
+                    {
                         id: 'item-2',
                         type: 'chart',
                         class: "fx-timeseries-ecample",
@@ -973,7 +973,7 @@ define(function () {
                                 }
                             }
                         ]
-                    }*/
+                    }
                 ]
             }
         },
@@ -997,6 +997,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -1963,6 +1964,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -2919,6 +2921,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -3078,6 +3081,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -4048,6 +4052,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -5021,6 +5026,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -5992,6 +5998,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
@@ -6963,6 +6970,7 @@ define(function () {
                             "type": "codelist",
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
+                            "uid" : "FLUDE_INDICATORS",
                             "title": {"EN": "Distinct"},
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
