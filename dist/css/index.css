@@ -7292,6 +7292,15 @@ input#toggle-side-faostat:checked + label:after {
     height: 100%;
     width: 100%; }
 
+.proto-text {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  font-size: 18px;
+  color: white;
+  height: 100%;
+  line-height: 75px; }
+
 .filter-container {
   min-height: 70px; }
 
