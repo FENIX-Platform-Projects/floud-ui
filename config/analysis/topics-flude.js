@@ -331,7 +331,12 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
+
                                     ]
                                 }
                             },
@@ -423,6 +428,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -501,6 +510,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -579,6 +592,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -657,6 +674,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -749,6 +770,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -931,6 +956,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1360,6 +1389,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1437,6 +1470,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1515,6 +1552,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1593,6 +1634,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1685,6 +1730,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1776,6 +1825,12 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": [
+                                                "um"
+                                            ],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -1867,6 +1922,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2206,6 +2265,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2298,6 +2361,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2375,6 +2442,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2453,6 +2524,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2531,6 +2606,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2623,6 +2702,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2698,6 +2781,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -2789,6 +2876,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3297,6 +3388,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3389,6 +3484,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3466,6 +3565,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3544,6 +3647,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3622,6 +3729,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3714,6 +3825,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3805,6 +3920,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -3896,6 +4015,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4233,6 +4356,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4325,6 +4452,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4402,6 +4533,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4494,6 +4629,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4572,6 +4711,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4664,6 +4807,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4742,6 +4889,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -4835,6 +4986,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5174,6 +5329,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5266,6 +5425,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5343,6 +5506,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5421,6 +5588,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5499,6 +5670,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5591,6 +5766,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5682,6 +5861,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -5773,6 +5956,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6113,6 +6300,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6205,6 +6396,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6282,6 +6477,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6360,6 +6559,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6438,6 +6641,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6530,6 +6737,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6621,6 +6832,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -6712,6 +6927,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7072,6 +7291,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7150,6 +7373,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7228,6 +7455,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7320,6 +7551,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7411,6 +7646,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }
@@ -7502,6 +7741,10 @@ define(function () {
                                         {
                                             "columns": ["value"],
                                             "rule": "AVG"
+                                        },
+                                        {
+                                            "columns": ["um"],
+                                            "rule": "FIRST"
                                         }
                                     ]
                                 }

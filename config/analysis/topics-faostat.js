@@ -181,7 +181,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "1717"
                                                     ]
@@ -244,7 +244,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "1717"
                                                     ]
@@ -444,7 +444,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "866"
                                                     ]
@@ -507,7 +507,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "866"
                                                     ]
@@ -707,7 +707,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "867"
                                                     ]
@@ -770,7 +770,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "867"
                                                     ]
@@ -970,7 +970,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "3010"
                                                     ]
@@ -1033,7 +1033,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "3010"
                                                     ]
@@ -1233,7 +1233,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "1865"
                                                     ]
@@ -1296,7 +1296,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "1865"
                                                     ]
@@ -1496,7 +1496,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "5058"
                                                     ]
@@ -1559,7 +1559,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "5058"
                                                     ]
@@ -1760,7 +1760,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "5069"
                                                     ]
@@ -1823,7 +1823,7 @@ define(function () {
                                         "item": {
                                             "codes": [
                                                 {
-                                                    "uid": "FLUDE_FAOSTAT_ITEM",
+                                                    "uid": "FAOSTAT_Items",
                                                     "codes": [
                                                         "5069"
                                                     ]
