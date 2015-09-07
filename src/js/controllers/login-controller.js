@@ -4,7 +4,7 @@ define([
     'underscore',
     'config/Events',
     'controllers/base/controller',
-    'views/protected-view',
+    'views/login-view',
     'globals/AuthManager',
     'rsvp'
 ], function (Chaplin, _, E, Controller, View, AuthManager, RSVP) {
@@ -15,7 +15,7 @@ define([
         beforeAction: function () {
             Controller.prototype.beforeAction.call(this, arguments);
 
-            return this.performAccessControlChecks().then(undefined, _.bind(this.denyAccessControl, this))
+            return this.performAccessControlChecks().then(_.bind(this.allowAccessControl, this), _.bind(this.denyAccessControl, this))
         },
 
         performAccessControlChecks: function () {
@@ -30,14 +30,19 @@ define([
             });
         },
 
+        allowAccessControl: function () {
+            this.authorized = true;
+        },
+
+
         denyAccessControl: function () {
             this.authorized = false;
         },
 
         show: function (params) {
 
-            if (this.authorized === false) {
-                Chaplin.mediator.publish(E.NOT_AUTHORIZED);
+            if (this.authorized === true) {
+                Chaplin.utils.redirectTo({controller: 'analysis', action: 'show'});
                 return;
             }
 

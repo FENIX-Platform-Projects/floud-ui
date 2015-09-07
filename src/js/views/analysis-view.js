@@ -109,14 +109,6 @@ define([
 
             var self = this;
 
-            this.$filterOpenerFlude.on('click', function () {
-                self.$filterContainerFlude.toggle();
-            });
-
-            this.$filterOpenerFaostat.on('click', function () {
-                self.$filterContainerFaostat.toggle();
-            });
-
             this.$topicSelectorFlude.on("change", function (e) {
                 self._onFludeTopicChange(e.val);
             });
@@ -267,6 +259,13 @@ define([
             this._renderFludeFilter(filterConfig);
 
             this._renderFludeDashboard(config.dashboard);
+
+        },
+
+        _updateDashboardTitles : function (filter) {
+
+            console.log(filter)
+
 
 
         },
