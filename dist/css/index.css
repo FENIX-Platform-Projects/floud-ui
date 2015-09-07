@@ -7287,6 +7287,10 @@ input#toggle-side-faostat:checked + label:after {
   top: 0;
   right: 0;
   cursor: pointer; }
+  .home-back-btn .return-btn {
+    display: block;
+    height: 100%;
+    width: 100%; }
 
 .filter-container {
   min-height: 70px; }

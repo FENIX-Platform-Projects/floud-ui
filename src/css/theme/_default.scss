@@ -131,6 +131,13 @@ input#toggle-side-faostat:checked + label:after {
   top: 0;
   right: 0;
   cursor: pointer;
+
+  .return-btn{
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
 }
 
 .filter-container{
