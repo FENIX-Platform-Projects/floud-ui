@@ -1,19 +1,20 @@
 /*global define*/
-define(function() {
-
+define([
+    'config/Config'
+], function (C) {
     'use strict';
 
-    var SERVER = "http://lprapp16.fao.org";
+    var SERVER = C.SERVER;
     //var SERVER = "http://fenix.fao.org";
 
     return window.FMCONFIG = {
 
         BASEURL_LANG: './submodules/fenix-ui-map/dist/i18n/',
 
-        MAP_SERVICE_SHADED: SERVER + '/test/geo/fenix/mapclassify/join/',
-        DEFAULT_WMS_SERVER: SERVER + '/geoserver',
-        MAP_SERVICE_GFI_JOIN: SERVER + '/test/geo/fenix/mapclassify/request/',
-        MAP_SERVICE_GFI_STANDARD: SERVER + '/test/geo/fenix/mapclassify/request/',
+        MAP_SERVICE_SHADED: SERVER + 'test/geo/fenix/mapclassify/join/',
+        DEFAULT_WMS_SERVER: SERVER + 'geoserver',
+        MAP_SERVICE_GFI_JOIN: SERVER + 'test/geo/fenix/mapclassify/request/',
+        MAP_SERVICE_GFI_STANDARD: SERVER + 'test/geo/fenix/mapclassify/request/',
 
         // ZOOM TO BBOX
         ZOOM_TO_BBOX: SERVER +'/geo/fenix/spatialquery/db/spatial/bbox/layer/',

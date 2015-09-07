@@ -1,14 +1,17 @@
-/* global define */
-define(function () {
+/*global define*/
+define([
+    'config/Config'
+], function (C) {
+    'use strict';
 
     'use strict';
 
-    var SERVER = "http://lprapp16.fao.org";
+    var SERVER = C.SERVER;
 
     return {
 
         SERVER :SERVER,
-        SERVICE_BASE_ADDRESS: SERVER + "/d3s_dev/msd"
+        SERVICE_BASE_ADDRESS: SERVER + "d3s_dev/msd"
 
     };
 });

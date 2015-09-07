@@ -1,11 +1,13 @@
 /* global define */
-define(function () {
+define([
+    'config/Config'
+],function (C) {
 
     'use strict';
 
     return {
 
-        SERVER : "http://lprapp16.fao.org/"
+        SERVER : C.SERVER
 
     };
 });

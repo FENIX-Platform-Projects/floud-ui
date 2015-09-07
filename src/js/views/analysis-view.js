@@ -128,6 +128,8 @@ define([
                  self.faostatDashboard.filter([values]);
  */
 
+                console.log(values)
+                return;
                 // TODO: it's an array
                 self.faostatDashboard.filter([values]);
             });
