@@ -1,6 +1,6 @@
 {
-  "guest@fenix" : {
+  "guest@fao" : {
       "name" : "Guest",
-      "password" : "guest"
+      "password" : "fao"
   }
 }

@@ -160,7 +160,7 @@ define([
 
                 $(window).trigger('resize');
 
-                window.dispatchEvent(new Event('resize'));
+                //window.dispatchEvent(new Event('resize'));
 
             });
         },
