@@ -3,6 +3,10 @@
   "width" : "99%",
   "data": [
     {
+      "id": "FAOSTAT_RL",
+      "text": "Inputs - Land"
+    },
+    {
       "id": "FAOSTAT_QC",
       "text": "Production - Crops"
     },
