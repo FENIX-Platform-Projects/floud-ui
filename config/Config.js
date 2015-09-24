@@ -35,7 +35,9 @@ define(function () {
 
             DOWNLOAD_FILE_SYSTEM_ROOT : 'http://fenixrepo.fao.org/cdn/data/flude/download/',
 
-            SERVER : "http://lprapp16.fao.org/"
+            SERVER : "http://fenixrepo.fao.org/external/lprapp16/"
+            //SERVER : "http://fenix.fao.org/"
+            //SERVER : "http://lprapp16.fao.org/"
 
         };
     });

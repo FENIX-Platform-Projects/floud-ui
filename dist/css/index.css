@@ -7390,7 +7390,7 @@ input#toggle-side-faostat:checked + label:after {
 .fm-legend-layertitle {
   font-size: 0 !important; }
   .fm-legend-layertitle:before {
-    content: 'Legend (HA3)';
+    content: 'Legend';
     font: normal normal 300 12px/normal "FrutigerLTW02-45Light", Arial, Helvetica, Verdana, sans-serif; }
 
 /* Components */
