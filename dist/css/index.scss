@@ -25,7 +25,9 @@
 @import '../../src/css/components/submenu';
 
 
-/* Third parties */
+/* Typo3 */
+@import '../../src/css/theme/typo3-compatibility';
+
 
 /* Pages */
 @import '../../src/css/pages/home';
