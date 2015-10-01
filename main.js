@@ -1,22 +1,46 @@
 /*global require*/
 
+var projectRoot = "//fenixrepo.fao.org/cdn/test/flude";
+
+
+require.config({
+    config: {
+        text: {
+            useXhr: function (url, protocol, hostname, port) {
+                return true;
+            }
+        }
+    },
+    paths : {
+        //compilerPaths : projectRoot + '/submodules/fenix-ui-common/js/Compiler',
+        compilerPaths : './submodules/fenix-ui-common/js/Compiler',
+        commonPaths : projectRoot + '/submodules/fenix-ui-common/js/paths',
+        menuPaths: projectRoot + '/submodules/fenix-ui-menu/js/paths',
+        dashboardPaths :projectRoot + '/submodules/fenix-ui-dashboard/src/js/paths',
+        chartPaths :projectRoot + '/submodules/fenix-ui-chart-creator/src/js/paths',
+        mapPaths :projectRoot + '/submodules/fenix-ui-map-creator/src/js/paths',
+        tablePaths : projectRoot + '/submodules/fenix-ui-table-creator/src/js/paths',
+        filterPaths :projectRoot + '/submodules/fenix-ui-filter/src/js/paths'
+    }
+});
+
 require([
-    './submodules/fenix-ui-common/js/Compiler',
-    './submodules/fenix-ui-common/js/paths',
-    './submodules/fenix-ui-menu/js/paths',
-    './submodules/fenix-ui-dashboard/src/js/paths',
-    './submodules/fenix-ui-chart-creator/src/js/paths',
-    './submodules/fenix-ui-map-creator/src/js/paths',
-    './submodules/fenix-ui-table-creator/src/js/paths',
-    './submodules/fenix-ui-filter/src/js/paths'
+    "compilerPaths",
+    "commonPaths",
+    "menuPaths",
+    "dashboardPaths",
+    "chartPaths",
+    "mapPaths",
+    "tablePaths",
+    "filterPaths"
 ], function (Compiler, Common, Menu, Dashboard, Chart, Map, Table, Filter) {
 
     'use strict';
 
-    var submodules_path = '../../submodules/';
+    var submodules_path = projectRoot + '/submodules';
 
     var commonConfig = Common;
-    commonConfig.baseUrl = submodules_path + 'fenix-ui-common/js';
+    commonConfig.baseUrl = submodules_path + '/fenix-ui-common/js';
 
     var menuConfig = Menu;
     menuConfig.baseUrl = submodules_path + '/fenix-ui-menu/js';
@@ -51,7 +75,7 @@ require([
                 },
 
                 // The path where your JavaScripts are located
-                baseUrl: './src/js',
+                baseUrl: projectRoot + '/src/js',
 
                 // Specify the paths of vendor libraries
                 paths: {
@@ -68,22 +92,22 @@ require([
 
                     amplify: '{FENIX_CDN}/js/amplify/1.1.2/amplify.min',
 
-                    'fx-c-c/config/creators/highcharts_template' :'../../config/submodules/fx-chart/highcharts_template',
+                    'fx-c-c/config/creators/highcharts_template' : projectRoot + '/config/submodules/fx-chart/highcharts_template',
 
-                    'fx-ds/config/config' : "../../config/submodules/fx-dashboard/Config",
+                    'fx-ds/config/config' : projectRoot + "/config/submodules/fx-dashboard/Config",
 
-                    'fenix-ui-map' : '../../submodules/fenix-ui-map/dist/fenix-ui-map.src',
-                    'fenix-ui-map-config' : '../../config/submodules/fx-map/Config' ,
+                    'fenix-ui-map' : projectRoot + '/submodules/fenix-ui-map/dist/fenix-ui-map.src',
+                    'fenix-ui-map-config' : projectRoot + '/config/submodules/fx-map/Config' ,
 
-                    'fx-m-c/config/config' : '../../config/submodules/fx-chart-creator/Config' ,
+                    'fx-m-c/config/config' : projectRoot + '/config/submodules/fx-chart-creator/Config' ,
 
-                    'fx-filter/config/config' : '../../config/submodules/fx-filter/Config' ,
+                    'fx-filter/config/config' : projectRoot + '/config/submodules/fx-filter/Config' ,
 
-                    nls: "../../i18n",
-                    config: "../../config",
-                    json: "../../json",
+                    nls: projectRoot + "/i18n",
+                    config: projectRoot + "/config",
+                    json: projectRoot + "/json",
 
-                    'fx-common/config/auth_users' : '../../config/auth_users.json'
+                    'fx-common/config/auth_users' :  projectRoot + '/config/auth_users.json'
                 },
 
                 // Underscore and Backbone are not AMD-capable per default,
@@ -111,6 +135,8 @@ require([
                 //, urlArgs: 'bust=' +  (new Date()).getTime()
             }
         });
+
+    console.log(requirejs.s.contexts)
 
     // Bootstrap the application
     require([
