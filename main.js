@@ -1,7 +1,7 @@
 /*global require*/
 
-var projectRoot = "//fenixrepo.fao.org/cdn/test/flude";
-
+var projectRoot = ".",
+    projectBaseURl = projectRoot +".";
 
 require.config({
     config: {
@@ -12,8 +12,8 @@ require.config({
         }
     },
     paths : {
-        //compilerPaths : projectRoot + '/submodules/fenix-ui-common/js/Compiler',
-        compilerPaths : './submodules/fenix-ui-common/js/Compiler',
+        compilerPaths : projectRoot + '/submodules/fenix-ui-common/js/Compiler',
+        //compilerPaths : './submodules/fenix-ui-common/js/Compiler',
         commonPaths : projectRoot + '/submodules/fenix-ui-common/js/paths',
         menuPaths: projectRoot + '/submodules/fenix-ui-menu/js/paths',
         dashboardPaths :projectRoot + '/submodules/fenix-ui-dashboard/src/js/paths',
@@ -37,7 +37,7 @@ require([
 
     'use strict';
 
-    var submodules_path = projectRoot + '/submodules';
+    var submodules_path = projectRoot + '/../../submodules';
 
     var commonConfig = Common;
     commonConfig.baseUrl = submodules_path + '/fenix-ui-common/js';
@@ -92,22 +92,22 @@ require([
 
                     amplify: '{FENIX_CDN}/js/amplify/1.1.2/amplify.min',
 
-                    'fx-c-c/config/creators/highcharts_template' : projectRoot + '/config/submodules/fx-chart/highcharts_template',
+                    'fx-c-c/config/creators/highcharts_template' : projectRoot + '/../../config/submodules/fx-chart/highcharts_template',
 
-                    'fx-ds/config/config' : projectRoot + "/config/submodules/fx-dashboard/Config",
+                    'fx-ds/config/config' : projectRoot + "/../../config/submodules/fx-dashboard/Config",
 
-                    'fenix-ui-map' : projectRoot + '/submodules/fenix-ui-map/dist/fenix-ui-map.src',
-                    'fenix-ui-map-config' : projectRoot + '/config/submodules/fx-map/Config' ,
+                    'fenix-ui-map' : projectRoot + '/../../submodules/fenix-ui-map/dist/fenix-ui-map.src',
+                    'fenix-ui-map-config' : projectRoot + '/../../config/submodules/fx-map/Config' ,
 
-                    'fx-m-c/config/config' : projectRoot + '/config/submodules/fx-chart-creator/Config' ,
+                    'fx-m-c/config/config' : projectRoot + '/../../config/submodules/fx-chart-creator/Config' ,
 
-                    'fx-filter/config/config' : projectRoot + '/config/submodules/fx-filter/Config' ,
+                    'fx-filter/config/config' : projectRoot + '/../../config/submodules/fx-filter/Config' ,
 
-                    nls: projectRoot + "/i18n",
-                    config: projectRoot + "/config",
-                    json: projectRoot + "/json",
+                    nls: projectRoot + "/../../i18n",
+                    config: projectRoot + "/../../config",
+                    json: projectRoot + "/../../json",
 
-                    'fx-common/config/auth_users' :  projectRoot + '/config/auth_users.json'
+                    'fx-common/config/auth_users' :  projectRoot + '/../../config/auth_users.json'
                 },
 
                 // Underscore and Backbone are not AMD-capable per default,
@@ -136,8 +136,6 @@ require([
             }
         });
 
-    console.log(requirejs.s.contexts)
-
     // Bootstrap the application
     require([
         'application',
@@ -150,8 +148,7 @@ require([
             routes: routes,
             controllerSuffix: C.CHAPLINJS_CONTROLLER_SUFFIX,
             root: C.CHAPLINJS_PROJECT_ROOT,
-            pushState: C.CHAPLINJS_PUSH_STATE,
-            scrollTo: C.CHAPLINJS_SCROLL_TO
+            pushState: C.CHAPLINJS_PUSH_STATE
         });
     });
 });
