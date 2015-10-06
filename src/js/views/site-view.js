@@ -23,7 +23,7 @@ define([
 
     var SiteView = View.extend({
 
-        container: 'body',
+        container: '.fx-sandbox',
 
         id: 'site-container',
 

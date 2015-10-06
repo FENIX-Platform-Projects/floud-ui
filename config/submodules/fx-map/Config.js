@@ -9,7 +9,7 @@ define([
 
     return window.FMCONFIG = {
 
-        BASEURL_LANG: './submodules/fenix-ui-map/dist/i18n/',
+        BASEURL_LANG: 'http://fenixrepo.fao.org/cdn/js/fenix-ui-map/0.1.4/i18n/',
 
         MAP_SERVICE_SHADED: SERVER + 'test/geo/fenix/mapclassify/join/',
         DEFAULT_WMS_SERVER: SERVER + 'geoserver',

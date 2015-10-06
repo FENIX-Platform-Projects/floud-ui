@@ -1,7 +1,7 @@
 /*global require*/
 
-var projectRoot = ".",
-    projectBaseURl = projectRoot +".";
+var projectRoot = "http://www.fao.org/fenixrepo/cdn/projects/flude/1.0.0";
+//var projectRoot = "//fenixrepo.fao.org/cdn/projects/flude/1.0.0";
 
 require.config({
     config: {
@@ -37,7 +37,7 @@ require([
 
     'use strict';
 
-    var submodules_path = projectRoot + '/../../submodules';
+    var submodules_path = projectRoot + '/submodules';
 
     var commonConfig = Common;
     commonConfig.baseUrl = submodules_path + '/fenix-ui-common/js';
@@ -63,7 +63,8 @@ require([
     Compiler.resolve([commonConfig, menuConfig, dashboardConfig, chartConfig, tableConfig, mapConfig, filterConfig],
         {
             placeholders: {
-                "FENIX_CDN": "//fenixrepo.fao.org/cdn"
+                "FENIX_CDN": "http://www.fao.org/fenixrepo/cdn"
+                //"FENIX_CDN": "//fenixrepo.fao.org/cdn"
                 //"FENIX_CDN": "http://lprapp16.fao.org/external/fenixrepo/cdn"
             },
 
@@ -79,11 +80,12 @@ require([
 
                 // Specify the paths of vendor libraries
                 paths: {
+                    /* 'jquery-private': "{FENIX_CDN}/js/jquery/2.1.1/jquery.min",*/
                     bootstrap: "{FENIX_CDN}/js/bootstrap/3.3.4/js/bootstrap.min",
                     underscore: "{FENIX_CDN}/js/underscore/1.7.0/underscore.min",
                     backbone: "{FENIX_CDN}/js/backbone/1.1.2/backbone.min",
                     handlebars: "{FENIX_CDN}/js/handlebars/2.0.0/handlebars",
-                    chaplin: "{FENIX_CDN}/js/chaplin/1.0.1/chaplin.min",
+                    chaplin: "{FENIX_CDN}/js/chaplin/1.0.1/chaplin",
                     domReady: "{FENIX_CDN}/js/requirejs/plugins/domready/2.0.1/domReady",
                     i18n: "{FENIX_CDN}/js/requirejs/plugins/i18n/2.0.4/i18n",
                     text: '{FENIX_CDN}/js/requirejs/plugins/text/2.0.12/text',
@@ -92,22 +94,22 @@ require([
 
                     amplify: '{FENIX_CDN}/js/amplify/1.1.2/amplify.min',
 
-                    'fx-c-c/config/creators/highcharts_template' : projectRoot + '/../../config/submodules/fx-chart/highcharts_template',
+                    'fx-c-c/config/creators/highcharts_template' : projectRoot + '/config/submodules/fx-chart/highcharts_template',
 
-                    'fx-ds/config/config' : projectRoot + "/../../config/submodules/fx-dashboard/Config",
+                    'fx-ds/config/config' : projectRoot + "/config/submodules/fx-dashboard/Config",
 
-                    'fenix-ui-map' : projectRoot + '/../../submodules/fenix-ui-map/dist/fenix-ui-map.src',
-                    'fenix-ui-map-config' : projectRoot + '/../../config/submodules/fx-map/Config' ,
+                    'fenix-ui-map' : projectRoot + '/submodules/fenix-ui-map/dist/fenix-ui-map.src',
+                    'fenix-ui-map-config' : projectRoot + '/config/submodules/fx-map/Config' ,
 
-                    'fx-m-c/config/config' : projectRoot + '/../../config/submodules/fx-chart-creator/Config' ,
+                    'fx-m-c/config/config' : projectRoot + '/config/submodules/fx-chart-creator/Config' ,
 
-                    'fx-filter/config/config' : projectRoot + '/../../config/submodules/fx-filter/Config' ,
+                    'fx-filter/config/config' : projectRoot + '/config/submodules/fx-filter/Config' ,
 
-                    nls: projectRoot + "/../../i18n",
-                    config: projectRoot + "/../../config",
-                    json: projectRoot + "/../../json",
+                    nls: projectRoot + "/i18n",
+                    config: projectRoot + "/config",
+                    json: projectRoot + "/json",
 
-                    'fx-common/config/auth_users' :  projectRoot + '/../../config/auth_users.json'
+                    'fx-common/config/auth_users' :  projectRoot + '/config/auth_users.json'
                 },
 
                 // Underscore and Backbone are not AMD-capable per default,
@@ -129,7 +131,17 @@ require([
                     handlebars: {
                         exports: 'Handlebars'
                     }
-                }
+                }/*,
+                 map: {
+                 // '*' means all modules will get 'jquery-private'
+                 // for their 'jquery' dependency.
+                 '*': { 'jquery': 'jquery-private' },
+
+                 // 'jquery-private' wants the real jQuery module
+                 // though. If this line was not here, there would
+                 // be an unresolvable cyclic dependency.
+                 'jquery-private': { 'jquery': 'jquery' }
+                 }*/
                 // For easier development, disable browser caching
                 // Of course, this should be removed in a production environment
                 //, urlArgs: 'bust=' +  (new Date()).getTime()
@@ -144,11 +156,49 @@ require([
         'domReady!'
     ], function (Application, routes, C) {
 
-        var app = new Application({
+        function countCSSRules() {
+            var results = '',
+                log = '';
+            if (!document.styleSheets) {
+                return;
+            }
+            for (var i = 0; i < document.styleSheets.length; i++) {
+                countSheet(document.styleSheets[i]);
+            }
+            function countSheet(sheet) {
+                var count = 0;
+                if (sheet && sheet.cssRules) {
+                    for (var j = 0, l = sheet.cssRules.length; j < l; j++) {
+                        var rule = sheet.cssRules[j];
+                        if (rule instanceof CSSImportRule) {
+                            countSheet(rule.styleSheet);
+                        }
+                        if( !rule.selectorText ) {
+                            continue;
+                        }
+                        count += rule.selectorText.split(',').length;
+                    }
+
+                    log += '\nFile: ' + (sheet.href ? sheet.href : 'inline <style> tag');
+                    log += '\nRules: ' + sheet.cssRules.length;
+                    log += '\nSelectors: ' + count;
+                    log += '\n--------------------------';
+                    if (count >= 4096) {
+                        results += '\n********************************\nWARNING:\n There are ' + count + ' CSS rules in the stylesheet ' + sheet.href + ' - IE will ignore the last ' + (count - 4096) + ' rules!\n';
+                    }
+                }
+            }
+            console.log(log);
+            console.log(results);
+        };
+        countCSSRules();
+
+    var app = new Application({
             routes: routes,
             controllerSuffix: C.CHAPLINJS_CONTROLLER_SUFFIX,
             root: C.CHAPLINJS_PROJECT_ROOT,
-            pushState: C.CHAPLINJS_PUSH_STATE
+            pushState: C.CHAPLINJS_PUSH_STATE,
+            scrollTo: C.CHAPLINJS_SCROLL_TO
         });
     });
 });
