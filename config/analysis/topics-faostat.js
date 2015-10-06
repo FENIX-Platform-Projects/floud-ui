@@ -211,7 +211,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -474,7 +481,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -737,7 +751,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -1000,7 +1021,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                subtitle: {
+                                    text: 'FAOSTAT Data',
+                                    x: -20
+                                }
+                            }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -1263,7 +1291,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -1526,7 +1561,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -1790,7 +1832,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],
@@ -2057,7 +2106,14 @@ define(function () {
                             template: {
                                 //"title": "Top 25..."
                             },
-                            creator: {}
+                            creator: {
+                                chartObj: {
+                                    subtitle: {
+                                        text: 'FAOSTAT Data',
+                                        x: -20
+                                    }
+                                }
+                            }
                         },
                         // for now it takes the id, TODO: add uid as well
                         allowedFilter: ['country', 'item', 'element'],

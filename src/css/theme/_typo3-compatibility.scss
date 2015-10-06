@@ -1,5 +1,26 @@
 /* Typo3 FAO Compatibility */
 
+body.super-extreme-filter {
+    .fx-filter-form-module {
+            width: 50%;
+    }
+
+
+  #side-faostat{
+
+    .obj-box.box-faostat{
+          height: 311px;
+
+
+      #filter-submit-btn-faostat{
+        position: relative;
+        top: 58px;
+      }
+    }
+  }
+
+}
+
 body {
 
   color: black;
@@ -19,6 +40,7 @@ footer {
 
 
 }
+
 
 #content {
 
