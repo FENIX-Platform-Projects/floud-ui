@@ -13,6 +13,14 @@ define([
     // Choose a meaningful name for your application
     var Application = Chaplin.Application.extend({
 
+        initialize: function() {
+            var args = [].slice.call(arguments);
+
+            // ...
+            //this.initLayout({openExternalToBlank: true});
+            Chaplin.Application.prototype.initialize.apply(this, args);
+        },
+
         // Set your application name here so the document title is set to
         // “Controller title – Site title” (see Layout#adjustTitle)
         title: C.CHAPLINJS_APPLICATION_TITLE,

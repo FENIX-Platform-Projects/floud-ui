@@ -23,7 +23,7 @@ define([
 
     var SiteView = View.extend({
 
-        container: 'body',
+        container: '.fx-sandbox',
 
         id: 'site-container',
 
@@ -52,45 +52,19 @@ define([
 
         initComponents: function () {
 
-            var self = this,
-                menuConf = {
-
-                    url: C.TOP_MENU_CONFIG,
-
-                    template: C.TOP_MENU_TEMPLATE,
-
-                    //active: State.menu,
-                    container: s.TOP_MENU_CONTAINER,
-                    callback: _.bind(this.onMenuRendered, this),
-                    breadcrumb: {
-                        active: C.TOP_MENU_SHOW_BREADCRUMB,
-                        container: s.BREADCRUMB_CONTAINER,
-                        showHome: C.TOP_MENU_SHOW_BREADCRUMB_HOME
-                    },
-                    footer: {
-                        active: C.TOP_MENU_SHOW_FOOTER,
-                        container: s.FOOTER_MENU_CONTAINER
-                    }
-                },
-                menuConfAuth = _.extend({}, menuConf, {
-                    hiddens: C.TOP_MENU_AUTH_MODE_HIDDEN_ITEMS
-                }),
-                menuConfPub = _.extend({}, menuConf, {
-                    hiddens: C.TOP_MENU_PUBLIC_MODE_HIDDEN_ITEMS
-                });
-
             this.authManager = AuthManager.init({
+                modal : {
+                    keyboard: false,
+                    backdrop: 'static'
+                },
                 onLogin: _.bind(function () {
-                    self.topMenu.refresh(menuConfAuth);
+                    Chaplin.utils.redirectTo({controller: 'analysis', action: 'show'});
                 }, this),
                 onLogout: _.bind(function () {
-                    Chaplin.mediator.publish(E.NOT_AUTHORIZED);
-                    self.topMenu.refresh(menuConfPub);
+                    Chaplin.utils.redirectTo({controller: 'login', action: 'show'});
                 }, this)
             });
 
-            //Top Menu
-            this.topMenu = new Menu(this.authManager.isLogged() ? menuConfAuth : menuConfPub);
         },
 
         onMenuRendered: function () {

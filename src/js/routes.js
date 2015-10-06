@@ -5,10 +5,11 @@ define(function () {
     // The routes for the application. This module returns a function.
     // `match` is match method of the Router
     return function (match) {
-        match('', 'home#show');
-        match('home', 'home#show');
-        match('protected', 'protected#show');
-        match('about', 'about#show');
+        match('', 'analysis#show');
+        match('index', 'analysis#show');
+        match('home', 'analysis#show');
+        //match('login', 'login#show');
+        match('analysis', 'analysis#show');
         match('*anything', '404#show');
     };
 });

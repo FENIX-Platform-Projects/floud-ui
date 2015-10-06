@@ -1,5 +1,12 @@
 /* Dist - Index */
 
+.fx-sandbox{
+  padding: 0 5px;
+
+  @import '../../src/css/fx-boot/bootstrap';
+
+}
+
 /* RLM - Variables */
 @import '../../src/css/theme/variables';
 
@@ -14,20 +21,16 @@
 
 /* Components */
 @import '../../src/css/components/breadcrumbs';
-@import '../../src/css/components/fao-footer';
+//@import '../../src/css/components/fao-footer';
 @import '../../src/css/components/fao-topmenu';
 @import '../../src/css/components/form';
 @import '../../src/css/components/jstree';
 @import '../../src/css/components/submenu';
 
 
+/* Typo3 */
+@import '../../src/css/theme/typo3-compatibility';
 
-
-
-/* Third parties */
 
 /* Pages */
 @import '../../src/css/pages/home';
-
-
-
