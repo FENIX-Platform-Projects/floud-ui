@@ -151,6 +151,7 @@ define([
 
                 self.$sideFlude.toggleClass('col-xs-6').toggleClass('col-xs-12');
 
+
                  if (!self.$sideFaostat.is(':visible')) {
                      self.$sideFaostat.show();
                      self._loadFaostatForTheFirstTime();
@@ -158,9 +159,19 @@ define([
                      self.$sideFaostat.hide()
                  }
 
-                $(window).trigger('resize');
+                $("body").toggleClass('super-extreme-filter');
 
-                //window.dispatchEvent(new Event('resize'));
+                amplify.publish("fx.window.resize");
+                $(window).trigger('resize');
+                window.dispatchEvent(new Event('resize'));
+
+                window.setTimeout(function () {
+                    amplify.publish("fx.window.resize");
+                    $(window).trigger('resize');
+                    window.dispatchEvent(new Event('resize'));
+                }, 100);
+
+
 
             });
         },

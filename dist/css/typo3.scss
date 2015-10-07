@@ -1,5 +1,14 @@
 /* Typo 3 Compatib */
 
+
+.fx-sandbox{
+  padding: 0 5px;
+
+  @import '../../src/css/fx-boot/bootstrap';
+
+}
+
+
 @import '../../src/css/theme/typo3-compatibility';
 
 

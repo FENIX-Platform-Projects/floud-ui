@@ -1,11 +1,6 @@
 /* Dist - Index */
 
-.fx-sandbox{
-  padding: 0 5px;
 
-  @import '../../src/css/fx-boot/bootstrap';
-
-}
 
 /* RLM - Variables */
 @import '../../src/css/theme/variables';
@@ -27,10 +22,9 @@
 @import '../../src/css/components/jstree';
 @import '../../src/css/components/submenu';
 
-
-/* Typo3 */
-@import '../../src/css/theme/typo3-compatibility';
-
+//
+///* Typo3 */
+//@import '../../src/css/theme/typo3-compatibility';
 
 /* Pages */
 @import '../../src/css/pages/home';
