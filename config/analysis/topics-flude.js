@@ -30,6 +30,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
 
@@ -1003,6 +1004,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -1970,6 +1972,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -2927,6 +2930,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -3087,6 +3091,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -4058,6 +4063,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -5032,6 +5038,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -6004,6 +6011,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -6976,6 +6984,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
