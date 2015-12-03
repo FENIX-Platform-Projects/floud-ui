@@ -333,7 +333,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -595,7 +595,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
