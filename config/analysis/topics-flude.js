@@ -431,7 +431,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -513,7 +513,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -677,7 +677,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -773,7 +773,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -868,7 +868,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         }
                                     ]
                                 }
@@ -959,7 +959,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1302,7 +1302,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         }
                                     ]
                                 }
@@ -1394,7 +1394,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1475,7 +1475,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1557,7 +1557,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1639,7 +1639,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1735,7 +1735,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1830,7 +1830,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": [
@@ -1927,7 +1927,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2272,7 +2272,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2368,7 +2368,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2449,7 +2449,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2531,7 +2531,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2613,7 +2613,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2709,7 +2709,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2788,7 +2788,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2883,7 +2883,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3391,7 +3391,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3487,7 +3487,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3568,7 +3568,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3650,7 +3650,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3732,7 +3732,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3828,7 +3828,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3923,7 +3923,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4018,7 +4018,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4361,7 +4361,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4457,7 +4457,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4538,7 +4538,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4634,7 +4634,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4716,7 +4716,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4812,7 +4812,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4894,7 +4894,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4991,7 +4991,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5336,7 +5336,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5432,7 +5432,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5513,7 +5513,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5595,7 +5595,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5677,7 +5677,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5773,7 +5773,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5868,7 +5868,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5963,7 +5963,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6309,7 +6309,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6405,7 +6405,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6486,7 +6486,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6568,7 +6568,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6650,7 +6650,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6746,7 +6746,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6841,7 +6841,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6936,7 +6936,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7302,7 +7302,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7384,7 +7384,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7466,7 +7466,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7562,7 +7562,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7657,7 +7657,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7752,7 +7752,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
