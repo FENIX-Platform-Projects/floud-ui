@@ -1,13 +1,13 @@
 /*global require*/
 
 //develop
-var pathProjectRoot = ".";
-var projectRoot = "../..";
+/*var pathProjectRoot = ".";
+var projectRoot = "../..";*/
 
 //distribution
-//var projectRoot = "http://www.fao.org/fenixrepo/cdn/projects/flude/1.0.0",
-//var projectRoot = "//fenixrepo.fao.org/cdn/projects/flude/1.0.0",
-//pathProjectRoot = projectRoot;
+var projectRoot = "http://www.fao.org/fenixrepo/cdn/projects/flude/1.0.1",
+//var projectRoot = "//fenixrepo.fao.org/cdn/projects/flude/1.0.1",
+pathProjectRoot = projectRoot;
 
 require.config({
     config: {
