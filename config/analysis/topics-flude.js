@@ -30,6 +30,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
 
@@ -332,7 +333,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -430,7 +431,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -512,7 +513,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -594,7 +595,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -676,7 +677,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -772,7 +773,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -867,7 +868,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         }
                                     ]
                                 }
@@ -958,7 +959,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1003,6 +1004,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -1300,7 +1302,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         }
                                     ]
                                 }
@@ -1392,7 +1394,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1473,7 +1475,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1555,7 +1557,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1637,7 +1639,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1733,7 +1735,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1828,7 +1830,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": [
@@ -1925,7 +1927,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -1970,6 +1972,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -2269,7 +2272,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2365,7 +2368,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2446,7 +2449,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2528,7 +2531,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2610,7 +2613,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2706,7 +2709,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2785,7 +2788,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2880,7 +2883,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -2927,6 +2930,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -3087,6 +3091,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -3386,7 +3391,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3482,7 +3487,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3563,7 +3568,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3645,7 +3650,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3727,7 +3732,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3823,7 +3828,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -3918,7 +3923,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4013,7 +4018,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4058,6 +4063,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -4355,7 +4361,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4451,7 +4457,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4532,7 +4538,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4628,7 +4634,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4710,7 +4716,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4806,7 +4812,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4888,7 +4894,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -4985,7 +4991,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5032,6 +5038,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -5329,7 +5336,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5425,7 +5432,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5506,7 +5513,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5588,7 +5595,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5670,7 +5677,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5766,7 +5773,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5861,7 +5868,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -5956,7 +5963,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6004,6 +6011,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -6301,7 +6309,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6397,7 +6405,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6478,7 +6486,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6560,7 +6568,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6642,7 +6650,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6738,7 +6746,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6833,7 +6841,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6928,7 +6936,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -6976,6 +6984,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "indicator",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": []
                             }
                         }
@@ -7293,7 +7302,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7375,7 +7384,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7457,7 +7466,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7553,7 +7562,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7648,7 +7657,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
@@ -7743,7 +7752,7 @@ define(function () {
                                     "aggregations": [
                                         {
                                             "columns": ["value"],
-                                            "rule": "AVG"
+                                            "rule": "SUM"
                                         },
                                         {
                                             "columns": ["um"],
