@@ -49,6 +49,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2015", "label": "2015", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -72,8 +73,8 @@ define(function () {
                             "componentType": "dropDownList-FENIX",
                             "lang": "EN",
                             "title": {"EN": "Codelist"},
-
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -96,6 +97,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -117,6 +119,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -1022,6 +1025,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2015", "label": "2015", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -1047,6 +1051,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -1069,6 +1074,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -1090,6 +1096,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -1990,6 +1997,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2010", "label": "2010", "selected": true},
                                     {"value": "2005", "label": "2005", "selected": false},
@@ -2018,6 +2026,7 @@ define(function () {
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
                                 ],
+                                "onlyValueText": true,
                                 "enableMultiselection": true
                             }
                         }
@@ -2039,6 +2048,7 @@ define(function () {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
+                                "onlyValueText": true,
                                 "enableMultiselection": true
                             }
                         }
@@ -2060,6 +2070,7 @@ define(function () {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true}
                                 ],
+                                "onlyValueText": true,
                                 "enableMultiselection": true
                             }
                         }
@@ -2951,6 +2962,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": null, "label": "All", "selected": true}
                                 ]
@@ -2971,6 +2983,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -2992,6 +3005,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -3109,6 +3123,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2015", "label": "2015", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -3134,6 +3149,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true}
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -3156,6 +3172,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -3177,6 +3194,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -4081,6 +4099,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2015", "label": "2015", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -4106,6 +4125,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -4128,6 +4148,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -4149,6 +4170,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -5056,6 +5078,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
 
                                     {"value": "2010", "label": "2010", "selected": true},
@@ -5081,6 +5104,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -5103,6 +5127,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -5124,6 +5149,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -6029,6 +6055,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2010", "label": "2010", "selected": true},
                                     {"value": "2005", "label": "2005", "selected": false},
@@ -6053,6 +6080,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -6075,6 +6103,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "incomes",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -6096,6 +6125,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
                             "name": "subregion",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
@@ -7002,6 +7032,7 @@ define(function () {
                             "title": {"EN": "Year"},
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
 
                                     {"value": "2011", "label": "2011", "selected": true},
@@ -7045,6 +7076,7 @@ define(function () {
                             "title": {"EN": "Codelist"},
 
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                     //{"value": null, "label": "All", "selected": true, "removeFilter": true},
@@ -7070,6 +7102,7 @@ define(function () {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
+                                "onlyValueText": true,
                                 "enableMultiselection": true
                             }
                         }
@@ -7091,6 +7124,7 @@ define(function () {
                                 "defaultsource": [
                                     //{"value": null, "label": "All", "selected": true},
                                 ],
+                                "onlyValueText": true,
                                 "enableMultiselection": true
                             }
                         }

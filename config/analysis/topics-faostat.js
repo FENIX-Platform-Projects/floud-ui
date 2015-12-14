@@ -20,6 +20,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -62,6 +63,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -87,6 +89,7 @@ define(function () {
                             "name": "element",
                             "config": {
                                 "defaultsource": [ ],
+                                "onlyValueText": true,
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
                                     "version": null,
@@ -110,6 +113,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -290,6 +294,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -332,6 +337,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -356,6 +362,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -380,6 +387,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -560,6 +568,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -603,6 +612,7 @@ define(function () {
                             "name": "item",
                             "config": {
                                 "defaultsource": [ ],
+                                "onlyValueText": true,
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
                                     "version": null,
@@ -626,6 +636,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -650,6 +661,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -830,6 +842,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -872,6 +885,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -896,6 +910,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -920,6 +935,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -1100,6 +1116,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -1142,6 +1159,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -1166,6 +1184,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -1190,6 +1209,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -1370,6 +1390,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -1412,6 +1433,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -1436,6 +1458,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -1460,6 +1483,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -1641,6 +1665,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2011", "label": "2011", "selected": true},
                                     {"value": "2010", "label": "2010", "selected": false},
@@ -1683,6 +1708,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -1707,6 +1733,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -1731,6 +1758,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
@@ -1914,6 +1942,7 @@ define(function () {
                             "lang": "EN",
                             "name": "year",
                             config: {
+                                "onlyValueText": true,
                                 "defaultsource": [
                                     {"value": "2012", "label": "2012", "selected": true},
                                     {"value": "2011", "label": "2011", "selected": false},
@@ -1957,6 +1986,7 @@ define(function () {
                             // name is the ID output in tehe filter getValues()
                             "name": "item",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FLUDE_FAOSTAT_ITEM",
@@ -1981,6 +2011,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "element",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ],
                                 filter :  {
                                     "uid": "FAOSTAT_Elements",
@@ -2005,6 +2036,7 @@ define(function () {
                             // name is the ID output in the filter getValues()
                             "name": "country",
                             "config": {
+                                "onlyValueText": true,
                                 "defaultsource": [ ]
                             }
                         }
