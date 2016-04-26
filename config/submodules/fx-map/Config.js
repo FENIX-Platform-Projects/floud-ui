@@ -4,8 +4,8 @@ define([
 ], function (C) {
     'use strict';
 
-    var SERVER = C.SERVER;
-    //var SERVER = "http://fenix.fao.org";
+    //var SERVER = C.SERVER;
+    var SERVER = "http://fenix.fao.org/";
 
     return window.FMCONFIG = {
 
@@ -25,6 +25,7 @@ define([
         MAP_SERVICE_ZOOM_TO_BOUNDARY: '/rest/service/bbox',
         MAP_SERVICE_WMS_GET_CAPABILITIES: '/rest/service/request',
         MAP_SERVICE_PROXY: '/rest/service/request'
+        //*/
     };
 });
 
